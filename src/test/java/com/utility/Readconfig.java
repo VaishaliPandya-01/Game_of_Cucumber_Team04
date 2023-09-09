@@ -9,7 +9,7 @@ public class Readconfig {
 	 Properties pro;
 
 	public Readconfig() {
-		File src = new File("./Configurationfiles/config.properties");
+		File src = new File("./Configuration/Config.properties");
 
 		try {
 			FileInputStream fis = new FileInputStream(src);
@@ -21,7 +21,7 @@ public class Readconfig {
 	}
                         
 	public String getApplicationURL() {
-		String url = pro.getProperty("baseurl");
+		String url = pro.getProperty("url");
 		return url;
 	}
 	
