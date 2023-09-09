@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="1" tests="1" time="4.102">
-    <testcase classname="Batch Page Validation" name="Validate Manage batch URL" time="3.945">
-        <skipped><![CDATA[Given Admin is on dashboard page after Login................................passed
-When Admin clicks Batch from navigation bar.................................pending
-Then Admin should see the "Manage Batch" in the URL.........................skipped
-]]></skipped>
-    </testcase>
-</testsuite>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0"/>

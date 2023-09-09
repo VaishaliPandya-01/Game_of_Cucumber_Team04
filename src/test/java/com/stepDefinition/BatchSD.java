@@ -18,13 +18,11 @@ public class BatchSD extends BaseClass{
 	
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
-	   Initialization();
+	   
 	}
 
 	@When("Admin clicks Batch from navigation bar")
 	public void admin_clicks_Batch_from_navigation_bar() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
 	}
 
 	//Validate Manage Batch URL
