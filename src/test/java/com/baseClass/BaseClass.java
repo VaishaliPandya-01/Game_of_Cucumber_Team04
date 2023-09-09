@@ -12,9 +12,8 @@ import com.utility.Readconfig;
 public class BaseClass {
 
 	Readconfig readconfig=new Readconfig();
-
 	public String baseURL=readconfig.getApplicationURL();
-	public static WebDriver driver;
+	public WebDriver driver;
 	public String browserName = readconfig.getbrowser();
 
 
@@ -39,7 +38,7 @@ public class BaseClass {
 	}
 
 
-	public static void teardown() {
+	public void teardown() {
 		driver.close();
 		driver.quit();
 	}
