@@ -253,6 +253,16 @@ public class Controller extends BaseClass implements ControllerInterface{
 		}
 		return text;
 	}
+	@Override
+	public String getCurrentURL(WebDriver driver)  {
+		boolean flag = false;
+
+		String text = driver.getCurrentUrl();
+		if (flag) {
+			System.out.println("Current URL is: \""+text+"\"");
+		}
+		return text;
+	}
 
 	
 	@Override

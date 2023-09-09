@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="17" tests="17" time="2.362">
+    <testcase classname="Assignment feature" name="Verify landing in manage assignment page" time="0.522">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see URL with "Manage assignment"..........................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Capture the response time to navigate to manage assignment page" time="0.037">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Get the response time for navigation from dashboard page to manage assignment page.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify manage assignment page Header" time="0.029">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see header with "Manage assignment".......................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Validate text in manage assignment page" time="0.033">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar and get all text from the portal page.undefined
+Then Admin should see correct spelling for the all the fields...............undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify delete icon below the header" time="0.029">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see disabled delete icon below the "Manage assignment"....undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify search bar on the manage assignment page" time="0.028">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see search bar on the manage assignment page..............undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify add new assignment button  on manage assignment page" time="0.023">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see +Add New assignment button on the manage assignment page.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify add new assignment button  on manage assignment page 2" time="0.015">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see data table on the manage assignment page With following column headers. (check box symbol ,Assignment name, Assignment description, Assignment Date, Assignment Grade, Edit Delete).undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify Edit icon in the data table" time="0.026">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Edit Icon in each row of data table only  when entries are available...undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify Edit icon when no data in the table" time="0.014">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Edit Icon will not be present in data table............................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify delete icon in the data table" time="0.015">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Delete Icon in each row of data table only  when entries are available.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify delete icon when no data in the table" time="0.01">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Delete Icon will not be present in data table..........................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify sort icon in the data table" time="0.017">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see sort icon near the column headers except for Edit and Delete.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify check box in the data table" time="0.029">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see check box in the all rows  of data table when entries available.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Validate the number entries displaying" time="0.029">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Above the footer Admin should see the text as "Showing x to y of z entries" below the table..undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Verify Pagination control below the data table" time="0.043">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see the pagination controls under the data table..........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Assignment feature" name="Validate footer  text" time="0.026">
+        <skipped><![CDATA[Given Logged on the LMS portal as Admin.....................................undefined
+Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "assignment" button on the navigation bar.................undefined
+Then Admin should see the text with total number assignments in the data table. ("In total there are number of assignments").undefined
+]]></skipped>
+    </testcase>
+</testsuite>
