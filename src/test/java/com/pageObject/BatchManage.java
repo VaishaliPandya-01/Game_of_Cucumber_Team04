@@ -1,5 +1,6 @@
 package com.pageObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -31,7 +32,14 @@ public class BatchManage extends BaseClass{
 
 	@FindBy (xpath="//*[@span/select-multiple-checkbox']")
 	private WebElement singleCheckBoxBatch;
+	
+	@FindBy (className = "pagination") 
+	private WebElement pagination;
+	
+	@FindBy (xpath="//*[@span/tableHeader']")
+	private List<WebElement> listOfTableHeader;
 
+	//Created object for controller class
 	Controller act = new Controller();
 
 
@@ -49,14 +57,10 @@ public class BatchManage extends BaseClass{
 		act.type(search_txt, text);
 	}
 
-
 	public void deleteMutipleBatchBtn() {
 
 		act.click(driver, deleteMutipleBatch_btn);
-
-		deleteMutipleBatch_btn.click();
 	}
-
 
 	public void addNewBatchBtn() {
 
@@ -81,15 +85,37 @@ public class BatchManage extends BaseClass{
 		}
 	}
 
-
 	public void SelectSingleCheckBoxBatch() {
 
 		act.click(driver, singleCheckBoxBatch);
 	}
 
+	public String getManageBatchTitle() {
 
-	public void getManageBatchTitle() {
-
-		act.getTitle(driver);
+		String pageTitle=act.getTitle(driver);
+		return pageTitle;
 	}
+		
+	public String getManageBatchURL() {
+
+		String URL=act.getCurrentURL(driver);
+		return URL;
+	}
+		
+	public boolean validatePagination() {
+
+		return act.isDisplayed(driver, pagination);
+	}
+	
+	public List<String> getTableHeaderList() {
+
+		List<String> tableHeader = new ArrayList<>();		
+		for(WebElement list : listOfTableHeader) {
+			String headerList =list.getText();
+			tableHeader.add(headerList);
+		}
+		return tableHeader;
+	}
+	
+	
 }
