@@ -32,59 +32,40 @@ Feature: Manage Attendance Page verification
   Scenario: Verify add new Attendance button  on Attendance page
     Then Admin should see +Add New Attendance button on the attendance page
     
-    Scenario Outline: Verify data table on the attendance page
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Verify data table on the attendance page
+
     Then Admin should see data table on the Manage Attendance Page With following column headers.
     # (Check box symbol,Class ID, Student Id,Preasent, Edit /Delete)
     
-    Scenario: Verify Edit icon in the data table
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Verify Edit icon in the data table
     Then Edit Icon in each row of data table only  when entries are available
     
-    Scenario: Verify Edit icon when no data in the table
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Verify Edit icon when no data in the table
     Then Edit Icon will not be present in data table
     
-    Scenario: Verify delete icon in the data table
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Verify delete icon in the data table
     Then Delete Icon in each row of data table only  when entries are available
     
-    Scenario: Verify delete icon when no data in the table
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Verify delete icon when no data in the table
     Then Admin cant see delete  Icon in data table
     
-    Scenario: Verify sort icon in the data table
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Verify sort icon in the data table
     Then Admin should see sort icon near the column headers except for Edit and Delete
     
     
-    Scenario: Verify check box in the data table
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Verify check box in the data table
     Then Admin should see check box in the all rows  of data table 
     
-    Scenario: Validate the number entries displaying
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Validate the number entries displaying
     Then Above the footer Admin should see the text as "Showing x to y of z entries" below the table. 
-  # x- starting record number on that page
+   #x- starting record number on that page
 		#y-ending record number on that page
 	#z-Total number of records  Note: with or without entries
 
     
-    Scenario: Verify Pagination control below the data table
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Verify Pagination control below the data table
     Then Admin should see the pagination controls under the data table
     
-    Scenario: Validate footer  text
-    Given Admin is on dashboard page after Login 
-    When Admin clicks "Attendance" on the navigation bar
+   Scenario: Validate footer  text
     Then Admin should see the text with total number classes in the data table. ( " In total there are number of classes")
     
