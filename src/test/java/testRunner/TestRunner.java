@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 @CucumberOptions(features ={"src/test/resources/features/"}, 
-glue = {"api.stepDefinition"}, 
+glue = {"com.stepDefinition"}, 
 
 monochrome = true, 
 plugin = {"pretty",
