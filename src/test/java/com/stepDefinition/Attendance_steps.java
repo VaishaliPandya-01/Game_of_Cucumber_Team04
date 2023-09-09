@@ -51,13 +51,8 @@ public class Attendance_steps {
 	    
 	}
 
-	@Given("Admin clicks {string} button on the navigation bar and get all text from the portal page")
-	public void admin_clicks_button_on_the_navigation_bar_and_get_all_text_from_the_portal_page(String string) {
-	    
-	    
-	}
 
-	@Then("Admin should see correct spelling for the all the fields")
+	@Then("Admin should see correct spelling for the all the fields in get all text from the portal page")
 	public void admin_should_see_correct_spelling_for_the_all_the_fields() {
 	    
 	    
