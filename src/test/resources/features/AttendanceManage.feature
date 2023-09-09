@@ -6,7 +6,7 @@ Feature: Manage Attendance Page verification
 		When Admin clicks "Attendance" on the navigation bar
 		
   Scenario: Validate the header of the page
-    Then Admin should see the Manage attendance in header
+    Then Admin should see the "Manage Attendance" in header
   
   Scenario: Validate response time from dashboard page to attendance page
     Then Maximum navigation time in milliseconds, defaults to 30 seconds

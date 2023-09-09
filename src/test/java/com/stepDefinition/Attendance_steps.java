@@ -3,28 +3,31 @@ package com.stepDefinition;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import org.junit.Assert;
+
 import com.pageObject.Attendance_Manage;
 
 public class Attendance_steps {
-	Attendance_Manage atten_manage = new Attendance_Manage();
+	Attendance_Manage atten_manager = new Attendance_Manage();
 	
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
-		atten_manage.Initialization();
-		System.out.println("First Given");
-		
+		atten_manager.Initialization();
+		System.out.println("First Given");	
 	}
+
 	@When("Admin clicks {string} on the navigation bar")
 	public void admin_clicks_on_the_navigation_bar(String string) {
-		if (string.equals("Attendance")) {
-			atten_manage.getTitle();
+		if (string.equals("Attendance")) {	
+			atten_manager.AttendanceButtonHeader();
 		}
-
 	}
 
-	@Then("Admin should see the Manage attendance in header")
-	public void admin_should_see_the_Manage_attendance_in_header() {
-
+	@Then("Admin should see the {string} in header")
+	public void admin_should_see_the_Manage_attendance_in_header(String Heading) {
+		String ManageTitle = atten_manager.getTitle();
+		Assert.assertTrue(ManageTitle.contains(Heading));
 	}
 	
 	@Then("Maximum navigation time in milliseconds, defaults to {int} seconds")
