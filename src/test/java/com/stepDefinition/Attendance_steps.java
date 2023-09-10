@@ -140,6 +140,96 @@ public class Attendance_steps extends BaseClass{
 	    
 	}
 
+	///////*******************Attendance Details Feature ****************************///////
+	
+	@Given("Admin is in manage attendance page")
+	public void admin_is_in_manage_attendance_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks + a new attendance button")
+	public void admin_clicks_a_new_attendance_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see correct spellings in the label")
+	public void admin_should_see_correct_spellings_in_the_label() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Four dropdown should be present")
+	public void four_dropdown_should_be_present() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see  close button on the attendance details popup window")
+	public void admin_should_see_close_button_on_the_attendance_details_popup_window() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Close button should on the top right corner")
+	public void close_button_should_on_the_top_right_corner() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+    @Then("First dropdown box {string} text  should be present")
+	public void first_dropdown_box_text_should_be_present(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Second dropdown box {string} text  should be present")
+	public void second_dropdown_box_text_should_be_present(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Third dropdown box {string} text  should be present")
+	public void third_dropdown_box_text_should_be_present(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Fourth dropdown box {string} text  should be present")
+	public void fourth_dropdown_box_text_should_be_present(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin  should text in gray color")
+	public void admin_should_text_in_gray_color() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see  save button in the class detail popup window")
+	public void admin_should_see_save_button_in_the_class_detail_popup_window() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see  cancel button in the class detail popup window")
+	public void admin_should_see_cancel_button_in_the_class_detail_popup_window() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Order of the label should be Program name, Class Name, Student Name, Attendance, Attendance Date.")
+	public void order_of_the_label_should_be_Program_name_Class_Name_Student_Name_Attendance_Attendance_Date() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+	
+	
 
 
 

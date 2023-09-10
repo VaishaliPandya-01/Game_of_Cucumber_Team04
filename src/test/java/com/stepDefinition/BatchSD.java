@@ -16,7 +16,7 @@ public class BatchSD extends BaseClass{
 	
 	private BatchManage batchManager = new BatchManage();
 	
-	@Given("Admin is on dashboard page after Login")
+/*	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
 	   Initialization();
 	}
@@ -59,5 +59,5 @@ public class BatchSD extends BaseClass{
 		List<String> actualdHeaderList = batchManager.getTableHeaderList();
 		Assert.assertTrue(expectedHeaderList.containsAll(actualdHeaderList));		
 	}
-
+*/
 }

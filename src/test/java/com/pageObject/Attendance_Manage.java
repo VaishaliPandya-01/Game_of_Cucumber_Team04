@@ -14,10 +14,11 @@ public class Attendance_Manage extends BaseClass {
 	
 	@FindBy (id="id_searchtxt") private WebElement attendnc_searchbox;
 	@FindBy (xpath="//div[@class='add_newAttendnc']") private WebElement attendnc_addNew;
-	@FindBy (xpath="//div[@class='edit_attendance']") private WebElement attendnc_edit;
-	@FindBy (xpath="//div[@class='delete_attendance']") private WebElement attendnc_delete;
+	@FindBy (xpath="//div[@class='edit_attendance']") private WebElement attendnc_SingleEdit;
+	@FindBy (xpath="//div[@class='delete_iconS']") private WebElement attendnc_SingleDelete;
+	@FindBy (xpath="//div[@class='delete_iconM']") private WebElement attendnc_MultiplDelete;
 	@FindBy (xpath="//div[@class='Attendance']/p[9]") private WebElement attendnc_Button;
-	@FindBy (xpath="//*[@class='checkbox']/p[1]") private List<WebElement> attendnc_m_checkbox;
+	@FindBy (xpath="//*[@class='checkbox']/p[1]") private List<WebElement> attendnc_multipl_checkbox;
 	@FindBy (xpath="//*[@class='checkbox-single']/") private WebElement attendnc_single_checkbx;
 	@FindBy (xpath="//table/tbody/tr[2]/td[2]/table/tbody/tr/td[2]") private WebElement attendnc_datatable_data;
 	@FindBy (xpath="//*[@class='ManageAttendanceHeader") private WebElement manageAttHeader;
@@ -38,17 +39,20 @@ public class Attendance_Manage extends BaseClass {
 		cn.click(driver, attendnc_addNew);
 	}
 	public void editIconAttendance() {
-		cn.click(driver, attendnc_edit);
+		cn.click(driver, attendnc_SingleEdit);
 	}
 	public void deleteIconAttendance() {
-		cn.click(driver, attendnc_delete);
+		cn.click(driver, attendnc_SingleDelete);
+	}
+	public void deleteMultiplAttendnc_Btn() {
+		cn.click(driver, attendnc_MultiplDelete);
 	}
 	public void AttendanceButtonHeader() {
 		cn.click(driver, attendnc_Button);
 	}
 	public void SelectMultiCheckBoxAtt() {
 
-		for ( WebElement checkBox : attendnc_m_checkbox ) {
+		for ( WebElement checkBox : attendnc_multipl_checkbox ) {
 			if ( !cn.isSelected(driver, checkBox) ) {
 				cn.click(driver, checkBox);
 			}

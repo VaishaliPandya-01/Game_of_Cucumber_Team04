@@ -58,7 +58,7 @@ Feature: Manage Attendance Page verification
     
    Scenario: Validate the number entries displaying
     Then Above the footer Admin should see the text as "Showing x to y of z entries" below the table. 
-   #x- starting record number on that page
+  # x- starting record number on that page
 		#y-ending record number on that page
 	#z-Total number of records  Note: with or without entries
 
