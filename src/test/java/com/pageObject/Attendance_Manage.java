@@ -6,7 +6,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.Point;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 
@@ -20,7 +20,7 @@ public class Attendance_Manage extends BaseClass {
 	@FindBy (xpath="//*[@class='checkbox']/p[1]") private List<WebElement> attendnc_m_checkbox;
 	@FindBy (xpath="//*[@class='checkbox-single']/") private WebElement attendnc_single_checkbx;
 	@FindBy (xpath="//table/tbody/tr[2]/td[2]/table/tbody/tr/td[2]") private WebElement attendnc_datatable_data;
-	
+	@FindBy (xpath="//*[@class='ManageAttendanceHeader") private WebElement manageAttHeader;
 	
 	Controller cn = new Controller();
 	
@@ -38,7 +38,7 @@ public class Attendance_Manage extends BaseClass {
 		cn.click(driver, attendnc_addNew);
 	}
 	public void editIconAttendance() {
-		cn.click(driver, attendnc_addNew);
+		cn.click(driver, attendnc_edit);
 	}
 	public void deleteIconAttendance() {
 		cn.click(driver, attendnc_delete);
@@ -60,10 +60,21 @@ public class Attendance_Manage extends BaseClass {
 	public void getResponseCode() {
 		
 	}
-	public void DataTableDataValidation() {
-		
-		String datatableText = attendnc_datatable_data.getText();
-		
+	public void DataTableDataValidation() {	
+		//attendnc_datatable_data
+	}
+	public boolean alignmentManageHeader() {
+		Boolean flag;
+		Point point = manageAttHeader.getLocation();
+		int xcord = point.getX();
+		if (xcord<=600){
+			System.out.println("Manage attendance header is in left side of the page");
+			flag = true;
+		}else {
+			System.out.println("Manage attendance header is not in left side of the page");
+			flag = false;
+		}
+		return flag;
 	}
 	
 }

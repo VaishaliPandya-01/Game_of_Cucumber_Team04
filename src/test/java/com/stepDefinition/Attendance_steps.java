@@ -50,11 +50,12 @@ public class Attendance_steps extends BaseClass{
 	//Verify the alignment of the Manage Attendance header
 	@Then("Manage attendance header should be in left side of the page")
 	public void manage_attendance_header_should_be_in_left_side_of_the_page() {
-	    
+	    Boolean flag = att_manager.alignmentManageHeader();
+	    Assert.assertTrue(flag);
 	    
 	}
 
-
+	//Validate text in manage attendancepage
 	@Then("Admin should see correct spelling for the all the fields in get all text from the portal page")
 	public void admin_should_see_correct_spelling_for_the_all_the_fields() {
 	    
