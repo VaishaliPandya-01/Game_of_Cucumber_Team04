@@ -3,51 +3,51 @@ package com.stepDefinition;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
+import com.baseClass.BaseClass;
 import org.junit.Assert;
-
 import com.pageObject.Attendance_Manage;
 
-public class Attendance_steps {
-	Attendance_Manage atten_manager = new Attendance_Manage();
+public class Attendance_steps extends BaseClass{
+	Attendance_Manage att_manager = new Attendance_Manage();
 	
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
-		atten_manager.Initialization();
+		Initialization();
 		System.out.println("First Given");	
 	}
 
 	@When("Admin clicks {string} on the navigation bar")
 	public void admin_clicks_on_the_navigation_bar(String string) {
 		if (string.equals("Attendance")) {	
-			atten_manager.AttendanceButtonHeader();
+			att_manager.AttendanceButtonHeader();
 		}
 	}
-
+	//Validate the header of the page
 	@Then("Admin should see the {string} in header")
 	public void admin_should_see_the_Manage_attendance_in_header(String Heading) {
-		String ManageTitle = atten_manager.getTitle();
+		String ManageTitle = att_manager.getTitle();
 		Assert.assertTrue(ManageTitle.contains(Heading));
 	}
-	
+	//Validate response time
 	@Then("Maximum navigation time in milliseconds, defaults to {int} seconds")
 	public void maximum_navigation_time_in_milliseconds_defaults_to_seconds(Integer int1) {
 	    
 	    
 	}
-
+	//Validate the broken link
 	@Then("HTTP response >= {int}. Then the link is broken")
 	public void http_response_Then_the_link_is_broken(Integer int1) {
 	    
 	    
 	}
-
-	@Then("Admin should see LMS -Learning management system  as title")
-	public void admin_should_see_LMS_Learning_management_system_as_title() {
-	    
-	    
+	//Verify LMS title
+	@Then("Admin should see {string}  as title")
+	public void admin_should_see_LMS_Learning_management_system_as_title(String expectedtitle) {
+		String ActualTitle = att_manager.getTitle();
+		Assert.assertEquals(ActualTitle,expectedtitle);    
 	}
 
+	//Verify the alignment of the Manage Attendance header
 	@Then("Manage attendance header should be in left side of the page")
 	public void manage_attendance_header_should_be_in_left_side_of_the_page() {
 	    

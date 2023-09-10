@@ -15,7 +15,7 @@ Feature: Manage Attendance Page verification
     Then HTTP response >= 400. Then the link is broken
     
   Scenario: Verify LMS title 
-    Then Admin should see LMS -Learning management system  as title 
+    Then Admin should see "LMS -Learning management system"  as title 
     
   Scenario: Verify the alignment of the Manage Attendance header
     Then Manage attendance header should be in left side of the page
@@ -35,7 +35,7 @@ Feature: Manage Attendance Page verification
    Scenario: Verify data table on the attendance page
 
     Then Admin should see data table on the Manage Attendance Page With following column headers.
-    # (Check box symbol,Class ID, Student Id,Preasent, Edit /Delete)
+     #(Check box symbol,Class ID, Student Id,Preasent, Edit /Delete)
     
    Scenario: Verify Edit icon in the data table
     Then Edit Icon in each row of data table only  when entries are available
