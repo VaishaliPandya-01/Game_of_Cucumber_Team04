@@ -7,8 +7,9 @@ import com.baseClass.BaseClass;
 import org.junit.Assert;
 import com.pageObject.Attendance_Manage;
 
-public class Attendance_steps extends BaseClass{
-	Attendance_Manage att_manager = new Attendance_Manage();
+public class Attendance_SD extends BaseClass{
+	
+	private Attendance_Manage att_manager = new Attendance_Manage();
 	
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
@@ -19,17 +20,17 @@ public class Attendance_steps extends BaseClass{
 	@When("Admin clicks {string} on the navigation bar")
 	public void admin_clicks_on_the_navigation_bar(String string) {
 		if (string.equals("Attendance")) {	
-			att_manager.AttendanceButtonHeader();
+			att_manager.AttendncBtn_onNav();
 		}
 	}
 	//Validate the header of the page
 	@Then("Admin should see the {string} in header")
 	public void admin_should_see_the_Manage_attendance_in_header(String Heading) {
-		String ManageTitle = att_manager.getTitle();
-		Assert.assertTrue(ManageTitle.contains(Heading));
+		String HeaderText = att_manager.GetTextManageAttendanceHeader();
+		Assert.assertEquals(HeaderText,Heading);
 	}
 	//Validate response time
-	@Then("Maximum navigation time in milliseconds, defaults to {int} seconds")
+	@Then("Maximum navigation time in milliseconds, defaults to {int} seconds for Attendance Module")
 	public void maximum_navigation_time_in_milliseconds_defaults_to_seconds(Integer int1) {
 	    
 	    
@@ -37,7 +38,7 @@ public class Attendance_steps extends BaseClass{
 	//Validate the broken link
 	@Then("HTTP response >= {int}. Then the link is broken")
 	public void http_response_Then_the_link_is_broken(Integer int1) {
-	    
+		att_manager.verifyBrokenLink();
 	    
 	}
 	//Verify LMS title
@@ -55,7 +56,7 @@ public class Attendance_steps extends BaseClass{
 	    
 	}
 
-	//Validate text in manage attendancepage
+	//Validate text spelling in manage attendancepage
 	@Then("Admin should see correct spelling for the all the fields in get all text from the portal page")
 	public void admin_should_see_correct_spelling_for_the_all_the_fields() {
 	    
@@ -144,86 +145,86 @@ public class Attendance_steps extends BaseClass{
 	
 	@Given("Admin is in manage attendance page")
 	public void admin_is_in_manage_attendance_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
 	@When("Admin clicks + a new attendance button")
 	public void admin_clicks_a_new_attendance_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-	@Then("Admin should see correct spellings in the label")
+	@Then("Admin should see correct spellings in the label for Attendance Module")
 	public void admin_should_see_correct_spellings_in_the_label() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-	@Then("Four dropdown should be present")
+	@Then("Four dropdown should be present for Attendance Module")
 	public void four_dropdown_should_be_present() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
 	@Then("Admin should see  close button on the attendance details popup window")
 	public void admin_should_see_close_button_on_the_attendance_details_popup_window() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-	@Then("Close button should on the top right corner")
+	@Then("Close button should on the top right corner for Attendance Module")
 	public void close_button_should_on_the_top_right_corner() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-    @Then("First dropdown box {string} text  should be present")
+    @Then("First dropdown box {string} text  should be present for Attendance Module")
 	public void first_dropdown_box_text_should_be_present(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-	@Then("Second dropdown box {string} text  should be present")
+	@Then("Second dropdown box {string} text  should be present for Attendance Module")
 	public void second_dropdown_box_text_should_be_present(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-	@Then("Third dropdown box {string} text  should be present")
+	@Then("Third dropdown box {string} text  should be present for Attendance Module")
 	public void third_dropdown_box_text_should_be_present(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-	@Then("Fourth dropdown box {string} text  should be present")
+	@Then("Fourth dropdown box {string} text  should be present for Attendance Module")
 	public void fourth_dropdown_box_text_should_be_present(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-	@Then("Admin  should text in gray color")
+	@Then("Admin  should text in gray color for Attendance Module")
 	public void admin_should_text_in_gray_color() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-	@Then("Admin should see  save button in the class detail popup window")
+	@Then("Admin should see  save button in the class detail popup window for Attendance Module")
 	public void admin_should_see_save_button_in_the_class_detail_popup_window() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
-	@Then("Admin should see  cancel button in the class detail popup window")
+	@Then("Admin should see  cancel button in the class detail popup window for Attendance Module")
 	public void admin_should_see_cancel_button_in_the_class_detail_popup_window() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
 	@Then("Order of the label should be Program name, Class Name, Student Name, Attendance, Attendance Date.")
 	public void order_of_the_label_should_be_Program_name_Class_Name_Student_Name_Attendance_Attendance_Date() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+	    
 	}
 
 

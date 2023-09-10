@@ -12,8 +12,8 @@ public class Attendance_Ref extends BaseClass{
 	@FindBy(xpath="//input[@class='className']") private WebElement att_className;
 	@FindBy(xpath="//input[@class='studentName']") private WebElement att_studName;
 	@FindBy(xpath="//div[@class='dropdown-menu show']/a[1]")private WebElement att_select;
-	@FindBy(xpath="//*[@id='cancel']") @CacheLookup  WebElement att_cancel;
-	@FindBy(xpath="//*[@id='submit']") @CacheLookup  WebElement att_submit;
+	@FindBy(xpath="//*[@id='cancel']") private  WebElement att_cancel;
+	@FindBy(xpath="//*[@id='submit']") private  WebElement att_submit;
 
 	
 	
