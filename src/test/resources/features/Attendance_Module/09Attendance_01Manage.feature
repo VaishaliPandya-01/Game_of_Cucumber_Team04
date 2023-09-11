@@ -35,7 +35,11 @@ Feature: Manage Attendance Page verification
    Scenario: Verify data table on the attendance page
 
     Then Admin should see data table on the Manage Attendance Page With following column headers.
-     #(Check box symbol,Class ID, Student Id,Preasent, Edit /Delete)
+    | headers |
+    | Class ID |
+    | Student Id |
+    | Preasent |
+    | Edit /Delete |  
     
    Scenario: Verify Edit icon in the data table
     Then Edit Icon in each row of data table only  when entries are available

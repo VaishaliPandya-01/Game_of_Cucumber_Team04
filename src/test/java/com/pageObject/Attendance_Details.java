@@ -31,6 +31,7 @@ public class Attendance_Details extends BaseClass {
 	}
 	public void pgmNameDropdown() {
 		cn.click(driver, att_pgmName);	
+		
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.stepDefinition;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,7 +23,7 @@ public class Attendance_SD extends BaseClass{
 	
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
-		Initialization();
+		
 		System.out.println("First Given");	
 	}
 
@@ -91,7 +92,8 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	@Then("Admin should see data table on the Manage Attendance Page With following column headers.")
-	public void admin_should_see_data_table_on_the_Manage_Attendance_Page_With_following_column_headers_Check_box_symbol_Class_ID_Student_Id_Preasent_Edit_Delete() {
+	public void see_data_table_on_the_Manage_Attendance_Page_With_following_column_headers(DataTable datatable) {
+		
 	    Assert.assertTrue(att_manager.commonCheckboxSymbolDisplayed());
 	    Assert.assertTrue(att_manager.CheckStudentIDDisplayed());
 	    Assert.assertTrue(att_manager.CheckClassIDDisplayed());
@@ -103,26 +105,42 @@ public class Attendance_SD extends BaseClass{
 
 	@Then("Edit Icon in each row of data table only  when entries are available")
 	public void edit_Icon_in_each_row_of_data_table_only_when_entries_are_available() {
-	    
+	    if(att_manager.checkdataTableHasData()) {
+	    	Assert.assertTrue(att_manager.SingleEditIconDisplayed());
+	    }else {
+	    	System.out.println("Datatable is empty");
+	    }
 	    
 	}
 
 	@Then("Edit Icon will not be present in data table")
 	public void edit_Icon_will_not_be_present_in_data_table() {
-	    
+		 if(att_manager.checkdataTableHasData()) {
+		    	Assert.assertTrue(att_manager.SingleDeleteIconDisplayed());
+		    }else {
+		    	System.out.println("Datatable is empty");
+		    }
 	    
 	}
 
 	@Then("Delete Icon in each row of data table only  when entries are available")
 	public void delete_Icon_in_each_row_of_data_table_only_when_entries_are_available() {
-	    
+		if(att_manager.checkdataTableHasData()) {
+	    	Assert.assertTrue(att_manager.SingleDeleteIconDisplayed());
+	    }else {
+	    	System.out.println("Datatable is empty");
+	    }
 	    
 	}
 
 	@Then("Admin cant see delete  Icon in data table")
 	public void admin_cant_see_delete_Icon_in_data_table() {
 	    
-	    
+		if(att_manager.checkdataTableHasData()) {
+	    	Assert.assertTrue(att_manager.SingleDeleteIconDisplayed());
+	    }else {
+	    	System.out.println("Datatable is empty");
+	    }
 	}
 
 	@Then("Admin should see sort icon near the column headers except for Edit and Delete")
@@ -134,12 +152,16 @@ public class Attendance_SD extends BaseClass{
 	@Then("Admin should see check box in the all rows  of data table")
 	public void admin_should_see_check_box_in_the_all_rows_of_data_table() {
 	    
-	    
+		if(att_manager.checkdataTableHasData()) {
+	    	Assert.assertTrue(att_manager.singleCheckboxDisplayed());
+	    }else {
+	    	System.out.println("Datatable is empty");
+	    }
 	}
 
 	@Then("Above the footer Admin should see the text as {string} below the table.")
-	public void above_the_footer_Admin_should_see_the_text_as_below_the_table(String string) {
-	    
+	public void above_the_footer_Admin_should_see_the_text_as_below_the_table(String expectedFooterText) {
+	    Assert.assertEquals(expectedFooterText, att_manager.footerTextValidation());
 	    
 	}
 

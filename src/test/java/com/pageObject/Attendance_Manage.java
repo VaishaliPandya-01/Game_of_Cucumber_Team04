@@ -1,6 +1,7 @@
 package com.pageObject;
 
 
+import java.util.Arrays;
 import java.util.List;
 import java.net.URL;
 import java.net.HttpURLConnection;
@@ -28,7 +29,8 @@ public class Attendance_Manage extends BaseClass {
 	@FindBy (xpath="//a[text()='Student Id']") private WebElement att_studID;
 	@FindBy (xpath="//a[text()='class Id']") private WebElement att_classID;
 	@FindBy (xpath="//a[text()='Preasent']") private WebElement att_PreasentValue;
-	
+	@FindBy (xpath="//*[@id='DataTable']/div/table/tbody/tr/td/a") private List<WebElement> att_DatatTable_data;
+	@FindBy (xpath="//a[text()='Footer Text']") private WebElement att_FooterText;
 	
 	static Readconfig rc = new Readconfig();
 	Controller cn = new Controller();
@@ -137,6 +139,9 @@ public class Attendance_Manage extends BaseClass {
 	public boolean commonCheckboxSymbolDisplayed() {
 		return cn.isDisplayed(driver, attendnc_addNew);
 	}
+	public boolean singleCheckboxDisplayed() {
+		return cn.isDisplayed(driver, attendnc_single_checkbx);
+	}
 	public boolean CheckStudentIDDisplayed() {
 		return cn.isDisplayed(driver, att_studID);
 	}
@@ -153,6 +158,35 @@ public class Attendance_Manage extends BaseClass {
 	public boolean CheckDeleteTextDisplayed() {
 		return cn.isDisplayed(driver, attendnc_addNew);
 	}
+	public boolean SingleEditIconDisplayed() {
+		return cn.isDisplayed(driver, attendnc_SingleEdit);
+	}
+	public boolean SingleDeleteIconDisplayed() {
+		return cn.isDisplayed(driver, attendnc_SingleDelete);
+	}
 	
+	public boolean checkdataTableHasData() {
+		boolean flag = false ;
+		List<WebElement> data = att_DatatTable_data;
+        for(int i=0; i<data.size(); i++) {
+            WebElement current = data.get(i);
+            if(current.getText()!= null) {
+                System.out.println("Data Table has data");
+                flag = true;
+            }  else {
+                System.out.println("Data Table has no data");
+                flag = false;
+            }
+        }
+        return flag;
+	}
+	/*public List<String> getDataTableHeaderList(){
+		
+	
+	}*/
+	public String footerTextValidation() {
+		String footertext = att_FooterText.getText();
+		return footertext;
+	}
 	
 }

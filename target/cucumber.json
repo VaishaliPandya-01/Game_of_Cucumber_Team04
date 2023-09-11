@@ -1,0 +1,5198 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:42.753Z",
+        "line": 8,
+        "name": "Validate the header of the page",
+        "description": "",
+        "id": "manage-attendance-page-verification;validate-the-header-of-the-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Admin should see the \"Manage Attendance\" in header",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.139Z",
+        "line": 11,
+        "name": "Validate response time from dashboard page to attendance page",
+        "description": "",
+        "id": "manage-attendance-page-verification;validate-response-time-from-dashboard-page-to-attendance-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "Maximum navigation time in milliseconds, defaults to 30 seconds",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.174Z",
+        "line": 14,
+        "name": "Validate the broken link",
+        "description": "",
+        "id": "manage-attendance-page-verification;validate-the-broken-link",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "HTTP response \u003e\u003d 400. Then the link is broken",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.205Z",
+        "line": 17,
+        "name": "Verify LMS title",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-lms-title",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "Admin should see \"LMS -Learning management system\"  as title",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.236Z",
+        "line": 20,
+        "name": "Verify the alignment of the Manage Attendance header",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-the-alignment-of-the-manage-attendance-header",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "Manage attendance header should be in left side of the page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.268Z",
+        "line": 23,
+        "name": "Validate text in manage attendancepage",
+        "description": "",
+        "id": "manage-attendance-page-verification;validate-text-in-manage-attendancepage",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 24,
+            "name": "Admin should see correct spelling for the all the fields in get all text from the portal page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.292Z",
+        "line": 26,
+        "name": "Verify delete icon below the header",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-delete-icon-below-the-header",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 27,
+            "name": "Admin should see disabled delete icon below the \"Manage Attendance\"",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.317Z",
+        "line": 29,
+        "name": "Verify search bar on the class page",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-search-bar-on-the-class-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 30,
+            "name": "Admin should see search bar on the attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.341Z",
+        "line": 32,
+        "name": "Verify add new Attendance button  on Attendance page",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-add-new-attendance-button--on-attendance-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 33,
+            "name": "Admin should see +Add New Attendance button on the attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.370Z",
+        "line": 35,
+        "name": "Verify data table on the attendance page",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-data-table-on-the-attendance-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 37,
+            "name": "Admin should see data table on the Manage Attendance Page With following column headers.",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "headers"
+                ]
+              },
+              {
+                "cells": [
+                  "Class ID"
+                ]
+              },
+              {
+                "cells": [
+                  "Student Id"
+                ]
+              },
+              {
+                "cells": [
+                  "Preasent"
+                ]
+              },
+              {
+                "cells": [
+                  "Edit /Delete"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.401Z",
+        "line": 44,
+        "name": "Verify Edit icon in the data table",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-edit-icon-in-the-data-table",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 45,
+            "name": "Edit Icon in each row of data table only  when entries are available",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.423Z",
+        "line": 47,
+        "name": "Verify Edit icon when no data in the table",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-edit-icon-when-no-data-in-the-table",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 48,
+            "name": "Edit Icon will not be present in data table",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.444Z",
+        "line": 50,
+        "name": "Verify delete icon in the data table",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-delete-icon-in-the-data-table",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 51,
+            "name": "Delete Icon in each row of data table only  when entries are available",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.462Z",
+        "line": 53,
+        "name": "Verify delete icon when no data in the table",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-delete-icon-when-no-data-in-the-table",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 54,
+            "name": "Admin cant see delete  Icon in data table",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.481Z",
+        "line": 56,
+        "name": "Verify sort icon in the data table",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-sort-icon-in-the-data-table",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 57,
+            "name": "Admin should see sort icon near the column headers except for Edit and Delete",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.500Z",
+        "line": 60,
+        "name": "Verify check box in the data table",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-check-box-in-the-data-table",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 61,
+            "name": "Admin should see check box in the all rows  of data table",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.518Z",
+        "line": 63,
+        "name": "Validate the number entries displaying",
+        "description": "",
+        "id": "manage-attendance-page-verification;validate-the-number-entries-displaying",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 64,
+            "name": "Above the footer Admin should see the text as \"Showing x to y of z entries\" below the table.",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.538Z",
+        "line": 70,
+        "name": "Verify Pagination control below the data table",
+        "description": "",
+        "id": "manage-attendance-page-verification;verify-pagination-control-below-the-data-table",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 71,
+            "name": "Admin should see the pagination controls under the data table",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.560Z",
+        "line": 73,
+        "name": "Validate footer  text",
+        "description": "",
+        "id": "manage-attendance-page-verification;validate-footer--text",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 74,
+            "name": "Admin should see the text with total number classes in the data table. ( \" In total there are number of classes\")",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Manage Attendance Page verification",
+    "description": "",
+    "id": "manage-attendance-page-verification",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Attendance_Module/09Attendance_01Manage.feature",
+    "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.583Z",
+        "line": 11,
+        "name": "Verify all label text",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-all-label-text",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "Admin should see correct spellings in the label for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.618Z",
+        "line": 14,
+        "name": "Verify dropdown box is present",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-dropdown-box-is-present",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Four dropdown should be present for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.655Z",
+        "line": 17,
+        "name": "Verify close button in attendance details popup window",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-close-button-in-attendance-details-popup-window",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "Admin should see  close button on the attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.683Z",
+        "line": 20,
+        "name": "Verify the alignment of the close button",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-the-alignment-of-the-close-button",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "Close button should on the top right corner for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.705Z",
+        "line": 23,
+        "name": "Verify the text on first dropdown select a program name",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-the-text-on-first-dropdown-select-a-program-name",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 24,
+            "name": "First dropdown box \"select a program name\" text  should be present for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.728Z",
+        "line": 26,
+        "name": "Verify the text on second dropdown select class  name",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-the-text-on-second-dropdown-select-class--name",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 27,
+            "name": "Second dropdown box \"select class name\" text  should be present for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.753Z",
+        "line": 29,
+        "name": "Verify the text on third dropdown select students",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-the-text-on-third-dropdown-select-students",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 30,
+            "name": "Third dropdown box \"select students\" text  should be present for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.776Z",
+        "line": 32,
+        "name": "Verify the text on fourth dropdown select attendance",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-the-text-on-fourth-dropdown-select-attendance",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 33,
+            "name": "Fourth dropdown box \"select attendance\" text  should be present for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.797Z",
+        "line": 35,
+        "name": "Verify all the text inside the dropdown box is gray color  for Attendance Module",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-all-the-text-inside-the-dropdown-box-is-gray-color--for-attendance-module",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 36,
+            "name": "Admin  should text in gray color for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.826Z",
+        "line": 38,
+        "name": "Verify save button is present",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-save-button-is-present",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 39,
+            "name": "Admin should see  save button in the class detail popup window for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.851Z",
+        "line": 41,
+        "name": "Verify cancel button is present",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-cancel-button-is-present",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 42,
+            "name": "Admin should see  cancel button in the class detail popup window for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.881Z",
+        "line": 44,
+        "name": "Verify order of the label in attendance details page",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-order-of-the-label-in-attendance-details-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 45,
+            "name": "Order of the label should be Program name, Class Name, Student Name, Attendance, Attendance Date.",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.908Z",
+        "line": 47,
+        "name": "Validate all program name is reflecting in the dropdown",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;validate-all-program-name-is-reflecting-in-the-dropdown",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 48,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 49,
+            "name": "Admin clicks  program name dropdown for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 50,
+            "name": "Program Name in the drop down  for Attendance Module should match with  program name in  manage program page table",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.940Z",
+        "line": 52,
+        "name": "Validate all class name  is reflecting in the dropdown",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;validate-all-class-name--is-reflecting-in-the-dropdown",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 53,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 54,
+            "name": "Admin clicks class name dropdown for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 55,
+            "name": "Class Name in the drop down should match with  class name in  manage class page table",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:43.982Z",
+        "line": 57,
+        "name": "Validate attendance field dropdown all mandatory keywords",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;validate-attendance-field-dropdown-all-mandatory-keywords",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 58,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 59,
+            "name": "Admin clicks attendance dropdown for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 60,
+            "name": "Attendance field should have keywords such as - present, absent, late, excused",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.014Z",
+        "line": 62,
+        "name": "Verify spellings in the attendance field drop down",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-spellings-in-the-attendance-field-drop-down",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 63,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 64,
+            "name": "Admin clicks attendance dropdown for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 65,
+            "name": "Admin should see correct spellings in dropdown text for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.045Z",
+        "line": 67,
+        "name": "Validate date picker",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;validate-date-picker",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 68,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 69,
+            "name": "Admin clicks date from date picker for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 70,
+            "name": "selected date should be their in class date text box for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.077Z",
+        "line": 72,
+        "name": "validate date picker should be correct format",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;validate-date-picker-should-be-correct-format",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 73,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 74,
+            "name": "Admin clicks date from date picker for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 75,
+            "name": "selected date should be in  mm/dd/yyyy format for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.113Z",
+        "line": 77,
+        "name": "Validate right arrow in data picker to navigate to next month",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;validate-right-arrow-in-data-picker-to-navigate-to-next-month",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 78,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 79,
+            "name": "Admin clicks right arrow in the date picker near month for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 80,
+            "name": "Next month calender should visible for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.145Z",
+        "line": 82,
+        "name": "Validate left arrow in data picker to navigate to previous month",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;validate-left-arrow-in-data-picker-to-navigate-to-previous-month",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 83,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 84,
+            "name": "Admin clicks left arrow in the date picker near month for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 85,
+            "name": "previous month calender should visible for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.178Z",
+        "line": 87,
+        "name": "Validate current date is highlighted in the date picker",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;validate-current-date-is-highlighted-in-the-date-picker",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 88,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 89,
+            "name": "Admin clicks date picker button for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 90,
+            "name": "Admin should see current date is highled in the date picker for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.210Z",
+        "line": 92,
+        "name": "Validate selected date is highlighted in the date picker",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;validate-selected-date-is-highlighted-in-the-date-picker",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 93,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 94,
+            "name": "Admin clicks date picker button and selects future date for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 95,
+            "name": "Admin should see selected date is highled in the date picker for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Attendance details popup window  verification",
+    "description": "",
+    "id": "attendance-details-popup-window--verification",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Attendance_Module/09Attendance_02Details.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.241Z",
+        "line": 10,
+        "name": "Validate admin able to create new attendance data",
+        "description": "",
+        "id": "add-new-attendance;validate-admin-able-to-create-new-attendance-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "Admin fills all the values and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "Admin should see success message in popup window and sees new attendance details in manage attendance details DB",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.276Z",
+        "line": 20,
+        "name": "Validate admin able to create new attendance data without Fields",
+        "description": "",
+        "id": "add-new-attendance;validate-admin-able-to-create-new-attendance-data-without-fields;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Admin fills values missing \"Program name\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "Message displays \"Program name\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.312Z",
+        "line": 21,
+        "name": "Validate admin able to create new attendance data without Fields",
+        "description": "",
+        "id": "add-new-attendance;validate-admin-able-to-create-new-attendance-data-without-fields;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Admin fills values missing \"class name\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "Message displays \"class name\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.337Z",
+        "line": 22,
+        "name": "Validate admin able to create new attendance data without Fields",
+        "description": "",
+        "id": "add-new-attendance;validate-admin-able-to-create-new-attendance-data-without-fields;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Admin fills values missing \"student name\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "Message displays \"student name\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.365Z",
+        "line": 23,
+        "name": "Validate admin able to create new attendance data without Fields",
+        "description": "",
+        "id": "add-new-attendance;validate-admin-able-to-create-new-attendance-data-without-fields;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Admin fills values missing \"Attendance\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "Message displays \"Attendance\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.390Z",
+        "line": 24,
+        "name": "Validate admin able to create new attendance data without Fields",
+        "description": "",
+        "id": "add-new-attendance;validate-admin-able-to-create-new-attendance-data-without-fields;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Admin fills values missing \"Attendance date\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "Message displays \"Attendance date\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks + a new attendance button",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.412Z",
+        "line": 27,
+        "name": "Validate admin able to create new attendance by selecting future date",
+        "description": "",
+        "id": "add-new-attendance;validate-admin-able-to-create-new-attendance-by-selecting-future-date",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 28,
+            "name": "Admin fills values with future date  and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 29,
+            "name": "Invalidate attendance date",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Add new Attendance",
+    "description": "",
+    "id": "add-new-attendance",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Attendance_Module/09Attendance_03Add.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks edit icon button on Attendence Manage page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.431Z",
+        "line": 10,
+        "name": "Validate admin able to edit  attendance data",
+        "description": "",
+        "id": "edit-attendance;validate-admin-able-to-edit--attendance-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "Admin fills all the values and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "Admin should see success message in popup window and sees new attendance details in manage attendance details DB",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks edit icon button on Attendence Manage page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.459Z",
+        "line": 19,
+        "name": "Validate admin able to edit attendance data without Fields",
+        "description": "",
+        "id": "edit-attendance;validate-admin-able-to-edit-attendance-data-without-fields;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Admin fills values missing \"Program name\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Message displays \"Program name\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks edit icon button on Attendence Manage page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.487Z",
+        "line": 20,
+        "name": "Validate admin able to edit attendance data without Fields",
+        "description": "",
+        "id": "edit-attendance;validate-admin-able-to-edit-attendance-data-without-fields;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Admin fills values missing \"class name\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Message displays \"class name\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks edit icon button on Attendence Manage page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.512Z",
+        "line": 21,
+        "name": "Validate admin able to edit attendance data without Fields",
+        "description": "",
+        "id": "edit-attendance;validate-admin-able-to-edit-attendance-data-without-fields;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Admin fills values missing \"student name\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Message displays \"student name\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks edit icon button on Attendence Manage page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.531Z",
+        "line": 22,
+        "name": "Validate admin able to edit attendance data without Fields",
+        "description": "",
+        "id": "edit-attendance;validate-admin-able-to-edit-attendance-data-without-fields;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Admin fills values missing \"Attendance\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Message displays \"Attendance\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks edit icon button on Attendence Manage page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.556Z",
+        "line": 23,
+        "name": "Validate admin able to edit attendance data without Fields",
+        "description": "",
+        "id": "edit-attendance;validate-admin-able-to-edit-attendance-data-without-fields;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Admin fills values missing \"Attendance date\" and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "Message displays \"Attendance date\" is missing  for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin clicks edit icon button on Attendence Manage page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Admin is in  attendance details popup window",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.579Z",
+        "line": 25,
+        "name": "Validate admin able to  edit attendance by selecting future date",
+        "description": "",
+        "id": "edit-attendance;validate-admin-able-to--edit-attendance-by-selecting-future-date",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 26,
+            "name": "Admin fills values with future date  and click save for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 27,
+            "name": "Invalidate attendance date",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Edit Attendance",
+    "description": "",
+    "id": "edit-attendance",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Attendance_Module/09Attendance_04Edit.feature",
+    "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.602Z",
+        "line": 9,
+        "name": "Verify Delete attendance alert",
+        "description": "",
+        "id": "delete-attendance-validation---single;verify-delete-attendance-alert",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "Admin clicks delete button in data table row level for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "Admin should see alert for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.624Z",
+        "line": 13,
+        "name": "Verify  accept enabled in alert",
+        "description": "",
+        "id": "delete-attendance-validation---single;verify--accept-enabled-in-alert",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "Admin clicks delete button in data table row level for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Alert should have \"yes\" button to accept for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.647Z",
+        "line": 17,
+        "name": "Verify reject enabled in alert",
+        "description": "",
+        "id": "delete-attendance-validation---single;verify-reject-enabled-in-alert",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "Admin clicks delete button in data table row level for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "Alert should have \"No\" button to reject for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.671Z",
+        "line": 21,
+        "name": "Validate accept in alert",
+        "description": "",
+        "id": "delete-attendance-validation---single;validate-accept-in-alert",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 22,
+            "name": "Admin clicks delete button in data table row level for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 23,
+            "name": "Admin should see Delete alert for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 24,
+            "name": "Admin clicks yes button for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 25,
+            "name": "Success message and selected attendance details are deleted from the data table",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.692Z",
+        "line": 27,
+        "name": "Validate reject in alert",
+        "description": "",
+        "id": "delete-attendance-validation---single;validate-reject-in-alert",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 28,
+            "name": "Admin clicks delete button in data table row level for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 29,
+            "name": "Admin should see Delete alert for Attendance module",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 30,
+            "name": "Admin clicks no button for Attendance module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 31,
+            "name": "Redirected attendance page and selected attendance details are not deleted from the data table",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Delete attendance validation - Single",
+    "description": "",
+    "id": "delete-attendance-validation---single",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Attendance_Module/09Attendance_05SingleDelete.feature",
+    "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.709Z",
+        "line": 9,
+        "name": "Verify delete multiple class  button is enabled",
+        "description": "",
+        "id": "delete-multiple-attendance-validation;verify-delete-multiple-class--button-is-enabled",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "Admin clicks single  row level check box in the data table for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "Admin should see delete icon below the header is enabled on Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.731Z",
+        "line": 13,
+        "name": "verify tick mark is visible after clicking on check box for single data",
+        "description": "",
+        "id": "delete-multiple-attendance-validation;verify-tick-mark-is-visible-after-clicking-on-check-box-for-single-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "Admin clicks single  row level check box in the data table for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Admin should see tick mark in check box for Attendance Module",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.749Z",
+        "line": 17,
+        "name": "verify admin able to click multiple check box",
+        "description": "",
+        "id": "delete-multiple-attendance-validation;verify-admin-able-to-click-multiple-check-box",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "Admin clicks multiple row level check box in the data table for Attendance Module",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "Admin should see tick mark in check box of the selected rows",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Delete multiple attendance validation",
+    "description": "",
+    "id": "delete-multiple-attendance-validation",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Attendance_Module/09Attendance_06MultplDelete.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.768Z",
+        "line": 13,
+        "name": "Verify admin is able to navigate from manage attendance to student page",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-admin-is-able-to-navigate-from-manage-attendance-to-student-page;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Admin clicks \"Student\" button in the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.790Z",
+        "line": 14,
+        "name": "Verify admin is able to navigate from manage attendance to student page",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-admin-is-able-to-navigate-from-manage-attendance-to-student-page;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Admin clicks \"Program\" button in the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.804Z",
+        "line": 15,
+        "name": "Verify admin is able to navigate from manage attendance to student page",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-admin-is-able-to-navigate-from-manage-attendance-to-student-page;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Admin clicks \"Batch\" button in the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.818Z",
+        "line": 16,
+        "name": "Verify admin is able to navigate from manage attendance to student page",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-admin-is-able-to-navigate-from-manage-attendance-to-student-page;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Admin clicks \"User\" button in the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.838Z",
+        "line": 17,
+        "name": "Verify admin is able to navigate from manage attendance to student page",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-admin-is-able-to-navigate-from-manage-attendance-to-student-page;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Admin clicks \"Assignment\" button in the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.854Z",
+        "line": 18,
+        "name": "Verify admin is able to navigate from manage attendance to student page",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-admin-is-able-to-navigate-from-manage-attendance-to-student-page;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Admin clicks \"Class\" button in the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal as Admin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks \"Attendance\" on the navigation bar",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "Admin is in manage attendance page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.870Z",
+        "line": 19,
+        "name": "Verify admin is able to navigate from manage attendance to student page",
+        "description": "",
+        "id": "attendance-details-popup-window--verification;verify-admin-is-able-to-navigate-from-manage-attendance-to-student-page;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Admin clicks \"Logout\" button in the navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      }
+    ],
+    "name": "Attendance details popup window  verification",
+    "description": "",
+    "id": "attendance-details-popup-window--verification",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Attendance_Module/09Attendance_08Navigatn.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.885Z",
+        "line": 8,
+        "name": "Validate Manage batch URL",
+        "description": "",
+        "id": "batch-page-validation;validate-manage-batch-url",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Admin should see the \"Manage Batch\" in the URL of manage batch page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateURL"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.920Z",
+        "line": 12,
+        "name": "Validate Manage batch Header",
+        "description": "",
+        "id": "batch-page-validation;validate-manage-batch-header",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "Admin should see the \"Manage Batch\" in the header of manage batch page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateHeader"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.938Z",
+        "line": 16,
+        "name": "Validate pagination on Manage batch",
+        "description": "",
+        "id": "batch-page-validation;validate-pagination-on-manage-batch",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "Admin should see the pagination controls under the data table on manage batch page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validatePaginator"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.953Z",
+        "line": 25,
+        "name": "Validate Manage batch data table Header",
+        "description": "",
+        "id": "batch-page-validation;validate-manage-batch-data-table-header;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "Admin Should see the data table on manage batch",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateTableHeader"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.975Z",
+        "line": 26,
+        "name": "Validate Manage batch data table Header",
+        "description": "",
+        "id": "batch-page-validation;validate-manage-batch-data-table-header;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "Admin Should see the data table on manage batch",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateTableHeader"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:44.991Z",
+        "line": 27,
+        "name": "Validate Manage batch data table Header",
+        "description": "",
+        "id": "batch-page-validation;validate-manage-batch-data-table-header;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "Admin Should see the data table on manage batch",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateTableHeader"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:45.006Z",
+        "line": 28,
+        "name": "Validate Manage batch data table Header",
+        "description": "",
+        "id": "batch-page-validation;validate-manage-batch-data-table-header;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "Admin Should see the data table on manage batch",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateTableHeader"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:45.019Z",
+        "line": 29,
+        "name": "Validate Manage batch data table Header",
+        "description": "",
+        "id": "batch-page-validation;validate-manage-batch-data-table-header;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "Admin Should see the data table on manage batch",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateTableHeader"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Admin is on dashboard page after Login",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-11T04:42:45.036Z",
+        "line": 30,
+        "name": "Validate Manage batch data table Header",
+        "description": "",
+        "id": "batch-page-validation;validate-manage-batch-data-table-header;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "Admin Should see the data table on manage batch",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateTableHeader"
+          }
+        ]
+      }
+    ],
+    "name": "Batch Page Validation",
+    "description": "",
+    "id": "batch-page-validation",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/BatchPageValidation.feature",
+    "tags": []
+  }
+]

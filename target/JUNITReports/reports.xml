@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="79" tests="79" time="2.504">
+    <testcase classname="Manage Attendance Page verification" name="Validate the header of the page" time="0.267">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see the "Manage Attendance" in header.....................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Validate response time from dashboard page to attendance page" time="0.023">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Maximum navigation time in milliseconds, defaults to 30 seconds........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Validate the broken link" time="0.018">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then HTTP response >= 400. Then the link is broken..........................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify LMS title" time="0.021">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see "LMS -Learning management system"  as title...........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify the alignment of the Manage Attendance header" time="0.017">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Manage attendance header should be in left side of the page............undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Validate text in manage attendancepage" time="0.015">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see correct spelling for the all the fields in get all text from the portal page.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify delete icon below the header" time="0.011">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see disabled delete icon below the "Manage Attendance"....undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify search bar on the class page" time="0.015">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see search bar on the attendance page.....................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify add new Attendance button  on Attendance page" time="0.015">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see +Add New Attendance button on the attendance page.....undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify data table on the attendance page" time="0.024">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see data table on the Manage Attendance Page With following column headers..undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify Edit icon in the data table" time="0.014">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Edit Icon in each row of data table only  when entries are available...undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify Edit icon when no data in the table" time="0.013">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Edit Icon will not be present in data table............................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify delete icon in the data table" time="0.01">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Delete Icon in each row of data table only  when entries are available.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify delete icon when no data in the table" time="0.011">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin cant see delete  Icon in data table..............................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify sort icon in the data table" time="0.012">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see sort icon near the column headers except for Edit and Delete.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify check box in the data table" time="0.011">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see check box in the all rows  of data table..............undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Validate the number entries displaying" time="0.012">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Above the footer Admin should see the text as "Showing x to y of z entries" below the table..undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Verify Pagination control below the data table" time="0.011">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see the pagination controls under the data table..........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Manage Attendance Page verification" name="Validate footer  text" time="0.013">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin should see the text with total number classes in the data table. ( " In total there are number of classes").undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify all label text" time="0.026">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin should see correct spellings in the label for Attendance Module..undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify dropdown box is present" time="0.027">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Four dropdown should be present for Attendance Module..................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify close button in attendance details popup window" time="0.019">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin should see  close button on the attendance details popup window..undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify the alignment of the close button" time="0.014">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Close button should on the top right corner for Attendance Module......undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify the text on first dropdown select a program name" time="0.015">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then First dropdown box "select a program name" text  should be present for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify the text on second dropdown select class  name" time="0.016">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Second dropdown box "select class name" text  should be present for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify the text on third dropdown select students" time="0.014">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Third dropdown box "select students" text  should be present for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify the text on fourth dropdown select attendance" time="0.012">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Fourth dropdown box "select attendance" text  should be present for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify all the text inside the dropdown box is gray color  for Attendance Module" time="0.015">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin  should text in gray color for Attendance Module.................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify save button is present" time="0.018">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin should see  save button in the class detail popup window for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify cancel button is present" time="0.015">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin should see  cancel button in the class detail popup window for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify order of the label in attendance details page" time="0.017">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Order of the label should be Program name, Class Name, Student Name, Attendance, Attendance Date..undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Validate all program name is reflecting in the dropdown" time="0.019">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks  program name dropdown for Attendance Module..............undefined
+Then Program Name in the drop down  for Attendance Module should match with  program name in  manage program page table.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Validate all class name  is reflecting in the dropdown" time="0.025">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks class name dropdown for Attendance Module.................undefined
+Then Class Name in the drop down should match with  class name in  manage class page table.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Validate attendance field dropdown all mandatory keywords" time="0.021">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks attendance dropdown for Attendance Module.................undefined
+Then Attendance field should have keywords such as - present, absent, late, excused.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify spellings in the attendance field drop down" time="0.018">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks attendance dropdown for Attendance Module.................undefined
+Then Admin should see correct spellings in dropdown text for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Validate date picker" time="0.02">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks date from date picker for Attendance Module...............undefined
+Then selected date should be their in class date text box for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="validate date picker should be correct format" time="0.023">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks date from date picker for Attendance Module...............undefined
+Then selected date should be in  mm/dd/yyyy format for Attendance Module....undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Validate right arrow in data picker to navigate to next month" time="0.02">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks right arrow in the date picker near month for Attendance Module.undefined
+Then Next month calender should visible for Attendance Module...............undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Validate left arrow in data picker to navigate to previous month" time="0.019">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks left arrow in the date picker near month for Attendance Module.undefined
+Then previous month calender should visible for Attendance Module...........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Validate current date is highlighted in the date picker" time="0.021">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks date picker button for Attendance Module..................undefined
+Then Admin should see current date is highled in the date picker for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Validate selected date is highlighted in the date picker" time="0.02">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Given Admin is in  attendance details popup window..........................undefined
+When Admin clicks date picker button and selects future date for Attendance Module.undefined
+Then Admin should see selected date is highled in the date picker for Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Add new Attendance" name="Validate admin able to create new attendance data" time="0.025">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills all the values and click save for Attendance module........undefined
+Then Admin should see success message in popup window and sees new attendance details in manage attendance details DB.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Add new Attendance" name="Validate admin able to create new attendance data without Fields" time="0.023">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "Program name" and click save for Attendance module.undefined
+Then Message displays "Program name" is missing  for Attendance module......undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Add new Attendance" name="Validate admin able to create new attendance data without Fields 2" time="0.016">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "class name" and click save for Attendance module.undefined
+Then Message displays "class name" is missing  for Attendance module........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Add new Attendance" name="Validate admin able to create new attendance data without Fields 3" time="0.018">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "student name" and click save for Attendance module.undefined
+Then Message displays "student name" is missing  for Attendance module......undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Add new Attendance" name="Validate admin able to create new attendance data without Fields 4" time="0.016">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "Attendance" and click save for Attendance module.undefined
+Then Message displays "Attendance" is missing  for Attendance module........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Add new Attendance" name="Validate admin able to create new attendance data without Fields 5" time="0.013">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "Attendance date" and click save for Attendance module.undefined
+Then Message displays "Attendance date" is missing  for Attendance module...undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Add new Attendance" name="Validate admin able to create new attendance by selecting future date" time="0.01">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks + a new attendance button.................................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values with future date  and click save for Attendance module.undefined
+Then Invalidate attendance date.............................................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Edit Attendance" name="Validate admin able to edit  attendance data" time="0.019">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks edit icon button on Attendence Manage page................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills all the values and click save for Attendance module........undefined
+Then Admin should see success message in popup window and sees new attendance details in manage attendance details DB.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Edit Attendance" name="Validate admin able to edit attendance data without Fields" time="0.019">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks edit icon button on Attendence Manage page................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "Program name" and click save for Attendance module.undefined
+Then Message displays "Program name" is missing  for Attendance module......undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Edit Attendance" name="Validate admin able to edit attendance data without Fields 2" time="0.016">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks edit icon button on Attendence Manage page................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "class name" and click save for Attendance module.undefined
+Then Message displays "class name" is missing  for Attendance module........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Edit Attendance" name="Validate admin able to edit attendance data without Fields 3" time="0.012">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks edit icon button on Attendence Manage page................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "student name" and click save for Attendance module.undefined
+Then Message displays "student name" is missing  for Attendance module......undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Edit Attendance" name="Validate admin able to edit attendance data without Fields 4" time="0.013">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks edit icon button on Attendence Manage page................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "Attendance" and click save for Attendance module.undefined
+Then Message displays "Attendance" is missing  for Attendance module........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Edit Attendance" name="Validate admin able to edit attendance data without Fields 5" time="0.015">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks edit icon button on Attendence Manage page................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values missing "Attendance date" and click save for Attendance module.undefined
+Then Message displays "Attendance date" is missing  for Attendance module...undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Edit Attendance" name="Validate admin able to  edit attendance by selecting future date" time="0.014">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks edit icon button on Attendence Manage page................undefined
+Then Admin is in  attendance details popup window...........................undefined
+When Admin fills values with future date  and click save for Attendance module.undefined
+Then Invalidate attendance date.............................................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Delete attendance validation - Single" name="Verify Delete attendance alert" time="0.014">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks delete button in data table row level for Attendance module.undefined
+Then Admin should see alert for Attendance module...........................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Delete attendance validation - Single" name="Verify  accept enabled in alert" time="0.013">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks delete button in data table row level for Attendance module.undefined
+Then Alert should have "yes" button to accept for Attendance module.........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Delete attendance validation - Single" name="Verify reject enabled in alert" time="0.015">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks delete button in data table row level for Attendance module.undefined
+Then Alert should have "No" button to reject for Attendance module..........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Delete attendance validation - Single" name="Validate accept in alert" time="0.013">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks delete button in data table row level for Attendance module.undefined
+Then Admin should see Delete alert for Attendance module....................undefined
+When Admin clicks yes button for Attendance module..........................undefined
+Then Success message and selected attendance details are deleted from the data table.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Delete attendance validation - Single" name="Validate reject in alert" time="0.011">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks delete button in data table row level for Attendance module.undefined
+Then Admin should see Delete alert for Attendance module....................undefined
+When Admin clicks no button for Attendance module...........................undefined
+Then Redirected attendance page and selected attendance details are not deleted from the data table.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Delete multiple attendance validation" name="Verify delete multiple class  button is enabled" time="0.013">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks single  row level check box in the data table for Attendance Module.undefined
+Then Admin should see delete icon below the header is enabled on Attendance Module.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Delete multiple attendance validation" name="verify tick mark is visible after clicking on check box for single data" time="0.011">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks single  row level check box in the data table for Attendance Module.undefined
+Then Admin should see tick mark in check box for Attendance Module..........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Delete multiple attendance validation" name="verify admin able to click multiple check box" time="0.012">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks multiple row level check box in the data table for Attendance Module.undefined
+Then Admin should see tick mark in check box of the selected rows...........undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify admin is able to navigate from manage attendance to student page" time="0.015">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks "Student" button in the navigation bar....................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify admin is able to navigate from manage attendance to student page 2" time="0.008">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks "Program" button in the navigation bar....................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify admin is able to navigate from manage attendance to student page 3" time="0.008">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks "Batch" button in the navigation bar......................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify admin is able to navigate from manage attendance to student page 4" time="0.012">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks "User" button in the navigation bar.......................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify admin is able to navigate from manage attendance to student page 5" time="0.008">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks "Assignment" button in the navigation bar.................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify admin is able to navigate from manage attendance to student page 6" time="0.01">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks "Class" button in the navigation bar......................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Attendance details popup window  verification" name="Verify admin is able to navigate from manage attendance to student page 7" time="0.009">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks "Attendance" on the navigation bar........................undefined
+Then Admin is in manage attendance page.....................................undefined
+When Admin clicks "Logout" button in the navigation bar.....................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Batch Page Validation" name="Validate Manage batch URL" time="0.025">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks Batch from navigation bar.................................undefined
+Then Admin should see the "Manage Batch" in the URL of manage batch page....undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Batch Page Validation" name="Validate Manage batch Header" time="0.009">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks Batch from navigation bar.................................undefined
+Then Admin should see the "Manage Batch" in the header of manage batch page.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Batch Page Validation" name="Validate pagination on Manage batch" time="0.008">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks Batch from navigation bar.................................undefined
+Then Admin should see the pagination controls under the data table on manage batch page.undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Batch Page Validation" name="Validate Manage batch data table Header" time="0.013">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks Batch from navigation bar.................................undefined
+Then Admin Should see the data table on manage batch........................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Batch Page Validation" name="Validate Manage batch data table Header 2" time="0.009">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks Batch from navigation bar.................................undefined
+Then Admin Should see the data table on manage batch........................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Batch Page Validation" name="Validate Manage batch data table Header 3" time="0.008">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks Batch from navigation bar.................................undefined
+Then Admin Should see the data table on manage batch........................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Batch Page Validation" name="Validate Manage batch data table Header 4" time="0.008">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks Batch from navigation bar.................................undefined
+Then Admin Should see the data table on manage batch........................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Batch Page Validation" name="Validate Manage batch data table Header 5" time="0.01">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks Batch from navigation bar.................................undefined
+Then Admin Should see the data table on manage batch........................undefined
+]]></skipped>
+    </testcase>
+    <testcase classname="Batch Page Validation" name="Validate Manage batch data table Header 6" time="0.008">
+        <skipped><![CDATA[Given Admin is on dashboard page after Login................................undefined
+When Admin clicks Batch from navigation bar.................................undefined
+Then Admin Should see the data table on manage batch........................undefined
+]]></skipped>
+    </testcase>
+</testsuite>
