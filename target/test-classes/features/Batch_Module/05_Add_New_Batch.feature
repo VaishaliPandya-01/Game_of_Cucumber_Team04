@@ -1,3 +1,4 @@
+@AddNewBatch
 Feature: Add New Batch
 
   Background: Logged on the LMS portal

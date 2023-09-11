@@ -9,6 +9,9 @@ import com.controller.Controller;
 
 public class Batch_Add_Obj extends BaseClass{
 
+	//Created object for controller class
+	private	Controller act = new Controller();
+	
 	//Element Object
 	@FindBy (id="batchName") 
 	private WebElement batchName;
@@ -40,17 +43,10 @@ public class Batch_Add_Obj extends BaseClass{
 	@FindBy(xpath="//*[contains(text(),'message')")
 	private WebElement Message;
 
-
-
-	//Created object for controller class
-	private	Controller act = new Controller();
-
-
 	//Constructor
 	public Batch_Add_Obj() {
 		PageFactory.initElements(driver, this);
 	}
-
 
 	//Methods
 

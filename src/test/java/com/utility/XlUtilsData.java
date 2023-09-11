@@ -2,16 +2,18 @@ package com.utility;
 
 import java.util.Map;
 
-public class ReadXlUtils {
+public class XlUtilsData {
 
 	public static String batchName;
 	public static String description;
 	public static String NoOfClass;
 	public static String programName;
+	
+	static Map<String, String> excelDataMap;
 
-	public static Map<String, String> ReadData(String dataKey,String sheetName) throws Exception {
+	public static Map<String, String> batchXLdata(String dataKey,String sheetName) throws Exception {
 
-		Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
+	    excelDataMap = XLUtils.getData(dataKey, sheetName);
 
 		batchName = excelDataMap.get("Name");
 		description = excelDataMap.get("Description");

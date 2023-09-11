@@ -293,4 +293,24 @@ public class Controller extends BaseClass implements ControllerInterface{
 		return driver.getCurrentUrl();
 	}
 
+
+	@Override
+	public String getText(WebElement element) {
+		String textValue = "";
+		try {
+		if(element.isDisplayed()) {
+			textValue=element.getText();
+			System.out.println("Text value:- "+textValue);
+		}
+		else {
+			System.out.println("Element is not visible");
+		}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return textValue;
+	}
+
+
+
 }

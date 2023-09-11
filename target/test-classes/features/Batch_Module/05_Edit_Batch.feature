@@ -1,3 +1,4 @@
+@EditBatch
 Feature: Edit Batch
 
   Background: Logged on the LMS portal

@@ -9,6 +9,8 @@ import com.controller.Controller;
 
 public class Batch_Delete_Obj extends BaseClass{
 
+	//Created object for controller class
+	private	Controller act = new Controller();
 
 	@FindBy (xpath="//button//span[text()=' yes']")
 	private WebElement deleteYes_btn;
@@ -25,13 +27,8 @@ public class Batch_Delete_Obj extends BaseClass{
 	@FindBy (xpath="//button//span[text()=' close']") 
 	private WebElement closeArrow;
 
-
-
-	private Controller act = new Controller();
-
 	//Constructor
 	public Batch_Delete_Obj() {
-
 		PageFactory.initElements(driver, this);
 	}
 

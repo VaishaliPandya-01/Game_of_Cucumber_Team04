@@ -1,3 +1,4 @@
+@DeleteMultipleBatch
 Feature: Delete Multiple Batch
 
   Background: Logged on the LMS portal

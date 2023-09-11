@@ -1,15 +1,16 @@
+@BatchPageValidations
 Feature: Batch Page Validation
 
   Background: Logged on the LMS portal
     Given Admin is on dashboard page after Login
     When Admin clicks Batch from navigation bar
 
-  @validateURL
+  @validateBatchURL
   Scenario: Validate landing in Batch page
     Then Admin should see the "Manage Batch" in the URL of manage batch page
 
-  @validateHeader
-  Scenario: Validate header in the Batch Page
+  @validateBatchTitle
+  Scenario: Validate heading in the Batch Page
     Then Admin should see the "Manage Batch" in the header of manage batch page
 
   @validatePaginator

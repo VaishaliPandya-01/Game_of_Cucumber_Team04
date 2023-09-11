@@ -9,6 +9,8 @@ import com.controller.Controller;
 
 public class Batch_Edit_Obj extends BaseClass{
 
+	//Created object for controller class
+	private	Controller act = new Controller();
 
 	@FindBy (id="batchName") 
 	private WebElement batchName;
@@ -37,13 +39,8 @@ public class Batch_Edit_Obj extends BaseClass{
 	@FindBy (xpath="//button//span[text()=' close']") 
 	private WebElement closeBatchDetails;
 
-
-	private Controller act = new Controller();
-
-
 	//Constructor
 	public Batch_Edit_Obj() {
-
 		PageFactory.initElements(driver, this);
 	}
 

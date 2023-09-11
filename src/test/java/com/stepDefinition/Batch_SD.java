@@ -14,7 +14,7 @@ import com.pageObject.Batch_Delete_Obj;
 import com.pageObject.Batch_Edit_Obj;
 import com.pageObject.Batch_Manage_Obj;
 import com.utility.Log;
-import com.utility.ReadXlUtils;
+import com.utility.XlUtilsData;
 import com.utility.XLUtils;
 
 import io.cucumber.datatable.DataTable;
@@ -37,36 +37,33 @@ public class Batch_SD extends BaseClass{
 	@When("Admin clicks Batch from navigation bar")
 	public void admin_clicks_Batch_from_navigation_bar() {
 	}
-	
-	/*****
-	Validate Manage Batch
-	 ******/
-	
+
+	@When("Admin clicks Program from navigation bar")
+	public void admin_clicks_Program_from_navigation_bar() {
+	}
+
+
+	/**
+	 * Validate Manage Batch
+	 *
+	 */
+
 	//Validate Manage Batch URL
 	@Then("Admin should see the {string} in the URL of manage batch page")
-	public void admin_should_see_the_in_the_URL_of_manage_batch_page(String pageURL) {
-Actions action = new Actions(driver);
-		
-		driver.switchTo().frame("callout");		
-		WebElement alert = driver.findElement(By.xpath("//button[contains(text(),'Stay signed out')]"));
-		alert.click();
-		driver.switchTo().defaultContent();
-		WebElement searchBox = driver.findElement(By.id("APjFqb"));
-		searchBox.sendKeys("selenium");
-		action.click(searchBox).build().perform();
-		searchBox.submit();
-			String URL=batchManager.getManageBatchURL();
-			Assert.assertTrue(URL.contains(pageURL));
-			Log.logInfo("Validate Manage Batch URL"+URL);
+	public void admin_should_see_the_in_the_URL_of_manage_batch_page(String expectedPageURL) {
+
+		String actualURL=batchManager.getManageBatchURL();
+		Assert.assertTrue(actualURL.contains(expectedPageURL));
+		Log.logInfo("Validate Manage Batch URL"+actualURL);
 	}
 
 	//Validate Manage Batch Title
 	@Then("Admin should see the {string} in the header of manage batch page")
-	public void admin_should_see_the_in_the_header_of_manage_batch_page(String pageTitle) {
+	public void admin_should_see_the_in_the_header_of_manage_batch_page(String expectedPageTitle) {
 
-		String title=batchManager.getManageBatchTitle();
-		Assert.assertEquals(pageTitle, title);
-		Log.logInfo("Validate Manage Batch Title"+title);
+		String actualTitle=batchManager.getManageBatchTitle();
+		Assert.assertEquals(expectedPageTitle, actualTitle);
+		Log.logInfo("Validate Manage Batch Title"+actualTitle);
 	}
 
 	//Validate Pagination
@@ -138,16 +135,17 @@ Actions action = new Actions(driver);
 
 	//Validate new pop up with batch details
 	@Then("A new pop up with {string} appears")
-	public void a_new_pop_up_with_appears(String pageTitle) {
+	public void a_new_pop_up_with_appears(String expectedPageTitle) {
 
-		String title=addBatch.getBatchDetailsTitle();
-		Assert.assertEquals(pageTitle, title);
-		Log.logInfo("Validate Batch details Title"+title);
+		String actualTitle=addBatch.getBatchDetailsTitle();
+		Assert.assertEquals(expectedPageTitle, actualTitle);
+		Log.logInfo("Validate Batch details Title"+actualTitle);
 	}
 
-	/*****
-	Add New Batch Details Form
-	 ******/
+	/**
+	 * Add New Batch Details Form
+	 *
+	 */
 
 	//Validate batch details fields
 	@Then("The pop up should include fields like Name Number of classes Description Status and Program Name")
@@ -160,6 +158,7 @@ Actions action = new Actions(driver);
 	//Fill Batch Detail without Description
 	@When("Click on save after filling all the fields except description with valid values on batch details {string} and {string}")
 	public void click_on_save_after_filling_all_the_fields_except_description_with_valid_values_on_batch_details_and(String dataKey, String sheetName) throws Exception {
+
 		//		Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
 		//		
 		//		String batchName = excelDataMap.get("Name");
@@ -167,21 +166,18 @@ Actions action = new Actions(driver);
 		//		String NoOfClass = excelDataMap.get("Number Of Classes");
 		//		String programName = excelDataMap.get("Program Name");
 
-		ReadXlUtils.ReadData(dataKey, sheetName);
-
-		String batchName = ReadXlUtils.batchName;
-		String description = ReadXlUtils.description;
-		String NoOfClass = ReadXlUtils.NoOfClass;
-		String programName = ReadXlUtils.programName;
+		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
-				addBatch.fillBatchDetailForm(batchName, description, NoOfClass, programName, batchManager);
+				addBatch.fillBatchDetailForm
+				(XlUtilsData.batchName, XlUtilsData.description,
+						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+batchName+ 
-				"Description:- " +description+ 
-				"No Of Classe:- " +NoOfClass+ 
-				"Program Name:- " +programName);
+				"BatchName:-"+XlUtilsData.batchName+ 
+				"Description:- " +XlUtilsData.description+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
+				"Program Name:- " +XlUtilsData.programName);
 	}
 
 
@@ -195,21 +191,18 @@ Actions action = new Actions(driver);
 		//			String NoOfClass = excelDataMap.get("Number Of Classes");
 		//			String programName = excelDataMap.get("Program Name");
 
-		ReadXlUtils.ReadData(dataKey, sheetName);
-
-		String batchName = ReadXlUtils.batchName;
-		String description = ReadXlUtils.description;
-		String NoOfClass = ReadXlUtils.NoOfClass;
-		String programName = ReadXlUtils.programName;
+		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
-				addBatch.fillBatchDetailForm(batchName, description, NoOfClass, programName, batchManager);
+				addBatch.fillBatchDetailForm
+				(XlUtilsData.batchName, XlUtilsData.description,
+						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+batchName+ 
-				"Description:- " +description+ 
-				"No Of Classe:- " +NoOfClass+ 
-				"Program Name:- " +programName);
+				"BatchName:-"+XlUtilsData.batchName+ 
+				"Description:- " +XlUtilsData.description+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
+				"Program Name:- " +XlUtilsData.programName);
 	}
 
 
@@ -219,10 +212,10 @@ Actions action = new Actions(driver);
 
 
 		String actualTableData = batchManager.getTableValue();
-		Assert.assertTrue(actualTableData.contains(ReadXlUtils.batchName));
-		Assert.assertTrue(actualTableData.contains(ReadXlUtils.description));
-		Assert.assertTrue(actualTableData.contains(ReadXlUtils.NoOfClass));
-		Assert.assertTrue(actualTableData.contains(ReadXlUtils.programName));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.batchName));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.description));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.NoOfClass));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.programName));
 		String title=batchManager.getManageBatchTitle();
 		Log.logInfo("Validate Manage Batch Title"+title);
 		Log.logInfo("Validate Manage Batch Data");
@@ -239,21 +232,18 @@ Actions action = new Actions(driver);
 		//			String NoOfClass = excelDataMap.get("Number Of Classes");
 		//			String programName = excelDataMap.get("Program Name");
 
-		ReadXlUtils.ReadData(dataKey, sheetName);
-
-		String batchName = ReadXlUtils.batchName;
-		String description = ReadXlUtils.description;
-		String NoOfClass = ReadXlUtils.NoOfClass;
-		String programName = ReadXlUtils.programName;
+		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
-				addBatch.fillBatchDetailForm(batchName, description, NoOfClass, programName, batchManager);
+				addBatch.fillBatchDetailForm
+				(XlUtilsData.batchName, XlUtilsData.description,
+						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+batchName+ 
-				"Description:- " +description+ 
-				"No Of Classe:- " +NoOfClass+ 
-				"Program Name:- " +programName);
+				"BatchName:-"+XlUtilsData.batchName+ 
+				"Description:- " +XlUtilsData.description+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
+				"Program Name:- " +XlUtilsData.programName);
 	}
 
 
@@ -267,21 +257,18 @@ Actions action = new Actions(driver);
 		//			String NoOfClass = excelDataMap.get("Number Of Classes");
 		//			String programName = excelDataMap.get("Program Name");
 
-		ReadXlUtils.ReadData(dataKey, sheetName);
-
-		String batchName = ReadXlUtils.batchName;
-		String description = ReadXlUtils.description;
-		String NoOfClass = ReadXlUtils.NoOfClass;
-		String programName = ReadXlUtils.programName;
+		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
-				addBatch.fillBatchDetailForm(batchName, description, NoOfClass, programName, batchManager);
+				addBatch.fillBatchDetailForm
+				(XlUtilsData.batchName, XlUtilsData.description,
+						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+batchName+ 
-				"Description:- " +description+ 
-				"No Of Classe:- " +NoOfClass+ 
-				"Program Name:- " +programName);
+				"BatchName:-"+XlUtilsData.batchName+ 
+				"Description:- " +XlUtilsData.description+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
+				"Program Name:- " +XlUtilsData.programName);
 	}
 
 
@@ -293,9 +280,10 @@ Actions action = new Actions(driver);
 
 	}
 
-	/*****
-	Delete Batch at row level
-	 ******/
+	/**
+	 * Delete Batch at row level
+	 *
+	 */
 
 	//Click on delete Icon	
 	@Then("Admin clicks on the delete icon on batch page if it is enabled")
@@ -315,6 +303,7 @@ Actions action = new Actions(driver);
 	//Click Yes to Delete
 	@When("Admin click yes option to delete batch")
 	public void admin_click_yes_option_to_delete_batch() {
+
 		deleteBatch.deleteYesBtn();
 		Log.logInfo("Clicked yes to delete");
 	}
@@ -340,9 +329,10 @@ Actions action = new Actions(driver);
 		Log.logInfo("Batch is not deleted");
 	}
 
-	/*****
-	Delete Multiple Batch
-	 ******/
+	/**
+	 * Delete Multiple Batch
+	 *
+	 */
 
 	//None of the checkBox are selected
 	@Given("None of the checkboxes in data table of batch are selected")
@@ -386,9 +376,10 @@ Actions action = new Actions(driver);
 		Log.logInfo("Checkbox is selected");
 	}
 
-	/*****
-	Edit Batch
-	 ******/
+	/**
+	 * Edit Batch
+	 *
+	 */
 
 	//Validate and click Edit Icon
 	@Then("Admin clicks on the Edit icon on batch page if it is enabled")
@@ -399,10 +390,10 @@ Actions action = new Actions(driver);
 
 	//Validate batch detail pop up
 	@Then("A new pop up with {string} appears to edit")
-	public void a_new_pop_up_with_appears_to_edit(String pageTitle) {
-		String title = editBatch.getBatchDetailsTitle();
-		Assert.assertEquals(pageTitle, title);
-		Log.logInfo("Validate Batch details Title"+title);
+	public void a_new_pop_up_with_appears_to_edit(String expectedPageTitle) {
+		String actualTitle = editBatch.getBatchDetailsTitle();
+		Assert.assertEquals(expectedPageTitle, actualTitle);
+		Log.logInfo("Validate Batch details Title"+actualTitle);
 
 	}
 
@@ -417,21 +408,18 @@ Actions action = new Actions(driver);
 		//		String NoOfClass = excelDataMap.get("Number Of Classes");
 		//		String programName = excelDataMap.get("Program Name");
 
-		ReadXlUtils.ReadData(dataKey, sheetName);
-
-		String batchName = ReadXlUtils.batchName;
-		String description = ReadXlUtils.description;
-		String NoOfClass = ReadXlUtils.NoOfClass;
-		String programName = ReadXlUtils.programName;
+		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
-				addBatch.fillBatchDetailForm(batchName, description, NoOfClass, programName, batchManager);
+				addBatch.fillBatchDetailForm
+				(XlUtilsData.batchName, XlUtilsData.description,
+						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+batchName+ 
-				"Description:- " +description+ 
-				"No Of Classe:- " +NoOfClass+ 
-				"Program Name:- " +programName);
+				"BatchName:-"+XlUtilsData.batchName+ 
+				"Description:- " +XlUtilsData.description+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
+				"Program Name:- " +XlUtilsData.programName);
 	}
 
 	//Update Batch Detail with Invalid value
@@ -444,21 +432,18 @@ Actions action = new Actions(driver);
 		//			String NoOfClass = excelDataMap.get("Number Of Classes");
 		//			String programName = excelDataMap.get("Program Name");
 
-		ReadXlUtils.ReadData(dataKey, sheetName);
-
-		String batchName = ReadXlUtils.batchName;
-		String description = ReadXlUtils.description;
-		String NoOfClass = ReadXlUtils.NoOfClass;
-		String programName = ReadXlUtils.programName;
+		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
-				addBatch.fillBatchDetailForm(batchName, description, NoOfClass, programName, batchManager);
+				addBatch.fillBatchDetailForm
+				(XlUtilsData.batchName, XlUtilsData.description,
+						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+batchName+ 
-				"Description:- " +description+ 
-				"No Of Classe:- " +NoOfClass+ 
-				"Program Name:- " +programName);
+				"BatchName:-"+XlUtilsData.batchName+ 
+				"Description:- " +XlUtilsData.description+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
+				"Program Name:- " +XlUtilsData.programName);
 	}
 
 	//Update with Missing Mandatory Fields
@@ -471,67 +456,54 @@ Actions action = new Actions(driver);
 		//			String NoOfClass = excelDataMap.get("Number Of Classes");
 		//			String programName = excelDataMap.get("Program Name");
 
-		ReadXlUtils.ReadData(dataKey, sheetName);
-
-		String batchName = ReadXlUtils.batchName;
-		String description = ReadXlUtils.description;
-		String NoOfClass = ReadXlUtils.NoOfClass;
-		String programName = ReadXlUtils.programName;
+		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
-				addBatch.fillBatchDetailForm(batchName, description, NoOfClass, programName, batchManager);
+				addBatch.fillBatchDetailForm
+				(XlUtilsData.batchName, XlUtilsData.description,
+						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+batchName+ 
-				"Description:- " +description+ 
-				"No Of Classe:- " +NoOfClass+ 
-				"Program Name:- " +programName);
+				"BatchName:-"+XlUtilsData.batchName+ 
+				"Description:- " +XlUtilsData.description+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
+				"Program Name:- " +XlUtilsData.programName);
 	}
-	
+
 	//Fill Batch Detail without Description
-		@When("Erase data from description field of batch {string} and {string}")
-		public void Erase_data_from_description_field_of_batch(String dataKey, String sheetName) throws Exception {
-			//		Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
-			//		
-			//		String batchName = excelDataMap.get("Name");
-			//		String description = excelDataMap.get("Description");
-			//		String NoOfClass = excelDataMap.get("Number Of Classes");
-			//		String programName = excelDataMap.get("Program Name");
+	@When("Erase data from description field of batch {string} and {string}")
+	public void Erase_data_from_description_field_of_batch(String dataKey, String sheetName) throws Exception {
+		//		Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
+		//		
+		//		String batchName = excelDataMap.get("Name");
+		//		String description = excelDataMap.get("Description");
+		//		String NoOfClass = excelDataMap.get("Number Of Classes");
+		//		String programName = excelDataMap.get("Program Name");
 
-			ReadXlUtils.ReadData(dataKey, sheetName);
+		XlUtilsData.batchXLdata(dataKey, sheetName);
 
-			String batchName = ReadXlUtils.batchName;
-			String description = ReadXlUtils.description;
-			String NoOfClass = ReadXlUtils.NoOfClass;
-			String programName = ReadXlUtils.programName;
+		batchManager = 
+				addBatch.fillBatchDetailForm
+				(XlUtilsData.batchName, XlUtilsData.description,
+						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
 
-			batchManager = 
-					addBatch.fillBatchDetailForm(batchName, description, NoOfClass, programName, batchManager);
-
-			Log.logInfo("Batch details added:-" +
-					"BatchName:-"+batchName+ 
-					"Description:- " +description+ 
-					"No Of Classe:- " +NoOfClass+ 
-					"Program Name:- " +programName);
-		}
+		Log.logInfo("Batch details added:-" +
+				"BatchName:-"+XlUtilsData.batchName+ 
+				"Description:- " +XlUtilsData.description+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
+				"Program Name:- " +XlUtilsData.programName);
+	}
 
 	//Validate Updated batch details
 	@Then("The updated batch details should appear on the data table")
 	public void the_updated_batch_details_should_appear_on_the_data_table() {
 		String actualTableData = batchManager.getTableValue();
-		Assert.assertTrue(actualTableData.contains(ReadXlUtils.batchName));
-		Assert.assertTrue(actualTableData.contains(ReadXlUtils.description));
-		Assert.assertTrue(actualTableData.contains(ReadXlUtils.NoOfClass));
-		Assert.assertTrue(actualTableData.contains(ReadXlUtils.programName));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.batchName));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.description));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.NoOfClass));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.programName));
 		String title=batchManager.getManageBatchTitle();
 		Log.logInfo("Validate Manage Batch Title"+title);
 		Log.logInfo("Validate Manage Batch Data");
 	}
-
-
-
-
-
-
-
 }

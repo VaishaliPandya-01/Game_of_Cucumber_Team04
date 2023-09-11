@@ -17,7 +17,7 @@ public class BaseClass {
 	public static String browserName = readconfig.getbrowser();
 
 	public static void Initialization() {
-		if(driver==null) {
+		
 			if(browserName.equalsIgnoreCase("chrome")) {
 				driver=new ChromeDriver();
 			}
@@ -29,18 +29,14 @@ public class BaseClass {
 			else if (browserName.equalsIgnoreCase("edge")) {
 				driver=new EdgeDriver();
 			}
-		}
-
 		driver.get(baseURL);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 	}
 
 
 	public static void teardown() {
-		if (driver != null) {
 			driver.close();
-		}
 	}
 }
