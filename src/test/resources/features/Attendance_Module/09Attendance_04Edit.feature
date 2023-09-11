@@ -1,4 +1,4 @@
-Feature: Add new Attendance 
+Feature: Edit Attendance 
 
 Background: Logged on the LMS portal as Admin
   	Given Admin is on dashboard page after Login
@@ -8,12 +8,12 @@ Background: Logged on the LMS portal as Admin
 		Then Admin is in  attendance details popup window
 	
 	Scenario: Validate admin able to edit  attendance data
-		When Admin fills all the values and click save for Attendance page
+		When  Admin fills all the values and click save for Attendance module
 		Then Admin should see success message in popup window and sees new attendance details in manage attendance details DB
 
 	Scenario Outline: Validate admin able to edit attendance data without Fields
-		When Admin fills values missing "<options>" and click save
-		Then Message displays "<options>" is missing 
+		When Admin fills values missing "<options>" and click save for Attendance module
+		Then Message displays "<options>" is missing  for Attendance module 
 			Examples: 
 		| options |
 		| Program name |
@@ -23,6 +23,6 @@ Background: Logged on the LMS portal as Admin
 		| Attendance date |
 
 	Scenario: Validate admin able to  edit attendance by selecting future date
-		When Admin fills values with future date  and click save  for Attendance page
+	  When Admin fills values with future date  and click save for Attendance module 
 		Then Invalidate attendance date
 	

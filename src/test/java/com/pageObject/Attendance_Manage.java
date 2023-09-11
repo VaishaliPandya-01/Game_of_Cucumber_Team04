@@ -1,6 +1,6 @@
 package com.pageObject;
 
-import java.net.MalformedURLException;
+
 import java.util.List;
 import java.net.URL;
 import java.net.HttpURLConnection;
@@ -11,9 +11,7 @@ import org.openqa.selenium.Point;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 import com.utility.Readconfig;
-
-import junit.framework.Assert;
-
+import java.net.MalformedURLException;
 public class Attendance_Manage extends BaseClass {
 	
 	@FindBy (id="id_searchtxt") private WebElement attendnc_searchbox;
@@ -27,6 +25,10 @@ public class Attendance_Manage extends BaseClass {
 	@FindBy (xpath="//*[@class='ManageAttendanceHeader") private WebElement manageAttHeader;
 	@FindBy (xpath="//*[@class='Nav_Attendance") private WebElement AttendanceButon_header;
 	@FindBy (xpath="//div[@class='Attendance']/p[9]") private WebElement attendnc_Button_Nav;
+	@FindBy (xpath="//a[text()='Student Id']") private WebElement att_studID;
+	@FindBy (xpath="//a[text()='class Id']") private WebElement att_classID;
+	@FindBy (xpath="//a[text()='Preasent']") private WebElement att_PreasentValue;
+	
 	
 	static Readconfig rc = new Readconfig();
 	Controller cn = new Controller();
@@ -78,8 +80,8 @@ public class Attendance_Manage extends BaseClass {
 	public void DataTableDataValidation() {	
 		//attendnc_datatable_data
 	}
-	public boolean alignmentManageHeader() {
-		Boolean flag;
+	public String alignmentManageHeader() {
+		/*Boolean flag;
 		Point point = manageAttHeader.getLocation();
 		int xcord = point.getX();
 		int eleWidth = manageAttHeader.getSize().getWidth();
@@ -90,8 +92,11 @@ public class Attendance_Manage extends BaseClass {
 		}else {
 			System.out.println("Manage attendance header is not in left side of the page");
 			flag = false;
-		}
-		return flag;
+		}*/
+		
+		String alignmentposition = manageAttHeader.getAttribute("align");
+		return alignmentposition;
+		
 	}
 	
 	public  void verifyBrokenLink() {
@@ -119,5 +124,35 @@ public class Attendance_Manage extends BaseClass {
 	public void CheckSpelling() {
 		
 	}
+	public boolean checkDeleteiconDisabled() {
+		return cn.isEnabled(driver, attendnc_MultiplDelete);
+	}
+	public boolean searchBarVisibility() {
+		return cn.isDisplayed(driver, attendnc_searchbox);
+	}
+	public boolean CheckaddNewSymbolDisplayed() {
+		return cn.isDisplayed(driver, attendnc_addNew);
+	}
+		    
+	public boolean commonCheckboxSymbolDisplayed() {
+		return cn.isDisplayed(driver, attendnc_addNew);
+	}
+	public boolean CheckStudentIDDisplayed() {
+		return cn.isDisplayed(driver, att_studID);
+	}
+	public boolean CheckClassIDDisplayed() {
+		return cn.isDisplayed(driver, att_classID);
+	}
+	public boolean CheckPreasentDisplayed() {
+		return cn.isDisplayed(driver, att_PreasentValue);
+	}
+	
+	public boolean CheckEditTextDisplayed() {
+		return cn.isDisplayed(driver, attendnc_addNew);
+	}
+	public boolean CheckDeleteTextDisplayed() {
+		return cn.isDisplayed(driver, attendnc_addNew);
+	}
+	
 	
 }

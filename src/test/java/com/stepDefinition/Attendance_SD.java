@@ -4,12 +4,21 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import com.baseClass.BaseClass;
+
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Assert;
 import com.pageObject.Attendance_Manage;
+import com.pageObject.Attendance_Details;
+import com.pageObject.Attendance_Delete;
+import com.pageObject.Attendance_Ref;
 
 public class Attendance_SD extends BaseClass{
 	
 	private Attendance_Manage att_manager = new Attendance_Manage();
+	private Attendance_Details att_details = new Attendance_Details();
+	private Attendance_Delete att_delete = new Attendance_Delete();
+	private Attendance_Ref att_Ref = new Attendance_Ref();
 	
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
@@ -51,8 +60,8 @@ public class Attendance_SD extends BaseClass{
 	//Verify the alignment of the Manage Attendance header
 	@Then("Manage attendance header should be in left side of the page")
 	public void manage_attendance_header_should_be_in_left_side_of_the_page() {
-	    Boolean flag = att_manager.alignmentManageHeader();
-	    Assert.assertTrue(flag);
+	   
+	    Assert.assertEquals("Left",att_manager.alignmentManageHeader());
 	    
 	}
 
@@ -65,25 +74,30 @@ public class Attendance_SD extends BaseClass{
 
 	@Then("Admin should see disabled delete icon below the {string}")
 	public void admin_should_see_disabled_delete_icon_below_the(String string) {
-	    
+	    Assert.assertFalse(att_manager.checkDeleteiconDisabled());
 	    
 	}
 
 	@Then("Admin should see search bar on the attendance page")
 	public void admin_should_see_search_bar_on_the_attendance_page() {
-	    
+	    Assert.assertTrue(att_manager.searchBarVisibility());
 	    
 	}
 
 	@Then("Admin should see +Add New Attendance button on the attendance page")
 	public void admin_should_see_Add_New_Attendance_button_on_the_attendance_page() {
 	    
-	    
+	    Assert.assertTrue(att_manager.CheckaddNewSymbolDisplayed());
 	}
 
 	@Then("Admin should see data table on the Manage Attendance Page With following column headers.")
 	public void admin_should_see_data_table_on_the_Manage_Attendance_Page_With_following_column_headers_Check_box_symbol_Class_ID_Student_Id_Preasent_Edit_Delete() {
-	    
+	    Assert.assertTrue(att_manager.commonCheckboxSymbolDisplayed());
+	    Assert.assertTrue(att_manager.CheckStudentIDDisplayed());
+	    Assert.assertTrue(att_manager.CheckClassIDDisplayed());
+	    Assert.assertTrue(att_manager.CheckPreasentDisplayed());
+	    Assert.assertTrue(att_manager.CheckEditTextDisplayed());
+	    Assert.assertTrue(att_manager.CheckDeleteTextDisplayed());
 	    
 	}
 
@@ -226,6 +240,240 @@ public class Attendance_SD extends BaseClass{
 	    
 	    
 	}
+	@When("Admin clicks  program name dropdown for Attendance Module")
+	public void admin_clicks_program_name_dropdown_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Program Name in the drop down  for Attendance Module should match with  program name in  manage program page table")
+	public void program_Name_in_the_drop_down_for_Attendance_Module_should_match_with_program_name_in_manage_program_page_table() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks class name dropdown for Attendance Module")
+	public void admin_clicks_class_name_dropdown_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Class Name in the drop down should match with  class name in  manage class page table")
+	public void class_Name_in_the_drop_down_should_match_with_class_name_in_manage_class_page_table() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks attendance dropdown for Attendance Module")
+	public void admin_clicks_attendance_dropdown_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Attendance field should have keywords such as - present, absent, late, excused")
+	public void attendance_field_should_have_keywords_such_as_present_absent_late_excused() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+	@Then("Admin should see correct spellings in dropdown text for Attendance Module")
+	public void admin_should_see_correct_spellings_in_dropdown_text_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	@Then("selected date should be their in class date text box for Attendance Module")
+	public void selected_date_should_be_their_in_class_date_text_box_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks date from date picker for Attendance Module")
+	public void admin_clicks_date_from_date_picker_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("selected date should be in  mm\\/dd\\/yyyy format for Attendance Module")
+	public void selected_date_should_be_in_mm_dd_yyyy_format_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks right arrow in the date picker near month for Attendance Module")
+	public void admin_clicks_right_arrow_in_the_date_picker_near_month_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Next month calender should visible for Attendance Module")
+	public void next_month_calender_should_visible_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks left arrow in the date picker near month for Attendance Module")
+	public void admin_clicks_left_arrow_in_the_date_picker_near_month_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("previous month calender should visible for Attendance Module")
+	public void previous_month_calender_should_visible_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks date picker button for Attendance Module")
+	public void admin_clicks_date_picker_button_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see current date is highled in the date picker for Attendance Module")
+	public void admin_should_see_current_date_is_highled_in_the_date_picker_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks date picker button and selects future date for Attendance Module")
+	public void admin_clicks_date_picker_button_and_selects_future_date_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see selected date is highled in the date picker for Attendance Module")
+	public void admin_should_see_selected_date_is_highled_in_the_date_picker_for_Attendance_Module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+////////////******************** Add New Attendance Page ************//////////////////////
+	
+	
+	@Then("Admin is in  attendance details popup window")
+	public void admin_is_in_attendance_details_popup_window() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin fills all the values and click save for Attendance module")
+	public void admin_fills_all_the_values_and_click_save_for_Attendance_module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see success message in popup window and sees new attendance details in manage attendance details DB")
+	public void admin_should_see_success_message_in_popup_window_and_sees_new_attendance_details_in_manage_attendance_details_DB() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	@When("Admin fills values missing {string} and click save for Attendance module")
+	public void admin_fills_values_missing_and_click_save_for_Attendance_module(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Message displays {string} is missing  for Attendance module")
+	public void message_displays_is_missing_for_Attendance_module(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	@When("Admin fills values with future date  and click save for Attendance module")
+	public void admin_fills_values_with_future_date_and_click_save_for_Attendance_module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Invalidate attendance date")
+	public void invalidate_attendance_date() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	//////////////************ Edit Attendance***************//////////////////////////
+	
+	
+	@When("Admin clicks edit icon button on Attendence Manage page")
+	public void admin_clicks_edit_icon_button_on_Attendence_Manage_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+	
+	
+/////////////********************* Single Delete Attendance ********///////////////////////////
+	
+	
+	@When("Admin clicks delete button in data table row level for Attendance module")
+	public void admin_clicks_delete_button_in_data_table_row_level_for_Attendance_module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Admin should see alert for Attendance module")
+	public void admin_should_see_alert_for_Attendance_module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	@Then("Alert should have {string} button to accept for Attendance module")
+	public void alert_should_have_button_to_accept_for_Attendance_module(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	@Then("Alert should have {string} button to reject for Attendance module")
+	public void alert_should_have_button_to_reject_for_Attendance_module(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	@Then("Admin should see Delete alert for Attendance module")
+	public void admin_should_see_Delete_alert_for_Attendance_module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("Admin clicks yes button for Attendance module")
+	public void admin_clicks_yes_button_for_Attendance_module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Success message and selected attendance details are deleted from the data table")
+	public void success_message_and_selected_attendance_details_are_deleted_from_the_data_table() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	@When("Admin clicks no button for Attendance module")
+	public void admin_clicks_no_button_for_Attendance_module() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Redirected attendance page and selected attendance details are not deleted from the data table")
+	public void redirected_attendance_page_and_selected_attendance_details_are_not_deleted_from_the_data_table() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
 
 
 
