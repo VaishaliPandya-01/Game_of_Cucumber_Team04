@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 
-public class BatchDelete extends BaseClass{
+public class Batch_Delete_Obj extends BaseClass{
 
 
 	@FindBy (xpath="//button//span[text()=' yes']")
@@ -15,49 +15,55 @@ public class BatchDelete extends BaseClass{
 
 	@FindBy (xpath="//button//span[text()=' No']")
 	private WebElement deleteNo_btn;
-	
+
 	@FindBy(xpath="//*[contains(text(),'Are you sure')") 
 	private WebElement deleteMessage;
-	
+
 	@FindBy(xpath="//*[contains(text(),'Success')") 
 	private WebElement successMessag;
-	
+
 	@FindBy (xpath="//button//span[text()=' close']") 
 	private WebElement closeArrow;
-	
-	
 
-	Controller act = new Controller();
+
+
+	private Controller act = new Controller();
 
 	//Constructor
-	public BatchDelete() {
+	public Batch_Delete_Obj() {
 
 		PageFactory.initElements(driver, this);
 	}
 
 	//methods
-	public BatchManage deleteYesBtn() {
+	public Batch_Manage_Obj deleteYesBtn() {
 
-		act.click(driver, deleteYes_btn);		
-		return new BatchManage();
+		act.click(driver, deleteYes_btn);
+		act.switchToDefaultFrame(driver);
+		return new Batch_Manage_Obj();
 	}
 
-	public BatchManage deleteNoBtn() {
+	public Batch_Manage_Obj deleteNoBtn() {
 
 		act.click(driver, deleteNo_btn);
-		return new BatchManage();
+		act.switchToDefaultFrame(driver);
+		return new Batch_Manage_Obj();
 	}
-	
+
 	public void closeArrow() {
 
 		act.click(driver, closeArrow);
 	}
-	
+
+	public boolean alertBoxIsDisplayed() {
+		return act.switchToFrameByName(driver, "alert");
+	}
+
 	public String successMessage() {
 		String successMessag=this.successMessag.getText();
 		return successMessag;
 	}
-	
+
 	public String deleteMessage() {
 		String deleteMessage=this.deleteMessage.getText();
 		return deleteMessage;

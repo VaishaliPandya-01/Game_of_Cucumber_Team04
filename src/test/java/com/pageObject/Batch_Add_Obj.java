@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 
-public class BatchAdd extends BaseClass{
+public class Batch_Add_Obj extends BaseClass{
 
-
+	//Element Object
 	@FindBy (id="batchName") 
 	private WebElement batchName;
 
@@ -36,69 +36,83 @@ public class BatchAdd extends BaseClass{
 
 	@FindBy (xpath="//button//span[text()=' close']") 
 	private WebElement closeBatchDetails;
+	
+	@FindBy(xpath="//*[contains(text(),'message')")
+	private WebElement Message;
 
 
 
-
-	Controller act = new Controller();
+	//Created object for controller class
+	private	Controller act = new Controller();
 
 
 	//Constructor
-	public BatchAdd() {
-
+	public Batch_Add_Obj() {
 		PageFactory.initElements(driver, this);
 	}
 
-	//Methods
-	public void batchName(String text) {
 
+	//Methods
+
+	public boolean validateFieldsOnForm() {
+		act.isDisplayed(driver, batchName);
+		act.isDisplayed(driver, batchDescription);
+		act.isDisplayed(driver, numOfClasses);
+		act.isDisplayed(driver, activeRadio_btn);
+		act.isDisplayed(driver, inActiveRadio_btn);
+		act.isDisplayed(driver, programNmDropDwn);
+		return true;
+	}
+
+	public Batch_Manage_Obj fillBatchDetailForm(String name,String desc,String noOfClasses,String programNm,Batch_Manage_Obj batchManageObj) {
+		act.type(batchName, name);
+		act.type(batchDescription, desc);
+		act.type(numOfClasses, noOfClasses);
+		act.click(driver, activeRadio_btn);
+		act.selectByVisibleText(programNm,programNmDropDwn);
+		act.click(driver, save_btn);
+		batchManageObj =  new Batch_Manage_Obj();
+		return batchManageObj;
+	}
+
+	public void batchName(String text) {
 		act.type(batchName, text);
 	}
 
-
 	public void batchDescription(String text) {
-
 		act.type(batchDescription, text);
 	}
 
-
 	public void numOfClasses(String text) {
-
 		act.type(numOfClasses, text);
 	}
 
-
 	public void activeRadio_btn() {
-
 		act.click(driver, activeRadio_btn);
 	}
 
-
 	public void inActiveRadio_btn() {
-
 		act.click(driver, inActiveRadio_btn);
 	}
 
-
 	public void cancel_btn() {
-
 		act.click(driver, cancel_btn);
 	}
 
-
-	public void save_btn() {
-
-		act.click(driver, save_btn);
-	}
-
-
 	public void programNmDropDwn(int num) {
-
 		act.selectByIndex(programNmDropDwn, num);
 	}
 
 	public void closeBatchDetails() {
-
 		act.click(driver, closeBatchDetails);;
+	}
+
+	public String getBatchDetailsTitle() {
+		String pageTitle=act.getTitle(driver);
+		return pageTitle;
+	}
+	
+	public String errorMessage() {
+		return Message.getText();
 	}
 }
