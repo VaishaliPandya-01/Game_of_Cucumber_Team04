@@ -78,8 +78,8 @@ Background: Logged on the LMS portal as Admin
 
  		Given Admin clicks date from date picker for Attendance Module
  		Then selected date should be in  mm/dd/yyyy format for Attendance Module
- 		| date |
- 		|10/12/2023 |
+ 		| date | format |
+ 		|10/12/2023 |mm/dd/yyyy |
  	 			 
  	 Scenario: Validate right arrow in data picker to navigate to next month
 

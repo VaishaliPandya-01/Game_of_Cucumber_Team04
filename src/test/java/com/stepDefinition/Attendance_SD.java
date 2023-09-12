@@ -27,13 +27,13 @@ public class Attendance_SD extends BaseClass{
 	private Attendance_Delete att_delete = new Attendance_Delete();
 	
 	//Validate the dashboard page 
-	@Given("Admin is on dashboard page after Login")
+	/*@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
 		
 		System.out.println("First Given");	
 		Log.logInfo("Admin on DashboardPage");
 	}
-	
+	*/
 	//Validate the Attendance on Navigation
 	@When("Admin clicks Attendance on the navigation bar")
 	public void admin_clicks_on_the_navigation_bar(String string) {
@@ -89,7 +89,7 @@ public class Attendance_SD extends BaseClass{
 	@Then("Admin should see correct spelling for the all the fields in get all text from the portal page")
 	public void admin_should_see_correct_spelling_for_the_all_the_fields() {
 	    
-	    
+		att_manager.spellCheckFunction();
 	}
 	
 	//Validate the Delete icon when No data in table
@@ -404,6 +404,7 @@ public class Attendance_SD extends BaseClass{
 		for (int i = 0; i < 4; i++) {
 		    System.out.println(dropList.get(i).getText());  
 		    Assert.assertEquals(expectedlist[i], dropList.get(i).getText());
+		    Log.logInfo("Verified spelling "+dropList.get(i).getText()+" Keyword ");
 		}
 	    
 	}
@@ -411,70 +412,82 @@ public class Attendance_SD extends BaseClass{
 	//Validate date picker is clickable
 	@Given("Admin clicks date from date picker for Attendance Module")
 	public void admin_clicks_date_from_date_picker_for_Attendance_Module() {
-	    att_details.clickAttndncDate();
-	    
+	   
+		att_details.ClickDateInDateBox();
+	    Log.logInfo("Verified Date picker ");
 	}
 	
 	//validate selected date is visible
 	@Then("selected date should be their in class date text box for Attendance Module")
 	public void selected_date_should_be_their_in_class_date_text_box_for_Attendance_Module() {
 	    att_details.setAttndncDate("11/05/1989");
-	    
+	    Log.logInfo("Verified selected Date  ");
 	}
 
 	//validate format of date
 	@Then("selected date should be in  mm\\/dd\\/yyyy format for Attendance Module")
-	public void selected_date_should_be_in_mm_dd_yyyy_format_for_Attendance_Module(String date) {
+	public void selected_date_should_be_in_mm_dd_yyyy_format_for_Attendance_Module(String date, String format) {
 	    
-	    
+		Assert.assertTrue(att_details.isValidDateFormat(date,format));
+		Log.logInfo("Verified Date Format ");
 	}
 
+	//Right arrow near month in the date picker
 	@Given("Admin clicks right arrow in the date picker near month for Attendance Module")
 	public void admin_clicks_right_arrow_in_the_date_picker_near_month_for_Attendance_Module() {
-	    
-	    
+		att_details.RightArrowClick();
+		Log.logInfo("Right arrow verified");
 	}
 
+	//Verify next month is visible
 	@Then("Next month calender should visible for Attendance Module")
 	public void next_month_calender_should_visible_for_Attendance_Module() {
 	    
-	    
+		Assert.assertTrue(att_details.IsNextMonthVisible());
+		Log.logInfo("Verified next month is visible ");
 	}
 
+	//Verify left arrow 
 	@Given("Admin clicks left arrow in the date picker near month for Attendance Module")
 	public void admin_clicks_left_arrow_in_the_date_picker_near_month_for_Attendance_Module() {
-	    
+		att_details.LeftArrowClick();
+		Log.logInfo("Left arrow verified");
 	    
 	}
 
+	//Verify previous month is visible
 	@Then("previous month calender should visible for Attendance Module")
 	public void previous_month_calender_should_visible_for_Attendance_Module() {
-	    
+		Assert.assertTrue(att_details.IsPrevMonthVisible());
+		Log.logInfo("Verified next month is visible ");
 	    
 	}
 
 	@Given("Admin clicks date picker button for Attendance Module")
 	public void admin_clicks_date_picker_button_for_Attendance_Module() {
-	    
+		att_details.clickAttndncDate();
+	    Log.logInfo("Verified Date picker ");
 	    
 	}
 
 	@Then("Admin should see current date is highled in the date picker for Attendance Module")
 	public void admin_should_see_current_date_is_highled_in_the_date_picker_for_Attendance_Module() {
 	    
+		Assert.assertTrue(att_details.VisibilityInDateBox());
 	    
 	}
 
 	@Given("Admin clicks date picker button and selects future date for Attendance Module")
 	public void admin_clicks_date_picker_button_and_selects_future_date_for_Attendance_Module() {
-	    
+		
+		
 	    
 	}
 
 	@Then("Admin should see selected date is highled in the date picker for Attendance Module")
 	public void admin_should_see_selected_date_is_highled_in_the_date_picker_for_Attendance_Module() {
 	    
-	    
+		Assert.assertTrue(att_details.VisibilityInDateBox());
 	}
 
 
@@ -676,46 +689,42 @@ public class Attendance_SD extends BaseClass{
 	
 	
 	
-	@Given("Admin is on dashboard page after Login")
-	public void admin_is_on_dashboard_page_after_login() {
-	    
-	    
-	}
 
-	@When("Admin clicks Attendance on the navigation bar")
-	public void admin_clicks_attendance_on_the_navigation_bar() {
-	    
-	    
-	}
 
 	@Then("Data table should display {int} page  when entries available for Attendance")
 	public void data_table_should_display_page_when_entries_available_for_attendance(Integer int1) {
-	    
+		
+		int pageCount = att_details.CountPagesOnDataTable();
+		Log.logInfo("Number of Pages is data table - "+pageCount);
 	    
 	}
 
 	@Then("Right arrow should be enabled in page one  when entries are more than {int} available for Attendance")
-	public void right_arrow_should_be_enabled_in_page_one_when_entries_are_more_than_available_for_attendance(Integer int1) {
+	public void right_arrow_should_be_enabled_in_page_one_when_entries_are_more_than_available_for_attendance(Integer pagecount) {
 	    
-	    
+		att_details.RightarrowVisiblity_pageOne(pagecount);
+		Log.logInfo("Validated right Arrow for Page counts");
 	}
 
 	@Then("Left arrow should be disabled in page one  when entries are more than {int} available for Attendance")
-	public void left_arrow_should_be_disabled_in_page_one_when_entries_are_more_than_available_for_attendance(Integer int1) {
+	public void left_arrow_should_be_disabled_in_page_one_when_entries_are_more_than_available_for_attendance(Integer pagecount) {
 	    
-	    
+	    Assert.assertFalse(att_details.LeftarrowVisiblity_pageOne(pagecount));
+	    Log.logInfo("Validated that Left arrow is disabled");
 	}
 
 	@Then("Right arrow should be enabled in page two when entries are more than {int} available for Attendance")
-	public void right_arrow_should_be_enabled_in_page_two_when_entries_are_more_than_available_for_attendance(Integer int1) {
+	public void right_arrow_should_be_enabled_in_page_two_when_entries_are_more_than_available_for_attendance(Integer pagecount) {
 	    
-	    
+		Assert.assertTrue(att_details.RightarrowVisiblity_pageTwo(pagecount));
+		Log.logInfo("Validated right Arrow for Page count 2");
 	}
 
 	@Then("Left arrow should be enabled in page two for Attendance")
 	public void left_arrow_should_be_enabled_in_page_two_for_attendance() {
 	    
-	    
+		Assert.assertTrue(att_details.LeftarrowVisiblity_pageTwo());
+		Log.logInfo("Validated right Arrow for Page count 2");
 	}
 
 

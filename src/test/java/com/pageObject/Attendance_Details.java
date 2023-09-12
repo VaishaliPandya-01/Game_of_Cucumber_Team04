@@ -1,9 +1,9 @@
 package com.pageObject;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 import java.util.Locale;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
@@ -11,11 +11,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import com.pageObject.Attendance_Manage;
 import com.utility.Log;
-
-import io.cucumber.java.it.Date;
-
+import java.util.Date;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
+import java.text.SimpleDateFormat;
 
 public class Attendance_Details extends BaseClass {
 	
@@ -25,11 +24,19 @@ public class Attendance_Details extends BaseClass {
 	@FindBy(xpath="//div[@class='dropdown-menu studName']") private WebElement att_studName;
 	@FindBy(xpath="//div[@class='dropdown-menu attendance']")private WebElement att_attendance;
 	@FindBy(xpath="//span[@aria-controls='datetimepicker_dateview']")
-			private WebElement att_selectDate;
+			private WebElement dateBox;
 	@FindBy(xpath="//*[@id='cancel']") private  WebElement att_cancel;
 	@FindBy(xpath="//*[@id='save']") private  WebElement att_save;
 	@FindBy(xpath="//*[@id='closeButton']") private  WebElement att_closeBtn;
-	@FindBy(xpath="//*[@id='outputmessage']")  WebElement message;
+	@FindBy(xpath="//*[@id='outputmessage']") private WebElement message;
+	@FindBy(xpath="//input[@class='rightbutton']") private WebElement rightarrow_month;
+	@FindBy(xpath="//input[@class='leftbutton']") private WebElement leftarrow_month;
+	@FindBy(xpath="//div/select[@class='ui− datepicker−month']") private WebElement datepicker_month;
+	@FindBy(xpath="//td[(@class,'ui−datepicker− month-day'))]/a[text()='day']") private WebElement datepicker_day;
+	@FindBy(xpath="//*[@id='example_next']") private  WebElement nextBtn_dataTable;
+	@FindBy(xpath="//input[@class='page_left']") private WebElement page_left;
+	@FindBy(xpath="//input[@class='page_right']") private WebElement page_right;
+
 	
 	public Attendance_Details() {
 		PageFactory.initElements(driver,this);
@@ -54,10 +61,10 @@ public class Attendance_Details extends BaseClass {
 	}
 	public void setAttndncDate(String AttendanceDate) {
 		
-		cn.selectByValue(att_selectDate, AttendanceDate);
+		cn.type(dateBox, AttendanceDate);
 	}
 	public void clickAttndncDate() {
-		cn.click(driver, att_selectDate);
+		cn.click(driver, dateBox);
 	}
 	public String getTextPgmName() {
 		return att_pgmName.getText();	
@@ -72,7 +79,7 @@ public class Attendance_Details extends BaseClass {
 		return att_attendance.getText();	
 	}
 	public String getTextAttendncDate() {
-		return att_selectDate.getText();	
+		return dateBox.getText();	
 	}
 	public boolean validateFieldsOnForm() {
 		cn.isDisplayed(driver, att_pgmName);
@@ -98,6 +105,7 @@ public class Attendance_Details extends BaseClass {
 		Select x= new Select(att_className);
 		x.selectByIndex(0);
 		WebElement first = x.getFirstSelectedOption();
+		att_className.getText();
 		String selectedoption = first.getText();
 		return selectedoption;
 	}
@@ -159,7 +167,7 @@ public class Attendance_Details extends BaseClass {
 		cn.selectByVisibleText(ClassName,att_className);
 		cn.selectByVisibleText(StudName,att_studName);
 		cn.selectByVisibleText(attendance,att_attendance);
-		cn.selectByVisibleText(attendance,att_selectDate);
+		cn.type(dateBox, AttendDate);
 		cn.click(driver, att_save);
 		att_manager =  new Attendance_Manage();
 		return att_manager;
@@ -175,10 +183,90 @@ public class Attendance_Details extends BaseClass {
 			Log.logInfo("Attendance date given is  future Date");
 		}
 	}
-	public void CheckDateFormat(String inputdate) {
+	public  boolean isValidDateFormat(String datevalue, String format) {
+        Date date = null;
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat(format);
+            date = sdf.parse(datevalue);
+            if (!datevalue.equals(sdf.format(date))) {
+                date = null;
+            }
+        } catch (Exception ex) {
+		      ex.printStackTrace();
+        }
+        return date != null;
+    }
+	public void LeftArrowClick() {
+		cn.click(driver, leftarrow_month);
+	}
+	public void RightArrowClick() {
+		cn.click(driver, rightarrow_month);
+	}
+	public boolean IsNextMonthVisible() {
+		return cn.isEnabled(driver, leftarrow_month);
+	}
+	public boolean IsPrevMonthVisible() {
+		return cn.isEnabled(driver, rightarrow_month);
+	}
+	public void ClickDateInDateBox() {
+		 Select s = new Select(datepicker_month); // choose month from dropdown
+	      s.selectByVisibleText("Jan");
+	      cn.click(driver, datepicker_day);
+	}
+	public boolean VisibilityInDateBox() {
+		LocalDate currentdate = LocalDate.now();
+		int currentDay = currentdate.getDayOfMonth();
+		Month currentMonth = currentdate.getMonth();
+		 Select s = new Select(datepicker_month); // choose month from dropdown
+	      s.selectByVisibleText("Jan");
+	      cn.click(driver, datepicker_day);
+	     return  cn.isDisplayed(driver, datepicker_day);
+	}
+	public int CountPagesOnDataTable() {
+		//String nextButtonClass = nextBtn_dataTable.getAttribute("class");
+		int i =1;
+		while (!cn.isEnabled(driver, nextBtn_dataTable)) {
+			cn.click(driver, nextBtn_dataTable);
+			i = i+1;
+		}
+		return i;
+	}
+	
+	public void RightarrowVisiblity_pageOne(int pagecount) {
 		
-        SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
-        Date date = format.parse(inputdate);
-        System.out.println(date);
+		for (int i =0;i<=pagecount;i++) {
+			cn.isDisplayed(driver, page_right);
+			cn.click(driver, page_right);
+		}	
+	}
+	public boolean LeftarrowVisiblity_pageOne(int pagecount) {		
+		int firstpage =1;
+		boolean flag= true;
+		if(firstpage<pagecount) {
+			 flag = cn.isEnabled(driver, page_left);
+		}
+		return flag;
+	}
+	public boolean RightarrowVisiblity_pageTwo(int pagecount) {
+		int pageNo = 2;
+		boolean flag= false;
+		if(pageNo<pagecount) {
+			flag = cn.isEnabled(driver, page_right);
+		}
+		return flag;
+	}
+	public boolean LeftarrowVisiblity_pageTwo() {
+		int start = 1;
+		int pagecount =2;
+		boolean flag= false;
+		if(pagecount>start) {
+			flag = cn.isEnabled(driver, page_left);
+		}
+		return flag;
 	}
 }
+
+
+
+
+

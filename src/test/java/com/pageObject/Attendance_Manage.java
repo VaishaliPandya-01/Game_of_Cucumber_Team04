@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.junit.Assert;
 import org.openqa.selenium.Point;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
@@ -207,6 +208,13 @@ public class Attendance_Manage extends BaseClass {
 	}
 	public boolean validatePagination() {
 		return cn.isDisplayed(driver, pagination);
+	}
+	public void spellCheckFunction() {
+		Assert.assertEquals(manageAttHeader.getText(),"Manage Attendance");
+		Assert.assertEquals(att_classID.getText(),"Class ID");
+		Assert.assertEquals(att_studID.getText(),"Student ID");
+		Assert.assertEquals(att_PreasentValue.getText(),"Present");
+		
 	}
 	
 }

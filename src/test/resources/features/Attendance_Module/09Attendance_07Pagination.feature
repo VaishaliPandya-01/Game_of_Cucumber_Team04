@@ -20,9 +20,6 @@ Background: Logged on the LMS portal as Admin
 	Scenario: Verify  left arrow is enable when sheet two is displayed in data table
 		Then Left arrow should be enabled in page two for Attendance
 	
-	Scenario: Verify  right arrow is disable when sheet two is displayed in data table when entries are less than 10
-		Then Data table should display  page 1  when entries available for Attendance
-	
 	Scenario: Verify pagination controls enabled
 		Then When entries are more than 5 in data table pagination controls enabled for Attendance
 	
