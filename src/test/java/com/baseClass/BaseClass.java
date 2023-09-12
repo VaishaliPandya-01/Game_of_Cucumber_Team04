@@ -11,35 +11,32 @@ import com.utility.Readconfig;
 
 public class BaseClass {
 
-	Readconfig readconfig=new Readconfig();
-	public String baseURL=readconfig.getApplicationURL();
-	public WebDriver driver;
-	public String browserName = readconfig.getbrowser();
+	static Readconfig readconfig=new Readconfig();
+	public static String baseURL=readconfig.getApplicationURL();
+	public static WebDriver driver;
+	public static String browserName = readconfig.getbrowser();
 
+	public static void Initialization() {
+		
+			if(browserName.equalsIgnoreCase("chrome")) {
+				driver=new ChromeDriver();
+			}
 
-	public void Initialization() {
+			else if(browserName.equalsIgnoreCase("firefox")) {
+				driver=new FirefoxDriver();
+			}
 
-		if(browserName.equalsIgnoreCase("chrome")) {
-			driver=new ChromeDriver();
-		}
-
-		else if(browserName.equalsIgnoreCase("firefox")) {
-			driver=new FirefoxDriver();
-		}
-
-		else if (browserName.equalsIgnoreCase("edge")) {
-			driver=new EdgeDriver();
-		}
-
+			else if (browserName.equalsIgnoreCase("edge")) {
+				driver=new EdgeDriver();
+			}
 		driver.get(baseURL);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 	}
 
 
-	public void teardown() {
-		driver.close();
-		driver.quit();
+	public static void teardown() {
+			driver.close();
 	}
 }

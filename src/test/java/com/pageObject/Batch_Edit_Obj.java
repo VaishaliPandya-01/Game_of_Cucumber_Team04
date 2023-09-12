@@ -7,8 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 
-public class BatchEdit extends BaseClass{
+public class Batch_Edit_Obj extends BaseClass{
 
+	//Created object for controller class
+	private	Controller act = new Controller();
 
 	@FindBy (id="batchName") 
 	private WebElement batchName;
@@ -37,13 +39,8 @@ public class BatchEdit extends BaseClass{
 	@FindBy (xpath="//button//span[text()=' close']") 
 	private WebElement closeBatchDetails;
 
-
-	Controller act = new Controller();
-
-
 	//Constructor
-	public BatchEdit() {
-
+	public Batch_Edit_Obj() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -98,5 +95,10 @@ public class BatchEdit extends BaseClass{
 	public void closeBatchDetails() {
 
 		act.click(driver, closeBatchDetails);;
+	}
+	
+	public String getBatchDetailsTitle() {
+		String pageTitle=act.getTitle(driver);
+		return pageTitle;
 	}
 }

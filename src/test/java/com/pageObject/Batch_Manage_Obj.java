@@ -10,8 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 
-public class BatchManage extends BaseClass{
+public class Batch_Manage_Obj extends BaseClass{
 
+	//Created object for controller class
+	Controller act = new Controller();
+
+	//Element Object
 	@FindBy (xpath="//button//span[text()=' Delete']") 
 	private WebElement deleteMutipleBatch_btn;
 
@@ -32,52 +36,72 @@ public class BatchManage extends BaseClass{
 
 	@FindBy (xpath="//*[@span/select-multiple-checkbox']")
 	private WebElement singleCheckBoxBatch;
-	
+
 	@FindBy (className = "pagination") 
 	private WebElement pagination;
-	
+
 	@FindBy (xpath="//*[@span/tableHeader']")
 	private List<WebElement> listOfTableHeader;
 
-	//Created object for controller class
-	Controller act = new Controller();
+	@FindBy (id="tableId")
+	private List<WebElement> table;
+
+	@FindBy (tagName=("td")) 
+	private List<WebElement> cells;
+
+	@FindBy (tagName=("tr")) 
+	private List<WebElement> Row;
 
 
 	//Constructor
-	public BatchManage() {
-
+	public Batch_Manage_Obj() {
 		PageFactory.initElements(driver, this);
 	}
 
 
-
 	//Methods
 	public void searchBox(String text) {
-
 		act.type(search_txt, text);
 	}
 
 	public void deleteMutipleBatchBtn() {
-
 		act.click(driver, deleteMutipleBatch_btn);
 	}
 
-	public void addNewBatchBtn() {
+	public boolean VisibledeleteBatchBtn() {
+		if(!act.isEnabled(driver, deleteMutipleBatch_btn)) {
+			return true;
+		}
+		return false;
+	}
 
+	public void addNewBatchBtn() {
 		act.click(driver, addNewBatch_btn);
 	}
 
-	public void editBatchBtn() {
+	public boolean addNewBatchBtnVisible() {
+		return act.isDisplayed(driver, addNewBatch_btn);
+	}
 
+	public void editBatchBtn() {
+		if(act.isEnabled(driver, editBatch_btn))
 		act.click(driver, editBatch_btn);
 	}
 
+	public void VisibleEditBatchBtn() {
+		act.isEnabled(driver, editBatch_btn);
+	}
+
 	public void deleteSingleBatchBtn() {
+		if(act.isEnabled(driver, deleteSingleBatch_btn))
 		act.click(driver, deleteSingleBatch_btn);
 	}
 
-	public void SelectMultiCheckBoxBatch() {
+	public void displayDeleteBtn() {
+		act.isEnabled(driver, deleteSingleBatch_btn);
+	}
 
+	public void SelectMultiCheckBoxBatch() {
 		for ( WebElement checkBox : multiCheckBoxBatch ) {
 			if ( !act.isSelected(driver, checkBox) ) {
 				act.click(driver, checkBox);
@@ -85,30 +109,34 @@ public class BatchManage extends BaseClass{
 		}
 	}
 
-	public void SelectSingleCheckBoxBatch() {
+	public boolean VisibleCheckBox() {
+		for ( WebElement checkBox : multiCheckBoxBatch ) {
+			if ( act.isDisplayed(driver, checkBox) ) {
+				return true;
+			}
+		}
+		return false;
+	}
 
+	public void SelectSingleCheckBoxBatch() {
 		act.click(driver, singleCheckBoxBatch);
 	}
 
 	public String getManageBatchTitle() {
-
 		String pageTitle=act.getTitle(driver);
 		return pageTitle;
 	}
-		
-	public String getManageBatchURL() {
 
+	public String getManageBatchURL() {
 		String URL=act.getCurrentURL(driver);
 		return URL;
 	}
-		
-	public boolean validatePagination() {
 
+	public boolean validatePagination() {
 		return act.isDisplayed(driver, pagination);
 	}
-	
-	public List<String> getTableHeaderList() {
 
+	public List<String> getTableHeaderList() {
 		List<String> tableHeader = new ArrayList<>();		
 		for(WebElement list : listOfTableHeader) {
 			String headerList =list.getText();
@@ -116,6 +144,15 @@ public class BatchManage extends BaseClass{
 		}
 		return tableHeader;
 	}
-	
-	
+
+	public String getTableValue() {
+
+		for (WebElement row : Row) {
+			for (WebElement cell : cells) {
+				String cellText = cell.getText();
+				return cellText;
+			}
+		}
+		return null;
+	}
 }
