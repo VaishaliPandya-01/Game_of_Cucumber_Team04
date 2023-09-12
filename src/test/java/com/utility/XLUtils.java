@@ -17,6 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class XLUtils {
 
+	Readconfig readconfig=new Readconfig();
 	public static FileInputStream fi;
 	public FileOutputStream fo;
 	public static XSSFWorkbook workbook;
@@ -24,12 +25,12 @@ public class XLUtils {
 	public XSSFRow row;
 	public static XSSFCell cell;
 	public CellStyle style;   
-	static String path;
+	static String path ;
 	public File jsonFile;
 	
 	 public XLUtils(String path)
 	{
-		this.path=path;
+		this.path=readconfig.getXlpath();
 	}
 	 	
 	//data driven through feature file

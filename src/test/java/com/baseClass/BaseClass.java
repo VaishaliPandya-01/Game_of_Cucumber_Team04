@@ -11,25 +11,24 @@ import com.utility.Readconfig;
 
 public class BaseClass {
 
-	Readconfig readconfig=new Readconfig();
-
-	public String baseURL=readconfig.getApplicationURL();
+	static Readconfig readconfig=new Readconfig();
+	public static String baseURL=readconfig.getApplicationURL();
 	public static WebDriver driver;
-	public String browserName = readconfig.getbrowser();
+	public static String browserName = readconfig.getbrowser();
 
+	public static void Initialization() {
+		if(driver==null) {
+			if(browserName.equalsIgnoreCase("chrome")) {
+				driver=new ChromeDriver();
+			}
 
-	public void Initialization() {
+			else if(browserName.equalsIgnoreCase("firefox")) {
+				driver=new FirefoxDriver();
+			}
 
-		if(browserName.equalsIgnoreCase("chrome")) {
-			driver=new ChromeDriver();
-		}
-
-		else if(browserName.equalsIgnoreCase("firefox")) {
-			driver=new FirefoxDriver();
-		}
-
-		else if (browserName.equalsIgnoreCase("edge")) {
-			driver=new EdgeDriver();
+			else if (browserName.equalsIgnoreCase("edge")) {
+				driver=new EdgeDriver();
+			}
 		}
 
 		driver.get(baseURL);
@@ -40,7 +39,8 @@ public class BaseClass {
 
 
 	public static void teardown() {
-		driver.close();
-		driver.quit();
+		if (driver != null) {
+			driver.close();
+		}
 	}
 }

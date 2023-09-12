@@ -16,62 +16,72 @@ public class Controller extends BaseClass implements ControllerInterface{
 
 	@Override
 	public void click(WebDriver driver, WebElement element) {
-		action.moveToElement(element).click().build().perform();		
+		try {
+			action.moveToElement(element).click().build().perform();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 
 
 	@Override
 	public boolean type(WebElement element, String text) {
 		boolean flag = false;
+		try {
+			if (element.isDisplayed()) {
 
-		if (element.isDisplayed()) {
+				element.clear();
+				element.sendKeys(text);
+				flag = true;
+				System.out.println("Successfully entered value");
 
-			element.clear();
-			element.sendKeys(text);
-			flag = true;
-			System.out.println("Successfully entered value");
-
-		} else {
-			flag = false;
-			System.out.println("Unable to enter value");
+			} else {
+				flag = false;
+				System.out.println("Unable to enter value");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-
 		return flag;
 	}
 
 
-	
+
 	@Override
 	public boolean isDisplayed(WebDriver driver, WebElement element) {
 		boolean flag = false;
+		try {
+			if (element.isDisplayed()) {				
+				flag = true;
+				System.out.println("The element is Displayed");
 
-		if (element.isDisplayed()) {				
-			flag = true;
-			System.out.println("The element is Displayed");
-
-		} else {
-			flag = false;
-			System.out.println("The element is not Displayed");
+			} else {
+				flag = false;
+				System.out.println("The element is not Displayed");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-
 		return flag;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean isSelected(WebDriver driver, WebElement element) {
 		boolean flag = false;
+		try {
+			if (element.isSelected()) {				
+				flag = true;
+				System.out.println("The element is Selected");
 
-		if (element.isSelected()) {				
-			flag = true;
-			System.out.println("The element is Selected");
-
-		} else {
-			flag = false;
-			System.out.println("The element is not Selected");
+			} else {
+				flag = false;
+				System.out.println("The element is not Selected");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-
 		return flag;
 	}
 
@@ -79,37 +89,41 @@ public class Controller extends BaseClass implements ControllerInterface{
 	@Override
 	public boolean isEnabled(WebDriver driver, WebElement element) {
 		boolean flag = false;
+		try {
+			if (element.isEnabled()) {				
+				flag = true;
+				System.out.println("The element is Enabled");
 
-		if (element.isEnabled()) {				
-			flag = true;
-			System.out.println("The element is Enabled");
-
-		} else {
-			flag = false;
-			System.out.println("The element is not Enabled");
+			} else {
+				flag = false;
+				System.out.println("The element is not Enabled");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-
 		return flag;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean selectByIndex(WebElement element, int index) {
 		boolean flag = false;
+		try {
+			if (element.isDisplayed()) {
 
-		if (element.isDisplayed()) {
+				select = new Select(element);
+				select.selectByIndex(index);
+				flag = true;
+				System.out.println("Option selected by Index");
 
-			select = new Select(element);
-			select.selectByIndex(index);
-			flag = true;
-			System.out.println("Option selected by Index");
-
-		} else {
-			flag = false;
-			System.out.println("Option not selected by Index");
+			} else {
+				flag = false;
+				System.out.println("Option not selected by Index");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-
 		return flag;
 	}
 
@@ -117,107 +131,123 @@ public class Controller extends BaseClass implements ControllerInterface{
 	@Override
 	public boolean selectByValue(WebElement element, String value) {
 		boolean flag = false;
+		try {
+			if (element.isDisplayed()) {
 
-		if (element.isDisplayed()) {
+				select = new Select(element);
+				select.selectByValue(value);
+				flag = true;
+				System.out.println("Option selected by value");
 
-			select = new Select(element);
-			select.selectByValue(value);
-			flag = true;
-			System.out.println("Option selected by value");
-
-		} else {
-			flag = false;
-			System.out.println("Option not selected by value");
+			} else {
+				flag = false;
+				System.out.println("Option not selected by value");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-
 		return flag;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean selectByVisibleText(String visibletext, WebElement element) {
 		boolean flag = false;
+		try {
+			if (element.isDisplayed()) {
 
-		if (element.isDisplayed()) {
+				select = new Select(element);
+				select.selectByVisibleText(visibletext);
+				flag = true;
+				System.out.println("Option selected by visibletext");
 
-			select = new Select(element);
-			select.selectByVisibleText(visibletext);
-			flag = true;
-			System.out.println("Option selected by visibletext");
-
-		} else {
-			flag = false;
-			System.out.println("Option not selected by visibletext");
+			} else {
+				flag = false;
+				System.out.println("Option not selected by visibletext");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-
 		return flag;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean switchToFrameByIndex(WebDriver driver, int index) {
 		boolean flag = false;
+		try {
+			driver.switchTo().frame(index);
+			flag = true;
 
-		driver.switchTo().frame(index);
-		flag = true;
-
-		if (flag) {
-			System.out.println("Frame is selected");
-		} else {
-			System.out.println("Frame is not selected");
+			if (flag) {
+				System.out.println("Frame is selected");
+			} else {
+				System.out.println("Frame is not selected");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 		return flag;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean switchToFrameById(WebDriver driver, String idValue) {
 		boolean flag = false;
+		try {
+			driver.switchTo().frame(idValue);
+			flag = true;
 
-		driver.switchTo().frame(idValue);
-		flag = true;
-
-		if (flag) {
-			System.out.println("Frame is selected");
-		} else {
-			System.out.println("Frame is not selected");
+			if (flag) {
+				System.out.println("Frame is selected");
+			} else {
+				System.out.println("Frame is not selected");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 		return flag;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean switchToFrameByName(WebDriver driver, String nameValue) {
 		boolean flag = false;
+		try {
+			driver.switchTo().frame(nameValue);
+			flag = true;
 
-		driver.switchTo().frame(nameValue);
-		flag = true;
-
-		if (flag) {
-			System.out.println("Frame is selected");
-		} else {
-			System.out.println("Frame is not selected");
+			if (flag) {
+				System.out.println("Frame is selected");
+			} else {
+				System.out.println("Frame is not selected");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 		return flag;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean switchToDefaultFrame(WebDriver driver) {
 		boolean flag = false;
+		try {
+			driver.switchTo().defaultContent();
+			flag = true;
 
-		driver.switchTo().defaultContent();
-		flag = true;
-
-		if (flag) {
-			System.out.println("Frame is selected");
-		} else {
-			System.out.println("Frame is not selected");
+			if (flag) {
+				System.out.println("Frame is selected");
+			} else {
+				System.out.println("Frame is not selected");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 		return flag;
 	}
@@ -225,49 +255,46 @@ public class Controller extends BaseClass implements ControllerInterface{
 
 	@Override
 	public void moveToElement(WebDriver driver, WebElement element) {
-
-		action.moveToElement(element).click().build().perform();		
+		try {
+			action.moveToElement(element).click().build().perform();	
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 
-	
+
 	@Override
 	public void rightclick(WebDriver driver, WebElement element) {
-
-		action.contextClick(element).perform();
+		try {
+			action.contextClick(element).perform();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 
-	
+
 	@Override
 	public void Alert(WebDriver driver) {
-		driver.switchTo().alert().accept();
+		try {
+			driver.switchTo().alert();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 
-	
+
 	@Override
 	public String getTitle(WebDriver driver) {
-		boolean flag = false;
-
-		String text = driver.getTitle();
-		if (flag) {
-			System.out.println("Title of the page is: \""+text+"\"");
-		}
-		return text;
+		return driver.getTitle();
 	}
+
 	@Override
 	public String getCurrentURL(WebDriver driver)  {
-		boolean flag = false;
-
-		String text = driver.getCurrentUrl();
-		if (flag) {
-			System.out.println("Current URL is: \""+text+"\"");
-		}
-		return text;
+		return driver.getCurrentUrl();
 	}
+
 
 	
-	@Override
-	public void click(WebElement locator, String locatorName) {
-		locator.click();
+		
 	}
 
-}
