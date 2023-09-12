@@ -651,31 +651,66 @@ public class Program_SD extends BaseClass{
 		String tableValue=programManager.getTableValue();
 		Log.logInfo("data get sorted on the table in descending order"+tableValue);
 	}
-	
+	/**
+	 * Program Pagination
+	 *
+	 */
 	//Next Page
 	@When("Admin clicks Next page link on the program table")
 	public void admin_clicks_Next_page_link_on_the_program_table() {
-	    programManager.nextPageArrow();
+		programManager.nextPageArrow();
 		Log.logInfo("Admin clicks Next page link on the program table");
 	}
 
 	//validate next page
 	@Then("Admin should see the Pagination has Next link")
 	public void admin_should_see_the_Pagination_has_link() {
-	    String footerText=programManager.validateFooterText();
+		String footerText=programManager.validateFooterText();
 		Log.logInfo("Admin is on Next page "+footerText);
 	}
-	
+
+	//Last page
 	@When("Admin clicks Last page link on the program table")
 	public void admin_clicks_Last_page_link_on_the_program_table() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		programManager.lastPageArrow();
+		Log.logInfo("Admin clicks Next page link on the program table");
 	}
 
+	//Validate last page
 	@Then("Admin should see the last page record on the table with Next page link are disabled")
 	public void admin_should_see_the_last_page_record_on_the_table_with_Next_page_link_are_disabled() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		programManager.disableNextPageArrow();
+		String footerText=programManager.validateFooterText();
+		Log.logInfo("Admin is on Next page "+footerText);
+	}
+
+	//First page
+	@When("Admin clicks first page link on the program table")
+	public void admin_clicks_first_page_link_on_the_program_table() {
+		programManager.firstPageArrow();
+		Log.logInfo("Admin clicks First page link on the program table");
+	}
+
+	//Validate first page
+	@Then("Admin should see the previous page record on the table with pagination has previous page link")
+	public void Admin_should_see_the_previous_page_record_on_the_table_with_pagination_has_previous_page_link() {
+		String footerText=programManager.validateFooterText();
+		Log.logInfo("Admin is on Next page "+footerText);
+	}
+
+	//Start page
+	@When("Admin clicks start page link on the program table")
+	public void admin_clicks_start_page_link_on_the_program_table() {
+		programManager.disablePrePageArrow();
+		programManager.firstPageArrow();
+		Log.logInfo("Admin clicks First page link on the program table");
+	}
+
+	//Validate start page
+	@Then("Admin should see the very first page record on the table with Previous page link are disabled")
+	public void Admin_should_see_the_very_first_page_record_on_the_table_with_Previous_page_link_are_disabled() {
+		String footerText=programManager.validateFooterText();
+		Log.logInfo("Admin is on Next page "+footerText);
 	}
 
 }

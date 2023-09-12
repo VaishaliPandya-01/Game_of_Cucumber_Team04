@@ -225,18 +225,32 @@ public class Program_Manage_Obj extends BaseClass{
 	}
 	
 	public void firstPageArrow() {
-		act.click(driver, firstPage_arrow);;
+		if(act.isEnabled(driver, firstPage_arrow))
+		act.click(driver, firstPage_arrow);
 	}
 	
 	public void lastPageArrow() {
-		act.click(driver, lastPage_arrow);;
+		if(act.isEnabled(driver, lastPage_arrow))
+		act.click(driver, lastPage_arrow);
 	}
 	
 	public void nextPageArrow() {
-		act.click(driver, nextPage_arrow);;
+		if(act.isEnabled(driver, nextPage_arrow))
+		act.click(driver, nextPage_arrow);
+	}
+	
+	public void disableNextPageArrow() {
+		if(!act.isEnabled(driver, nextPage_arrow))
+		System.out.println("Next page arrow is diabled");		
+	}
+	
+	public void disablePrePageArrow() {
+		if(!act.isEnabled(driver, startPage_arrow))
+		System.out.println("Next page arrow is diabled");		
 	}
 	
 	public void startPageArrow() {
-		act.click(driver, startPage_arrow);;
+		if(act.isEnabled(driver, startPage_arrow))
+		act.click(driver, startPage_arrow);
 	}
 }
