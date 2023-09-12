@@ -1,5 +1,5 @@
 @EditBatch
-Feature: Edit Batch
+Feature: Edit Batch Details
 
   Background: Logged on the LMS portal
     Given Admin is on dashboard page after Login

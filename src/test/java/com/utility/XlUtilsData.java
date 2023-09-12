@@ -5,9 +5,12 @@ import java.util.Map;
 public class XlUtilsData {
 
 	public static String batchName;
-	public static String description;
-	public static String NoOfClass;
+	public static String descriptionfrBtch;
+	public static String NoOfClassfrBtch;
+	public static String programNameFrBtch;
 	public static String programName;
+	public static String descriptionfrPrgrm;
+	public static String prgrmStatus;
 	
 	static Map<String, String> excelDataMap;
 
@@ -15,11 +18,23 @@ public class XlUtilsData {
 
 	    excelDataMap = XLUtils.getData(dataKey, sheetName);
 
-		batchName = excelDataMap.get("Name");
-		description = excelDataMap.get("Description");
-		NoOfClass = excelDataMap.get("Number Of Classes");
-		programName = excelDataMap.get("Program Name");
+		batchName = excelDataMap.get("batchName");
+		descriptionfrBtch = excelDataMap.get("descriptionfrBtch");
+		NoOfClassfrBtch = excelDataMap.get("NoOfClassfrBtch");
+		programNameFrBtch = excelDataMap.get("programNameFrBtch");
 		
+		return excelDataMap;
+	}
+	
+
+	public static Map<String, String> programXLdata(String dataKey,String sheetName) throws Exception {
+
+	    excelDataMap = XLUtils.getData(dataKey, sheetName);
+
+	    programName = excelDataMap.get("programName");
+	    descriptionfrPrgrm = excelDataMap.get("descriptionfrPrgrm");
+	    prgrmStatus = excelDataMap.get("prgrmStatus");
+				
 		return excelDataMap;
 	}
 

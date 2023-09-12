@@ -125,6 +125,11 @@ public class Batch_SD extends BaseClass{
 		Log.logInfo("Validate delete button in data table");
 	}
 
+	/**
+	 * Add New Batch Details Form
+	 *
+	 */
+	
 	//Click on add new batch
 	@When("Admin clicks + A New Batch button")
 	public void admin_clicks_A_New_Batch_button() {
@@ -141,11 +146,6 @@ public class Batch_SD extends BaseClass{
 		Assert.assertEquals(expectedPageTitle, actualTitle);
 		Log.logInfo("Validate Batch details Title"+actualTitle);
 	}
-
-	/**
-	 * Add New Batch Details Form
-	 *
-	 */
 
 	//Validate batch details fields
 	@Then("The pop up should include fields like Name Number of classes Description Status and Program Name")
@@ -170,14 +170,14 @@ public class Batch_SD extends BaseClass{
 
 		batchManager = 
 				addBatch.fillBatchDetailForm
-				(XlUtilsData.batchName, XlUtilsData.description,
-						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
+				(XlUtilsData.batchName, XlUtilsData.descriptionfrBtch,
+						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
 				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.description+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
-				"Program Name:- " +XlUtilsData.programName);
+				"Description:- " +XlUtilsData.descriptionfrBtch+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
+				"Program Name:- " +XlUtilsData.programNameFrBtch);
 	}
 
 
@@ -195,14 +195,14 @@ public class Batch_SD extends BaseClass{
 
 		batchManager = 
 				addBatch.fillBatchDetailForm
-				(XlUtilsData.batchName, XlUtilsData.description,
-						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
+				(XlUtilsData.batchName, XlUtilsData.descriptionfrBtch,
+						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
 				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.description+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
-				"Program Name:- " +XlUtilsData.programName);
+				"Description:- " +XlUtilsData.descriptionfrBtch+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
+				"Program Name:- " +XlUtilsData.programNameFrBtch);
 	}
 
 
@@ -213,9 +213,9 @@ public class Batch_SD extends BaseClass{
 
 		String actualTableData = batchManager.getTableValue();
 		Assert.assertTrue(actualTableData.contains(XlUtilsData.batchName));
-		Assert.assertTrue(actualTableData.contains(XlUtilsData.description));
-		Assert.assertTrue(actualTableData.contains(XlUtilsData.NoOfClass));
-		Assert.assertTrue(actualTableData.contains(XlUtilsData.programName));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.descriptionfrBtch));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.NoOfClassfrBtch));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.programNameFrBtch));
 		String title=batchManager.getManageBatchTitle();
 		Log.logInfo("Validate Manage Batch Title"+title);
 		Log.logInfo("Validate Manage Batch Data");
@@ -236,14 +236,14 @@ public class Batch_SD extends BaseClass{
 
 		batchManager = 
 				addBatch.fillBatchDetailForm
-				(XlUtilsData.batchName, XlUtilsData.description,
-						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
+				(XlUtilsData.batchName, XlUtilsData.descriptionfrBtch,
+						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
 				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.description+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
-				"Program Name:- " +XlUtilsData.programName);
+				"Description:- " +XlUtilsData.descriptionfrBtch+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
+				"Program Name:- " +XlUtilsData.programNameFrBtch);
 	}
 
 
@@ -261,14 +261,14 @@ public class Batch_SD extends BaseClass{
 
 		batchManager = 
 				addBatch.fillBatchDetailForm
-				(XlUtilsData.batchName, XlUtilsData.description,
-						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
+				(XlUtilsData.batchName, XlUtilsData.descriptionfrBtch,
+						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
 				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.description+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
-				"Program Name:- " +XlUtilsData.programName);
+				"Description:- " +XlUtilsData.descriptionfrBtch+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
+				"Program Name:- " +XlUtilsData.programNameFrBtch);
 	}
 
 
@@ -373,7 +373,7 @@ public class Batch_SD extends BaseClass{
 	@Then("The respective row in the data table of batch is deleted")
 	public void the_respective_row_in_the_data_table_of_batch_is_deleted() {
 		deleteBatch.deleteMessage();
-		Log.logInfo("Checkbox is selected");
+		Log.logInfo("Batch is deleted successfully");
 	}
 
 	/**
@@ -412,14 +412,14 @@ public class Batch_SD extends BaseClass{
 
 		batchManager = 
 				addBatch.fillBatchDetailForm
-				(XlUtilsData.batchName, XlUtilsData.description,
-						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
+				(XlUtilsData.batchName, XlUtilsData.descriptionfrBtch,
+						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
 				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.description+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
-				"Program Name:- " +XlUtilsData.programName);
+				"Description:- " +XlUtilsData.descriptionfrBtch+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
+				"Program Name:- " +XlUtilsData.programNameFrBtch);
 	}
 
 	//Update Batch Detail with Invalid value
@@ -436,14 +436,14 @@ public class Batch_SD extends BaseClass{
 
 		batchManager = 
 				addBatch.fillBatchDetailForm
-				(XlUtilsData.batchName, XlUtilsData.description,
-						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
+				(XlUtilsData.batchName, XlUtilsData.descriptionfrBtch,
+						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
 				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.description+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
-				"Program Name:- " +XlUtilsData.programName);
+				"Description:- " +XlUtilsData.descriptionfrBtch+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
+				"Program Name:- " +XlUtilsData.programNameFrBtch);
 	}
 
 	//Update with Missing Mandatory Fields
@@ -460,14 +460,14 @@ public class Batch_SD extends BaseClass{
 
 		batchManager = 
 				addBatch.fillBatchDetailForm
-				(XlUtilsData.batchName, XlUtilsData.description,
-						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
+				(XlUtilsData.batchName, XlUtilsData.descriptionfrBtch,
+						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
 				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.description+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
-				"Program Name:- " +XlUtilsData.programName);
+				"Description:- " +XlUtilsData.descriptionfrBtch+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
+				"Program Name:- " +XlUtilsData.programNameFrBtch);
 	}
 
 	//Fill Batch Detail without Description
@@ -484,14 +484,14 @@ public class Batch_SD extends BaseClass{
 
 		batchManager = 
 				addBatch.fillBatchDetailForm
-				(XlUtilsData.batchName, XlUtilsData.description,
-						XlUtilsData.NoOfClass, XlUtilsData.programName, batchManager);
+				(XlUtilsData.batchName, XlUtilsData.descriptionfrBtch,
+						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
 				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.description+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClass+ 
-				"Program Name:- " +XlUtilsData.programName);
+				"Description:- " +XlUtilsData.descriptionfrBtch+ 
+				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
+				"Program Name:- " +XlUtilsData.programNameFrBtch);
 	}
 
 	//Validate Updated batch details
@@ -499,9 +499,9 @@ public class Batch_SD extends BaseClass{
 	public void the_updated_batch_details_should_appear_on_the_data_table() {
 		String actualTableData = batchManager.getTableValue();
 		Assert.assertTrue(actualTableData.contains(XlUtilsData.batchName));
-		Assert.assertTrue(actualTableData.contains(XlUtilsData.description));
-		Assert.assertTrue(actualTableData.contains(XlUtilsData.NoOfClass));
-		Assert.assertTrue(actualTableData.contains(XlUtilsData.programName));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.descriptionfrBtch));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.NoOfClassfrBtch));
+		Assert.assertTrue(actualTableData.contains(XlUtilsData.programNameFrBtch));
 		String title=batchManager.getManageBatchTitle();
 		Log.logInfo("Validate Manage Batch Title"+title);
 		Log.logInfo("Validate Manage Batch Data");

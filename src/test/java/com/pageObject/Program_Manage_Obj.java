@@ -18,45 +18,50 @@ public class Program_Manage_Obj extends BaseClass{
 	//Element Object
 	@FindBy (xpath="//button//span[text()=' Delete']") 
 	private WebElement deleteMutipleProgram_btn;
-
 	@FindBy (id="search_query_top") 
 	private WebElement search_txt;
-
 	@FindBy (xpath="//*[@aria-label='Add a new Program']//span")
 	private WebElement addNewProgram_btn;
-
 	@FindBy (xpath="//*[@class='btn btn-edit']")
 	private WebElement editProgram_btn;
-
 	@FindBy (xpath="//*[@class='btn btn-edit']")
 	private WebElement deleteSingleProgram_btn;
-
 	@FindBy (xpath="//*[@span/select-multiple-checkbox']")
-	private List<WebElement> multiCheckBoxBatch;
-
+	private List<WebElement> multiCheckBoxProgram;
 	@FindBy (xpath="//*[@span/select-multiple-checkbox']")
-	private WebElement singleCheckBoxBatch;
-
+	private WebElement singleCheckBoxProgram;
 	@FindBy (className = "pagination") 
 	private WebElement pagination;
-
 	@FindBy (xpath="//*[@span/tableHeader']")
 	private List<WebElement> listOfTableHeader;
-
 	@FindBy (id="tableId")
 	private List<WebElement> table;
-
 	@FindBy (tagName=("td")) 
 	private List<WebElement> cells;
-
 	@FindBy (tagName=("tr")) 
-	private List<WebElement> Row;
-	
+	private List<WebElement> Row;	
 	@FindBy (xpath="//*[contains(text(),'Showing ')]") 
-	private WebElement footer_text;
-	
+	private WebElement footer_text;	
 	@FindBy(xpath="//*[@class='btn btn-description-desc']") 
-	private WebElement sorting_Arrow;
+	private WebElement descDescSorting_Arrow;	
+	@FindBy(xpath="//*[@class='btn btn-name-desc']") 
+	private WebElement descNameSorting_Arrow;	
+	@FindBy(xpath="//*[@class='btn btn-status-desc']") 
+	private WebElement descStatusSorting_Arrow;	
+	@FindBy(xpath="//*[@class='btn btn-description-asc']") 
+	private WebElement ascDescSorting_Arrow;	
+	@FindBy(xpath="//*[@class='btn btn-name-asc']") 
+	private WebElement ascNameSorting_Arrow;	
+	@FindBy(xpath="//*[@class='btn btn-status-asc']") 
+	private WebElement ascStatusSorting_Arrow;	
+	@FindBy (className = "pagination-arrowLast") 
+	private WebElement lastPage_arrow;
+	@FindBy (className = "pagination-arrowRight") 
+	private WebElement nextPage_arrow;
+	@FindBy (className = "pagination-arrowFirst") 
+	private WebElement firstPage_arrow;
+	@FindBy (className = "pagination-arrowLeft") 
+	private WebElement startPage_arrow;
 
 
 	//Constructor
@@ -89,11 +94,40 @@ public class Program_Manage_Obj extends BaseClass{
 		return false;
 	}
 	
-	public boolean sortingArrowButton() {
-		if(!act.isDisplayed(driver, sorting_Arrow)) {
-			return true;
+	public void descDescSorting() {
+		if(act.isDisplayed(driver, descDescSorting_Arrow)) {
+			act.click(driver, descDescSorting_Arrow);
 		}
-		return false;
+	}
+	
+	public void descNameSorting() {
+		if(act.isDisplayed(driver, descNameSorting_Arrow)) {
+			act.click(driver, descNameSorting_Arrow);
+		}
+	}
+	
+	public void descStatusSorting() {
+		if(act.isDisplayed(driver, descStatusSorting_Arrow)) {
+			act.click(driver, descStatusSorting_Arrow);
+		}
+	}
+	
+	public void ascDescSorting() {
+		if(act.isDisplayed(driver, ascDescSorting_Arrow)) {
+			act.click(driver, ascDescSorting_Arrow);
+		}
+	}
+	
+	public void ascNameSorting() {
+		if(act.isDisplayed(driver, ascNameSorting_Arrow)) {
+			act.click(driver, ascNameSorting_Arrow);
+		}
+	}
+	
+	public void ascStatusSorting() {
+		if(act.isDisplayed(driver, ascStatusSorting_Arrow)) {
+			act.click(driver, ascStatusSorting_Arrow);
+		}
 	}
 
 	public void addNewProgramBtn() {
@@ -122,8 +156,8 @@ public class Program_Manage_Obj extends BaseClass{
 		act.isEnabled(driver, deleteSingleProgram_btn);
 	}
 
-	public void SelectMultiCheckBoxBatch() {
-		for ( WebElement checkBox : multiCheckBoxBatch ) {
+	public void SelectMultiCheckBoxProgram() {
+		for ( WebElement checkBox : multiCheckBoxProgram ) {
 			if ( !act.isSelected(driver, checkBox) ) {
 				act.click(driver, checkBox);
 			}
@@ -131,7 +165,7 @@ public class Program_Manage_Obj extends BaseClass{
 	}
 
 	public boolean VisibleCheckBox() {
-		for ( WebElement checkBox : multiCheckBoxBatch ) {
+		for ( WebElement checkBox : multiCheckBoxProgram ) {
 			if ( act.isDisplayed(driver, checkBox) ) {
 				return true;
 			}
@@ -139,8 +173,8 @@ public class Program_Manage_Obj extends BaseClass{
 		return false;
 	}
 
-	public void SelectSingleCheckBoxBatch() {
-		act.click(driver, singleCheckBoxBatch);
+	public void SelectSingleCheckBoxProgram() {
+		act.click(driver, singleCheckBoxProgram);
 	}
 
 	public String getManageProgramTitle() {
@@ -171,7 +205,6 @@ public class Program_Manage_Obj extends BaseClass{
 	}
 
 	public String getTableValue() {
-
 		for (WebElement row : Row) {
 			for (WebElement cell : cells) {
 				String cellText = cell.getText();
@@ -189,5 +222,21 @@ public class Program_Manage_Obj extends BaseClass{
 	public int getRowSize() {
 		int rowSize = Row.size();
 		return rowSize;
+	}
+	
+	public void firstPageArrow() {
+		act.click(driver, firstPage_arrow);;
+	}
+	
+	public void lastPageArrow() {
+		act.click(driver, lastPage_arrow);;
+	}
+	
+	public void nextPageArrow() {
+		act.click(driver, nextPage_arrow);;
+	}
+	
+	public void startPageArrow() {
+		act.click(driver, startPage_arrow);;
 	}
 }

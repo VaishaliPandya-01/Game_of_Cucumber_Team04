@@ -53,11 +53,11 @@ public class Controller extends BaseClass implements ControllerInterface{
 		try {
 			if (element.isDisplayed()) {				
 				flag = true;
-				System.out.println("The element is Displayed");
+				System.out.println("The element is Displayed"+element);
 
 			} else {
 				flag = false;
-				System.out.println("The element is not Displayed");
+				System.out.println("The element is not Displayed"+element);
 			}
 		} catch (Exception e) {
 			System.out.println(e);

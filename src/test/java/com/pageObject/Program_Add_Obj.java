@@ -7,20 +7,17 @@ import org.openqa.selenium.support.PageFactory;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 
-public class Batch_Add_Obj extends BaseClass{
+public class Program_Add_Obj extends BaseClass{
 
 	//Created object for controller class
 	private	Controller act = new Controller();
-	
+
 	//Element Object
-	@FindBy (id="batchName") 
-	private WebElement batchName;
+	@FindBy (id="programName") 
+	private WebElement programName;
 
-	@FindBy (id="batchDescription") 
-	private WebElement batchDescription;
-
-	@FindBy (id="numOfClasses") 
-	private WebElement numOfClasses;
+	@FindBy (id="programDescription") 
+	private WebElement programDescription;
 
 	@FindBy (xpath="id('mat-radio-40')//span") 
 	private WebElement activeRadio_btn;
@@ -34,41 +31,34 @@ public class Batch_Add_Obj extends BaseClass{
 	@FindBy (xpath="//button//span[text()=' save']") 
 	private WebElement save_btn;
 
-	@FindBy (xpath="//*[@id='post-2646']//select") 
-	private WebElement programNmDropDwn;
-
 	@FindBy (xpath="//button//span[text()=' close']") 
-	private WebElement closeBatchDetails;
-	
+	private WebElement closeProgramDetails;
+
 	@FindBy(xpath="//*[contains(text(),'message')")
 	private WebElement Message;
 
 	//Constructor
-	public Batch_Add_Obj() {
+	public Program_Add_Obj() {
 		PageFactory.initElements(driver, this);
 	}
 
 	//Methods
 
 	public boolean validateFieldsOnForm() {
-		act.isDisplayed(driver, batchName);
-		act.isDisplayed(driver, batchDescription);
-		act.isDisplayed(driver, numOfClasses);
+		act.isDisplayed(driver, programName);
+		act.isDisplayed(driver, programDescription);
 		act.isDisplayed(driver, activeRadio_btn);
 		act.isDisplayed(driver, inActiveRadio_btn);
-		act.isDisplayed(driver, programNmDropDwn);
 		return true;
 	}
 
-	public Batch_Manage_Obj fillBatchDetailForm(String name,String desc,String noOfClasses,String programNm,Batch_Manage_Obj batchManageObj) {
-		act.type(batchName, name);
-		act.type(batchDescription, desc);
-		act.type(numOfClasses, noOfClasses);
+	public Program_Manage_Obj fillProgramDetailForm(String name,String desc,Program_Manage_Obj programManageObj) {
+		act.type(programName, name);
+		act.type(programDescription, desc);
 		act.click(driver, activeRadio_btn);
-		act.selectByVisibleText(programNm,programNmDropDwn);
 		act.click(driver, save_btn);
-		batchManageObj =  new Batch_Manage_Obj();
-		return batchManageObj;
+		programManageObj =  new Program_Manage_Obj();
+		return programManageObj;
 	}
 
 	public void activeRadio_btn() {
@@ -80,19 +70,29 @@ public class Batch_Add_Obj extends BaseClass{
 	}
 
 	public void cancel_btn() {
+		if(act.isDisplayed(driver, cancel_btn)) {
 		act.click(driver, cancel_btn);
+		}
+	}
+	
+	public void save_btn() {
+		if(act.isDisplayed(driver, save_btn)) {
+		act.click(driver, save_btn);
+		}
 	}
 
-	public void closeBatchDetails() {
-		act.click(driver, closeBatchDetails);;
+	public void closeProgramDetails() {
+		if(act.isDisplayed(driver, closeProgramDetails)) {
+		act.click(driver, closeProgramDetails);
+		}
 	}
 
-	public String getBatchDetailsTitle() {
+	public String getProgramDetailsTitle() {
 		String pageTitle=act.getTitle(driver);
 		return pageTitle;
 	}
-	
-	public String errorMessage() {
-		return Message.getText();
+
+	public String validationMessage() {
+		return act.getText(Message);
 	}
 }
