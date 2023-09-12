@@ -12,6 +12,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.utility.Readconfig;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 
 	static Readconfig readconfig=new Readconfig();
@@ -22,21 +24,18 @@ public class BaseClass {
 	public static void Initialization() {
 
 		if(browserName.equalsIgnoreCase("chrome")) {
-			ChromeOptions options = new ChromeOptions();
-					options.addArguments("--no-sandbox");
-			driver=new ChromeDriver(options);
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
 		}
 
 		else if(browserName.equalsIgnoreCase("firefox")) {
-			FirefoxOptions options = new FirefoxOptions();
-			options.addArguments("--no-sandbox");
-			driver=new FirefoxDriver(options);
+			WebDriverManager.firefoxdriver().setup();
+			driver=new FirefoxDriver();
 		}
 
 		else if (browserName.equalsIgnoreCase("edge")) {
-			EdgeOptions options = new EdgeOptions();
-			options.addArguments("--no-sandbox");
-			driver=new EdgeDriver(options);
+			WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
 		}
 		driver.get(baseURL);
 		driver.manage().window().maximize();
