@@ -31,6 +31,11 @@ public class Attendance_Manage extends BaseClass {
 	@FindBy (xpath="//a[text()='Preasent']") private WebElement att_PreasentValue;
 	@FindBy (xpath="//*[@id='DataTable']/div/table/tbody/tr/td/a") private List<WebElement> att_DatatTable_data;
 	@FindBy (xpath="//a[text()='Footer Text']") private WebElement att_FooterText;
+	@FindBy (xpath="//a[text()='Pagination']") private WebElement pagination;
+	@FindBy (xpath="//*[@class='sortClass']") private WebElement sortClass_btn;
+	@FindBy (xpath="//*[@class='sortstud']") private WebElement sortStud_btn;
+	@FindBy (xpath="//*[@class='sortpresent']") private WebElement sortAttendance_btn;
+	
 	
 	static Readconfig rc = new Readconfig();
 	Controller cn = new Controller();
@@ -75,6 +80,10 @@ public class Attendance_Manage extends BaseClass {
 	}
 	public void SelectSingleCheckBoxAtt() {
 		cn.click(driver, attendnc_single_checkbx);
+	}
+	
+	public Boolean VerifyTickMark() {
+		return cn.isSelected(driver, attendnc_single_checkbx);
 	}
 	public void getResponseCode() {
 		
@@ -123,10 +132,18 @@ public class Attendance_Manage extends BaseClass {
 		}
 		//return flag;	
 	}
-	public void CheckSpelling() {
-		
+	
+	public Boolean visibity_sort() {
+		Boolean flag =false;
+		if(cn.isDisplayed(driver, sortClass_btn)&&
+			cn.isDisplayed(driver, sortStud_btn)&&
+			cn.isDisplayed(driver, sortAttendance_btn)) 
+		{
+			flag = true;
+		}
+		return flag;
 	}
-	public boolean checkDeleteiconDisabled() {
+	public boolean M_DeleteiconEnabled() {
 		return cn.isEnabled(driver, attendnc_MultiplDelete);
 	}
 	public boolean searchBarVisibility() {
@@ -187,6 +204,9 @@ public class Attendance_Manage extends BaseClass {
 	public String footerTextValidation() {
 		String footertext = att_FooterText.getText();
 		return footertext;
+	}
+	public boolean validatePagination() {
+		return cn.isDisplayed(driver, pagination);
 	}
 	
 }
