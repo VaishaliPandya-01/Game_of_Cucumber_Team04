@@ -18,37 +18,26 @@ public class Batch_Manage_Obj extends BaseClass{
 	//Element Object
 	@FindBy (xpath="//button//span[text()=' Delete']") 
 	private WebElement deleteMutipleBatch_btn;
-
 	@FindBy (id="search_query_top") 
 	private WebElement search_txt;
-
 	@FindBy (xpath="//*[@aria-label='Add a new Batch']//span")
 	private WebElement addNewBatch_btn;
-
 	@FindBy (xpath="//*[@class='btn btn-edit']")
 	private WebElement editBatch_btn;
-
 	@FindBy (xpath="//*[@class='btn btn-edit']")
 	private WebElement deleteSingleBatch_btn;
-
 	@FindBy (xpath="//*[@span/select-multiple-checkbox']")
 	private List<WebElement> multiCheckBoxBatch;
-
 	@FindBy (xpath="//*[@span/select-multiple-checkbox']")
 	private WebElement singleCheckBoxBatch;
-
 	@FindBy (className = "pagination") 
 	private WebElement pagination;
-
 	@FindBy (xpath="//*[@span/tableHeader']")
 	private List<WebElement> listOfTableHeader;
-
 	@FindBy (id="tableId")
 	private List<WebElement> table;
-
 	@FindBy (tagName=("td")) 
 	private List<WebElement> cells;
-
 	@FindBy (tagName=("tr")) 
 	private List<WebElement> Row;
 

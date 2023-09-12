@@ -14,19 +14,14 @@ public class Program_Delete_Obj extends BaseClass{
 
 		@FindBy (xpath="//button//span[text()=' yes']")
 		private WebElement deleteYes_btn;
-
 		@FindBy (xpath="//button//span[text()=' No']")
 		private WebElement deleteNo_btn;
-
-		@FindBy(xpath="//*[contains(text(),'Are you sure')") 
+		@FindBy(xpath="//*[contains(text(),'Are you sure')]") 
 		private WebElement deleteMessage;
-
-		@FindBy(xpath="//*[contains(text(),'Success')") 
+		@FindBy(xpath="//*[contains(text(),'Success')]") 
 		private WebElement successMessag;
-
 		@FindBy (xpath="//button//span[text()=' close']") 
-		private WebElement closeArrow;
-		
+		private WebElement closeArrow;		
 		@FindBy (xpath="//button//span[text()='are you sure']")
 		private WebElement deleteBoxText;
 

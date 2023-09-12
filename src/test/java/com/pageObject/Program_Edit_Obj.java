@@ -14,22 +14,16 @@ public class Program_Edit_Obj extends BaseClass{
 
 		@FindBy (id="programName") 
 		private WebElement ProgramName;
-
 		@FindBy (id="programDescription") 
 		private WebElement ProgramDescription;
-
 		@FindBy (xpath="id('mat-radio-40')//span") 
 		private WebElement activeRadio_btn;
-
 		@FindBy (xpath="id('mat-radio-40')//span") 
 		private WebElement inActiveRadio_btn;
-
 		@FindBy (xpath="//button//span[text()=' Cancel']") 
 		private WebElement cancel_btn;
-
 		@FindBy (xpath="//button//span[text()=' save']") 
 		private WebElement save_btn;
-
 		@FindBy (xpath="//button//span[text()=' close']") 
 		private WebElement closeProgramDetails;
 

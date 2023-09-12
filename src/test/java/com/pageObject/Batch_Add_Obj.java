@@ -15,32 +15,23 @@ public class Batch_Add_Obj extends BaseClass{
 	//Element Object
 	@FindBy (id="batchName") 
 	private WebElement batchName;
-
 	@FindBy (id="batchDescription") 
 	private WebElement batchDescription;
-
 	@FindBy (id="numOfClasses") 
 	private WebElement numOfClasses;
-
 	@FindBy (xpath="id('mat-radio-40')//span") 
 	private WebElement activeRadio_btn;
-
 	@FindBy (xpath="id('mat-radio-40')//span") 
 	private WebElement inActiveRadio_btn;
-
 	@FindBy (xpath="//button//span[text()=' Cancel']") 
 	private WebElement cancel_btn;
-
 	@FindBy (xpath="//button//span[text()=' save']") 
 	private WebElement save_btn;
-
 	@FindBy (xpath="//*[@id='post-2646']//select") 
 	private WebElement programNmDropDwn;
-
 	@FindBy (xpath="//button//span[text()=' close']") 
-	private WebElement closeBatchDetails;
-	
-	@FindBy(xpath="//*[contains(text(),'message')")
+	private WebElement closeBatchDetails;	
+	@FindBy(xpath="//*[contains(text(),'message')]")
 	private WebElement Message;
 
 	//Constructor

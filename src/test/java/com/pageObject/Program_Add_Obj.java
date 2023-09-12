@@ -15,26 +15,19 @@ public class Program_Add_Obj extends BaseClass{
 	//Element Object
 	@FindBy (id="programName") 
 	private WebElement programName;
-
 	@FindBy (id="programDescription") 
 	private WebElement programDescription;
-
 	@FindBy (xpath="id('mat-radio-40')//span") 
 	private WebElement activeRadio_btn;
-
 	@FindBy (xpath="id('mat-radio-40')//span") 
 	private WebElement inActiveRadio_btn;
-
 	@FindBy (xpath="//button//span[text()=' Cancel']") 
 	private WebElement cancel_btn;
-
 	@FindBy (xpath="//button//span[text()=' save']") 
 	private WebElement save_btn;
-
 	@FindBy (xpath="//button//span[text()=' close']") 
 	private WebElement closeProgramDetails;
-
-	@FindBy(xpath="//*[contains(text(),'message')")
+	@FindBy(xpath="//*[contains(text(),'message')]")
 	private WebElement Message;
 
 	//Constructor

@@ -1,34 +1,29 @@
 package com.stepDefinition;
 
 import java.util.List;
-import java.util.Map;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
-import com.baseClass.BaseClass;
 import com.pageObject.Batch_Add_Obj;
 import com.pageObject.Batch_Delete_Obj;
 import com.pageObject.Batch_Edit_Obj;
 import com.pageObject.Batch_Manage_Obj;
 import com.utility.Log;
 import com.utility.XlUtilsData;
-import com.utility.XLUtils;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Batch_SD extends BaseClass{
+public class Batch_SD{
 
 	private Batch_Manage_Obj batchManager = new Batch_Manage_Obj();
 	private Batch_Add_Obj addBatch = new Batch_Add_Obj();
 	private Batch_Delete_Obj deleteBatch = new Batch_Delete_Obj();
 	private Batch_Edit_Obj editBatch = new Batch_Edit_Obj();
 
+	
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
 
@@ -159,13 +154,6 @@ public class Batch_SD extends BaseClass{
 	@When("Click on save after filling all the fields except description with valid values on batch details {string} and {string}")
 	public void click_on_save_after_filling_all_the_fields_except_description_with_valid_values_on_batch_details_and(String dataKey, String sheetName) throws Exception {
 
-		//		Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
-		//		
-		//		String batchName = excelDataMap.get("Name");
-		//		String description = excelDataMap.get("Description");
-		//		String NoOfClass = excelDataMap.get("Number Of Classes");
-		//		String programName = excelDataMap.get("Program Name");
-
 		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
@@ -174,23 +162,17 @@ public class Batch_SD extends BaseClass{
 						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.descriptionfrBtch+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
-				"Program Name:- " +XlUtilsData.programNameFrBtch);
+				"BatchName:- "+ XlUtilsData.batchName + 
+				"Description:- " + XlUtilsData.descriptionfrBtch + 
+				"No Of Classe:- " + XlUtilsData.NoOfClassfrBtch + 
+				"Program Name:- " + XlUtilsData.programNameFrBtch);
 	}
 
 
 	//Fill Batch Detail with all values
 	@When("Click on save after filling all the fields with valid values on batch details {string} and {string}")
 	public void click_on_save_after_filling_all_the_fields_with_valid_values_on_batch_details_and(String dataKey, String sheetName) throws Exception {
-		//			Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
-		//			
-		//			String batchName = excelDataMap.get("Name");
-		//			String description = excelDataMap.get("Description");
-		//			String NoOfClass = excelDataMap.get("Number Of Classes");
-		//			String programName = excelDataMap.get("Program Name");
-
+		
 		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
@@ -199,10 +181,10 @@ public class Batch_SD extends BaseClass{
 						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.descriptionfrBtch+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
-				"Program Name:- " +XlUtilsData.programNameFrBtch);
+				"BatchName:- "+ XlUtilsData.batchName + 
+				"Description:- " + XlUtilsData.descriptionfrBtch + 
+				"No Of Classe:- " + XlUtilsData.NoOfClassfrBtch + 
+				"Program Name:- " + XlUtilsData.programNameFrBtch);
 	}
 
 
@@ -225,13 +207,7 @@ public class Batch_SD extends BaseClass{
 	//Fill Batch Detail with Invalid value
 	@When("Click on save after filling all the fields with Invalid values on batch details {string} and {string}")
 	public void click_on_save_after_filling_all_the_fields_with_Invalid_values_on_batch_details_and(String dataKey, String sheetName) throws Exception {
-		//			Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
-		//			
-		//			String batchName = excelDataMap.get("Name");
-		//			String description = excelDataMap.get("Description");
-		//			String NoOfClass = excelDataMap.get("Number Of Classes");
-		//			String programName = excelDataMap.get("Program Name");
-
+		
 		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
@@ -240,23 +216,17 @@ public class Batch_SD extends BaseClass{
 						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.descriptionfrBtch+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
-				"Program Name:- " +XlUtilsData.programNameFrBtch);
+				"BatchName:- "+ XlUtilsData.batchName + 
+				"Description:- " + XlUtilsData.descriptionfrBtch + 
+				"No Of Classe:- " + XlUtilsData.NoOfClassfrBtch + 
+				"Program Name:- " + XlUtilsData.programNameFrBtch);
 	}
 
 
 	//Missing Mandatory Fields
 	@When("Click on save after missing mandatory fields on batch details {string} and {string}")
 	public void Click_on_save_after_missing_mandatory_fields_on_batch_details_and(String dataKey, String sheetName) throws Exception {
-		//			Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
-		//			
-		//			String batchName = excelDataMap.get("Name");
-		//			String description = excelDataMap.get("Description");
-		//			String NoOfClass = excelDataMap.get("Number Of Classes");
-		//			String programName = excelDataMap.get("Program Name");
-
+		
 		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
@@ -265,10 +235,10 @@ public class Batch_SD extends BaseClass{
 						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.descriptionfrBtch+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
-				"Program Name:- " +XlUtilsData.programNameFrBtch);
+				"BatchName:- "+ XlUtilsData.batchName + 
+				"Description:- " + XlUtilsData.descriptionfrBtch + 
+				"No Of Classe:- " + XlUtilsData.NoOfClassfrBtch + 
+				"Program Name:- " + XlUtilsData.programNameFrBtch);
 	}
 
 
@@ -401,13 +371,6 @@ public class Batch_SD extends BaseClass{
 	@When("Click save after updating the batch detail fields with valid values {string} and {string}")
 	public void click_save_after_updating_the_batch_detail_fields_with_valid_values_and(String dataKey, String sheetName) throws Exception {
 
-		//		Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
-		//		
-		//		String batchName = excelDataMap.get("Name");
-		//		String description = excelDataMap.get("Description");
-		//		String NoOfClass = excelDataMap.get("Number Of Classes");
-		//		String programName = excelDataMap.get("Program Name");
-
 		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
@@ -416,21 +379,15 @@ public class Batch_SD extends BaseClass{
 						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.descriptionfrBtch+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
-				"Program Name:- " +XlUtilsData.programNameFrBtch);
+				"BatchName:- "+ XlUtilsData.batchName + 
+				"Description:- " + XlUtilsData.descriptionfrBtch + 
+				"No Of Classe:- " + XlUtilsData.NoOfClassfrBtch + 
+				"Program Name:- " + XlUtilsData.programNameFrBtch);
 	}
 
 	//Update Batch Detail with Invalid value
 	@When("Click save after updating the batch detail fields with Invalid values {string} and {string}")
 	public void Click_save_after_updating_the_batch_detail_fields_with_Invalid_values(String dataKey, String sheetName) throws Exception {
-		//			Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
-		//			
-		//			String batchName = excelDataMap.get("Name");
-		//			String description = excelDataMap.get("Description");
-		//			String NoOfClass = excelDataMap.get("Number Of Classes");
-		//			String programName = excelDataMap.get("Program Name");
 
 		XlUtilsData.batchXLdata(dataKey, sheetName);
 
@@ -440,22 +397,16 @@ public class Batch_SD extends BaseClass{
 						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.descriptionfrBtch+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
-				"Program Name:- " +XlUtilsData.programNameFrBtch);
+				"BatchName:- "+ XlUtilsData.batchName + 
+				"Description:- " + XlUtilsData.descriptionfrBtch + 
+				"No Of Classe:- " + XlUtilsData.NoOfClassfrBtch + 
+				"Program Name:- " + XlUtilsData.programNameFrBtch);
 	}
 
 	//Update with Missing Mandatory Fields
 	@When("Click save after updating the batch detail without mandatory fields {string} and {string}")
 	public void Click_save_after_updating_the_batch_detail_without_mandatory_fields(String dataKey, String sheetName) throws Exception {
-		//			Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
-		//			
-		//			String batchName = excelDataMap.get("Name");
-		//			String description = excelDataMap.get("Description");
-		//			String NoOfClass = excelDataMap.get("Number Of Classes");
-		//			String programName = excelDataMap.get("Program Name");
-
+	
 		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
@@ -464,22 +415,16 @@ public class Batch_SD extends BaseClass{
 						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.descriptionfrBtch+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
-				"Program Name:- " +XlUtilsData.programNameFrBtch);
+				"BatchName:- "+ XlUtilsData.batchName + 
+				"Description:- " + XlUtilsData.descriptionfrBtch + 
+				"No Of Classe:- " + XlUtilsData.NoOfClassfrBtch + 
+				"Program Name:- " + XlUtilsData.programNameFrBtch);
 	}
 
 	//Fill Batch Detail without Description
 	@When("Erase data from description field of batch {string} and {string}")
 	public void Erase_data_from_description_field_of_batch(String dataKey, String sheetName) throws Exception {
-		//		Map<String, String> excelDataMap = XLUtils.getData(dataKey, sheetName);
-		//		
-		//		String batchName = excelDataMap.get("Name");
-		//		String description = excelDataMap.get("Description");
-		//		String NoOfClass = excelDataMap.get("Number Of Classes");
-		//		String programName = excelDataMap.get("Program Name");
-
+	
 		XlUtilsData.batchXLdata(dataKey, sheetName);
 
 		batchManager = 
@@ -488,10 +433,10 @@ public class Batch_SD extends BaseClass{
 						XlUtilsData.NoOfClassfrBtch, XlUtilsData.programNameFrBtch, batchManager);
 
 		Log.logInfo("Batch details added:-" +
-				"BatchName:-"+XlUtilsData.batchName+ 
-				"Description:- " +XlUtilsData.descriptionfrBtch+ 
-				"No Of Classe:- " +XlUtilsData.NoOfClassfrBtch+ 
-				"Program Name:- " +XlUtilsData.programNameFrBtch);
+				"BatchName:- "+ XlUtilsData.batchName + 
+				"Description:- " + XlUtilsData.descriptionfrBtch + 
+				"No Of Classe:- " + XlUtilsData.NoOfClassfrBtch + 
+				"Program Name:- " + XlUtilsData.programNameFrBtch);
 	}
 
 	//Validate Updated batch details

@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.junit.Assert;
 
-import com.baseClass.BaseClass;
 import com.pageObject.Program_Add_Obj;
 import com.pageObject.Program_Delete_Obj;
 import com.pageObject.Program_Edit_Obj;
@@ -17,7 +16,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Program_SD extends BaseClass{
+public class Program_SD{
 
 	private Program_Manage_Obj programManager = new Program_Manage_Obj();
 	private Program_Add_Obj addProgram = new Program_Add_Obj();
@@ -249,8 +248,8 @@ public class Program_SD extends BaseClass{
 				(XlUtilsData.programName, XlUtilsData.descriptionfrPrgrm,programManager);
 
 		Log.logInfo("Program details added:-" +
-				"ProgramName:-"+XlUtilsData.programName+ 
-				"Description:- " +XlUtilsData.descriptionfrPrgrm);
+				"ProgramName:- "+ XlUtilsData.programName + 
+				"Description:- " + XlUtilsData.descriptionfrPrgrm);
 	}
 
 	//Fill only program description
@@ -264,8 +263,8 @@ public class Program_SD extends BaseClass{
 				(XlUtilsData.programName, XlUtilsData.descriptionfrPrgrm,programManager);
 
 		Log.logInfo("Program details added:-" +
-				"ProgramName:-"+XlUtilsData.programName+ 
-				"Description:- " +XlUtilsData.descriptionfrPrgrm);
+				"ProgramName:- "+ XlUtilsData.programName + 
+				"Description:- " + XlUtilsData.descriptionfrPrgrm);
 	}
 
 	//Fill only program Status
@@ -279,8 +278,8 @@ public class Program_SD extends BaseClass{
 				(XlUtilsData.programName, XlUtilsData.descriptionfrPrgrm,programManager);
 
 		Log.logInfo("Program details added:-" +
-				"ProgramName:-"+XlUtilsData.programName+ 
-				"Description:- " +XlUtilsData.descriptionfrPrgrm);
+				"ProgramName:- "+ XlUtilsData.programName + 
+				"Description:- " + XlUtilsData.descriptionfrPrgrm);
 	}
 
 	//validate error message
@@ -303,8 +302,8 @@ public class Program_SD extends BaseClass{
 				(XlUtilsData.programName, XlUtilsData.descriptionfrPrgrm,programManager);
 
 		Log.logInfo("Program details added:-" +
-				"ProgramName:-"+XlUtilsData.programName+ 
-				"Description:- " +XlUtilsData.descriptionfrPrgrm);
+				"ProgramName:- "+ XlUtilsData.programName + 
+				"Description:- " + XlUtilsData.descriptionfrPrgrm);
 	}
 
 	//ClickOnClose
@@ -338,8 +337,8 @@ public class Program_SD extends BaseClass{
 				(XlUtilsData.programName, XlUtilsData.descriptionfrPrgrm,programManager);
 
 		Log.logInfo("Program details added:-" +
-				"ProgramName:-"+XlUtilsData.programName+ 
-				"Description:- " +XlUtilsData.descriptionfrPrgrm);
+				"ProgramName:- "+ XlUtilsData.programName + 
+				"Description:- " + XlUtilsData.descriptionfrPrgrm);
 	}
 
 	//validate message
@@ -382,8 +381,8 @@ public class Program_SD extends BaseClass{
 				(XlUtilsData.programName, XlUtilsData.descriptionfrPrgrm,programManager);
 
 		Log.logInfo("Program details added:-" +
-				"ProgramName:-"+XlUtilsData.programName+ 
-				"Description:- " +XlUtilsData.descriptionfrPrgrm);
+				"ProgramName:- "+ XlUtilsData.programName + 
+				"Description:- " + XlUtilsData.descriptionfrPrgrm);
 	}
 
 	//Update by program description
@@ -397,8 +396,8 @@ public class Program_SD extends BaseClass{
 				(XlUtilsData.programName, XlUtilsData.descriptionfrPrgrm,programManager);
 
 		Log.logInfo("Program details added:-" +
-				"ProgramName:-"+XlUtilsData.programName+ 
-				"Description:- " +XlUtilsData.descriptionfrPrgrm);
+				"ProgramName:- "+ XlUtilsData.programName + 
+				"Description:- " + XlUtilsData.descriptionfrPrgrm);
 	}
 
 	//Update by program Status
