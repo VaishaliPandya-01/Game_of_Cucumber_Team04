@@ -12,9 +12,9 @@ import java.util.Map;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
-import com.pageObject.Attendance_Manage;
-import com.pageObject.Attendance_Details;
-import com.pageObject.Attendance_Delete;
+import com.pageObject.Attendance_Manage_Obj;
+import com.pageObject.Attendance_Details_Obj;
+import com.pageObject.Attendance_Delete_Obj;
 import com.utility.Log;
 import com.utility.ReadXlUtils;
 import com.utility.XlUtilsData;
@@ -22,25 +22,27 @@ import com.utility.XlUtilsData;
 
 public class Attendance_SD extends BaseClass{
 	
-	private Attendance_Manage att_manager = new Attendance_Manage();
-	private Attendance_Details att_details = new Attendance_Details();
-	private Attendance_Delete att_delete = new Attendance_Delete();
+	private Attendance_Manage_Obj att_manager = new Attendance_Manage_Obj();
+	private Attendance_Details_Obj att_details = new Attendance_Details_Obj();
+	private Attendance_Delete_Obj att_delete = new Attendance_Delete_Obj();
+	private long startTime;
+	private long endTime;
 	
 	//Validate the dashboard page 
-	/*@Given("Admin is on dashboard page after Login")
+	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
 		
 		System.out.println("First Given");	
 		Log.logInfo("Admin on DashboardPage");
 	}
-	*/
+	
 	//Validate the Attendance on Navigation
 	@When("Admin clicks Attendance on the navigation bar")
 	public void admin_clicks_on_the_navigation_bar(String string) {
-			
+		startTime = System.currentTimeMillis();
 			att_manager.AttendncBtn_onNav();
 			Log.logInfo("Admin Clicks 'Attendance' on NavigationBar");
-		
+			endTime = System.currentTimeMillis();
 	}
 	
 	//Validate the header of the page
@@ -56,7 +58,8 @@ public class Attendance_SD extends BaseClass{
 	@Then("Maximum navigation time in milliseconds, defaults to 30 seconds for attendance module")
 	public void maximum_navigation_time_in_milliseconds_defaults_to_seconds(Integer int1) {
 		
-		Log.logInfo("Validate ResponseTime");
+		long responseTime = endTime - startTime;
+		Log.logInfo("Response time:  "+ responseTime +" milliseconds");
 	    
 	}
 	//Validate the broken link

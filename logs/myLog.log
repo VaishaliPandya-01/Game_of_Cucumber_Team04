@@ -23,3 +23,28 @@
 [INFO ]2023-09-12 17:16:59.761 [main]Log-Click on edit batch buton
 [INFO ]2023-09-12 17:18:32.939 [main]Log-Click on edit batch buton
 [INFO ]2023-09-12 17:20:10.295 [main]Log-Click on edit batch buton
+[INFO ]2023-09-13 09:43:58.216 [main]Log-Click on add new batch
+[INFO ]2023-09-13 09:43:58.268 [main]Log-Validate batch details fields
+[INFO ]2023-09-13 09:43:58.373 [main]Log-Click on add new batch
+[INFO ]2023-09-13 09:43:59.884 [main]Log-Click on add new batch
+[INFO ]2023-09-13 09:44:00.090 [main]Log-Click on add new batch
+[INFO ]2023-09-13 09:44:00.280 [main]Log-Click on add new batch
+[INFO ]2023-09-13 09:44:00.590 [main]Log-Validate Pagination
+[INFO ]2023-09-13 09:44:01.045 [main]Log-Validate delete Icon
+[INFO ]2023-09-13 09:44:01.103 [main]Log-A New batch button is displayed
+[INFO ]2023-09-13 09:44:01.270 [main]Log-Validate edit button in data table
+[INFO ]2023-09-13 09:44:01.312 [main]Log-Validate delete button in data table
+[INFO ]2023-09-13 09:44:01.358 [main]Log-Click on add new batch
+[INFO ]2023-09-13 09:44:01.428 [main]Log-Clicked on delete
+[INFO ]2023-09-13 09:44:01.436 [main]Log-Delete alert box is present
+[INFO ]2023-09-13 09:44:01.473 [main]Log-Clicked on delete
+[INFO ]2023-09-13 09:44:01.491 [main]Log-Clicked yes to delete
+[INFO ]2023-09-13 09:44:01.544 [main]Log-Clicked on delete
+[INFO ]2023-09-13 09:44:01.555 [main]Log-Clicked No to delete
+[INFO ]2023-09-13 09:44:01.677 [main]Log-Checkbox is selected
+[INFO ]2023-09-13 09:44:01.687 [main]Log-Click on delete button
+[INFO ]2023-09-13 09:44:01.796 [main]Log-Click on edit batch buton
+[INFO ]2023-09-13 09:44:01.840 [main]Log-Click on edit batch buton
+[INFO ]2023-09-13 09:44:02.005 [main]Log-Click on edit batch buton
+[INFO ]2023-09-13 09:44:02.228 [main]Log-Click on edit batch buton
+[INFO ]2023-09-13 09:44:02.521 [main]Log-Click on edit batch buton
