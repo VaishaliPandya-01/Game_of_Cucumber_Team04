@@ -4,7 +4,7 @@ Feature: Attendance details popup window  verification
 Background: Logged on the LMS portal as Admin
   	Given Admin is on dashboard page after Login
 		When Admin clicks Attendance on the navigation bar
-		Then Admin is in "Manage Attendance" page
+		Then Admin is in "Manage Attendance" page for Attendance Module
 		When Admin clicks + a new attendance button
  		 
   Scenario: Verify all label text  
@@ -57,7 +57,7 @@ Background: Logged on the LMS portal as Admin
  	 Scenario: Validate all class name  is reflecting in the dropdown
  		
  		Given Admin clicks "class name" dropdown for Attendance Module
- 		Then Class Name in the drop down should match with  class name in  manage class page table
+ 		Then Class Name in the drop down should match with  class name in  manage class page table for Attendance Module
  	 
  	 Scenario: Validate attendance field dropdown all mandatory keywords
 

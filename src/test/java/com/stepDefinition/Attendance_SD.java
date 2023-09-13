@@ -53,14 +53,14 @@ public class Attendance_SD extends BaseClass{
 	}
 	
 	//Validate response time
-	@Then("Maximum navigation time in milliseconds, defaults to {int} seconds for Attendance Module")
+	@Then("Maximum navigation time in milliseconds, defaults to 30 seconds for attendance module")
 	public void maximum_navigation_time_in_milliseconds_defaults_to_seconds(Integer int1) {
 		
 		Log.logInfo("Validate ResponseTime");
 	    
 	}
 	//Validate the broken link
-	@Then("HTTP response >= {int}. Then the link is broken")
+	@Then("HTTP response >= {int}. Then the link is broken for attendance module")
 	public void http_response_Then_the_link_is_broken(Integer int1) {
 		
 		att_manager.verifyBrokenLink();
@@ -69,7 +69,7 @@ public class Attendance_SD extends BaseClass{
 	}
 	
 	//Verify LMS title
-	@Then("Admin should see {string}  as title")
+	@Then("Admin should see {string}  as title for attendance module")
 	public void admin_should_see_LMS_Learning_management_system_as_title(String expectedtitle) {
 		String ActualTitle = att_manager.getTitle();
 		Assert.assertEquals(ActualTitle,expectedtitle);   
@@ -77,7 +77,7 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Verify the alignment of the Manage Attendance header
-	@Then("Manage attendance header should be in left side of the page")
+	@Then("Manage attendance header should be in left side of the page for attendance module")
 	public void manage_attendance_header_should_be_in_left_side_of_the_page() {
 	   
 	    Assert.assertEquals("Left",att_manager.alignmentManageHeader());
@@ -86,14 +86,14 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Validate text spelling in manage attendancepage
-	@Then("Admin should see correct spelling for the all the fields in get all text from the portal page")
+	@Then("Admin should see correct spelling for the all the fields in get all text for attendance module")
 	public void admin_should_see_correct_spelling_for_the_all_the_fields() {
 	    
 		att_manager.spellCheckFunction();
 	}
 	
 	//Validate the Delete icon when No data in table
-	@Then("Admin should see disabled delete icon below the {string}")
+	@Then("Admin should see disabled delete icon below the {string} for attendance module")
 	public void admin_should_see_disabled_delete_icon_below_the(String string) {
 		
 	    Assert.assertFalse(att_manager.M_DeleteiconEnabled());
@@ -101,7 +101,7 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Validate the search bar
-	@Then("Admin should see search bar on the attendance page")
+	@Then("Admin should see search bar on the attendance page for attendance module")
 	public void admin_should_see_search_bar_on_the_attendance_page() {
 		
 	    Assert.assertTrue(att_manager.searchBarVisibility());
@@ -129,7 +129,7 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Validate the edit icon for single row
-	@Then("Edit Icon in each row of data table only  when entries are available")
+	@Then("Edit Icon in each row of data table only  when entries are available for attendance module")
 	public void edit_Icon_in_each_row_of_data_table_only_when_entries_are_available() {
 		
 	    if(att_manager.checkdataTableHasData()) {
@@ -142,7 +142,7 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Validate the edit icon
-	@Then("Edit Icon will not be present in data table")
+	@Then("Edit Icon will not be present in data table for attendance module")
 	public void edit_Icon_will_not_be_present_in_data_table() {
 		 if(att_manager.checkdataTableHasData()) {
 			 
@@ -155,7 +155,7 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Validate the delete icon when data table has data
-	@Then("Delete Icon in each row of data table only  when entries are available")
+	@Then("Delete Icon in each row of data table only  when entries are available for attendance module")
 	public void delete_Icon_in_each_row_of_data_table_only_when_entries_are_available() {
 		if(att_manager.checkdataTableHasData()) {
 			
@@ -168,7 +168,7 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Validate the delete icon when no data
-	@Then("Admin cant see delete  Icon in data table")
+	@Then("Admin cant see delete  Icon in data table for attendance module")
 	public void admin_cant_see_delete_Icon_in_data_table() {
 	    
 		if(att_manager.checkdataTableHasData()) {
@@ -180,14 +180,14 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Validate the visibitity of sort icon
-	@Then("Admin should see sort icon near the column headers except for Edit and Delete")
+	@Then("Admin should see sort icon near the column headers except for Edit and Delete for attendance module")
 	public void admin_should_see_sort_icon_near_the_column_headers_except_for_Edit_and_Delete() {
 	    Assert.assertTrue(att_manager.visibity_sort());
 	    Log.logInfo("Validating the sort icon ");
 	}
 
 	//Validate the single checkbox
-	@Then("Admin should see check box in the all rows  of data table")
+	@Then("Admin should see check box in the all rows  of data table for attendance module")
 	public void admin_should_see_check_box_in_the_all_rows_of_data_table() {
 	    
 		if(att_manager.checkdataTableHasData()) {
@@ -198,14 +198,14 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Validate the footer text
-	@Then("Above the footer Admin should see the text as {string} below the table.")
+	@Then("Above the footer Admin should see the text as {string} below the table for attendance module")
 	public void above_the_footer_Admin_should_see_the_text_as_below_the_table(String expectedFooterText) {
 	    Assert.assertEquals(expectedFooterText, att_manager.footerTextValidation());
 	    
 	}
 
 	//Validate the pagination controls
-	@Then("Admin should see the pagination controls under the data table")
+	@Then("Admin should see the pagination controls under the data table for attendance module")
 	public void admin_should_see_the_pagination_controls_under_the_data_table() {
 		att_manager.validatePagination();
 		Log.logInfo("Validate Pagination controls");
@@ -213,7 +213,7 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Verify the text with total number of classes in data
-	@Then("Admin should see the text with total number classes in the data table. \\( {string})")
+	@Then("Admin should see the text with total number classes in the data table for attendance module")
 	public void admin_should_see_the_text_with_total_number_classes_in_the_data_table(String string) {
 	    
 		int total = att_manager.ClassesTotalCount();
@@ -223,7 +223,7 @@ public class Attendance_SD extends BaseClass{
 	///////*******************Attendance Details Feature ****************************///////
 	
 	//Validate Manage attendance page 
-	@Given("Admin is in {string} page")
+	@Given("Admin is in {string} page for Attendance Module")
 	public void admin_is_in_manage_attendance_page(String title) {
 	
 		Assert.assertEquals(att_manager.getTitle(),title);   
@@ -378,7 +378,7 @@ public class Attendance_SD extends BaseClass{
 	}
 
 	//Verify Class Name with class name in class Module data
-	@Then("Class Name in the drop down should match with  class name in  manage class page table")
+	@Then("Class Name in the drop down should match with  class name in  manage class page table for Attendance Module")
 	public void class_Name_in_the_drop_down_should_match_with_class_name_in_manage_class_page_table() {
 	    
 	    
@@ -475,13 +475,14 @@ public class Attendance_SD extends BaseClass{
 	public void admin_should_see_current_date_is_highled_in_the_date_picker_for_Attendance_Module() {
 	    
 		Assert.assertTrue(att_details.VisibilityInDateBox());
-	    
+		Log.logInfo("Verified Current Date in date picker ");
 	}
 
 	@Given("Admin clicks date picker button and selects future date for Attendance Module")
 	public void admin_clicks_date_picker_button_and_selects_future_date_for_Attendance_Module() {
 		att_details.clickAttndncDate();
 		att_details.selectFutureDate("2025");
+		Log.logInfo("Admin selects future Date ");
 	    
 	}
 
@@ -489,6 +490,7 @@ public class Attendance_SD extends BaseClass{
 	public void admin_should_see_selected_date_is_highled_in_the_date_picker_for_Attendance_Module() {
 	    
 		Assert.assertTrue(att_details.VisibilityInDateBox());
+		Log.logInfo("Selected date is highlighted");
 	}
 
 
@@ -503,11 +505,11 @@ public class Attendance_SD extends BaseClass{
 		
 		XlUtilsData.AttendanceXLdata(dataKey, sheetName);
 		att_manager = att_details.fillAttendncAddForm
-				(XlUtilsData.programName, XlUtilsData.ClassName,
-						XlUtilsData.StudName, XlUtilsData.attendance,XlUtilsData.AttendDate,att_manager);
+				(XlUtilsData.programName_att, XlUtilsData.ClassName_att,
+						XlUtilsData.StudName_att, XlUtilsData.attendance_att,XlUtilsData.AttendDate_att,att_manager);
 		
-		Log.logInfo("Attendance added:-"+XlUtilsData.programName+" "+
-					XlUtilsData.ClassName+" "+XlUtilsData.StudName+" "+XlUtilsData.attendance);
+		Log.logInfo("Attendance added:-"+XlUtilsData.programName_att+" "+
+					XlUtilsData.ClassName_att+" "+XlUtilsData.StudName_att+" "+XlUtilsData.attendance_att);
 	}
 
 	@Then("Admin should see success message in popup window and sees new attendance details in manage attendance details DB")
@@ -523,11 +525,11 @@ public class Attendance_SD extends BaseClass{
 	    
 		XlUtilsData.AttendanceXLdata(dataKey, sheetName);
 		att_manager = att_details.fillAttendncAddForm
-				(XlUtilsData.programName, XlUtilsData.ClassName,
-						XlUtilsData.StudName, XlUtilsData.attendance,XlUtilsData.AttendDate,att_manager);
+				(XlUtilsData.programName_att, XlUtilsData.ClassName_att,
+						XlUtilsData.StudName_att, XlUtilsData.attendance_att,XlUtilsData.AttendDate_att,att_manager);
 		
-		Log.logInfo("Attendance added:-"+XlUtilsData.programName+" "+
-					XlUtilsData.ClassName+" "+XlUtilsData.StudName+" "+XlUtilsData.attendance);
+		Log.logInfo("Attendance added:-"+XlUtilsData.programName_att+" "+
+					XlUtilsData.ClassName_att+" "+XlUtilsData.StudName_att+" "+XlUtilsData.attendance_att);
 	    
 	}
 
@@ -542,8 +544,10 @@ public class Attendance_SD extends BaseClass{
 
 	@When("Admin fills values with future date in {string} and {string} and click save for Attendance module")
 	public void admin_fills_values_with_future_date_and_click_save_for_Attendance_module(String dataKey, String sheetName) throws Exception {
+		
 		XlUtilsData.AttendanceXLdata(dataKey, sheetName);
-		att_details.ValidationAttendncfutureDate(XlUtilsData.AttendDate);
+		att_details.ValidationAttendncfutureDate(XlUtilsData.AttendDate_att);
+		Log.logInfo("Admin Fills future date for Attendance");
 	    
 	}
 
@@ -561,6 +565,7 @@ public class Attendance_SD extends BaseClass{
 	public void admin_clicks_edit_icon_button_on_Attendence_Manage_page() {
 	    
 	    att_manager.editIconAttendance();
+	    Log.logInfo("Verified the Edit Icon button");
 	}
 	
 	
@@ -628,9 +633,10 @@ public class Attendance_SD extends BaseClass{
 /////////////////////***********Multiple Delete***********************///////////////////////////
 	
 	
-	@When("Admin clicks single  row level check box in the data table for Attendance Module")
+	@Given("Admin clicks single  row level check box in the data table for Attendance Module")
 	public void admin_clicks_single_row_level_check_box_in_the_data_table_for_Attendance_Module() {
-	    	att_manager.SelectSingleCheckBoxAtt();
+	    	
+		att_manager.SelectSingleCheckBoxAtt();
 	    
 	}
 
@@ -646,21 +652,28 @@ public class Attendance_SD extends BaseClass{
 		Assert.assertTrue(att_manager.VerifyTickMark());
 	    
 	}
+	
+	@Given("Admin clicks multiple row level check box in the data table for Attendance Module")
+	public void admin_click_multiple_row_level_check_box() {
+		
+		att_manager.SelectMultiCheckBoxAtt();
+	}
 
-	@When("Admin clicks multiple row level check box in the data table for Attendance Module")
+	@Given("Admin clicks delete button under header after selecting the single check box for attendance module")
 	public void admin_clicks_multiple_row_level_check_box_in_the_data_table_for_Attendance_Module() {
 	   
-		att_manager.SelectMultiCheckBoxAtt();
+		att_manager.SelectSingleCheckBoxAtt();
+		att_manager.deleteMultiplAttendnc_Btn();
 	    
 	}
 
-	@When("Admin clicks delete button under header after selecting the check box in the data table for Attendance Module")
+	@Given("Admin clicks delete button under header after selecting the check box in the data table for Attendance Module")
 	public void admin_clicks_delete_button_under_header_after_selecting_Single_check_box_in_the_data_table_for_Attendance_Module() {
 		att_manager.SelectSingleCheckBoxAtt();
 	    att_manager.deleteMultiplAttendnc_Btn();
 	}
 	
-	@When("Admin clicks delete button under header after selecting the multiple check box for Attendance Module")
+	@Given("Admin clicks delete button under header after selecting the multiple check box for Attendance Module")
 	public void admin_clicks_delete_button_under_header_after_selecting_the_multiple_check_box_for_Attendance_Module() {
 		att_manager.SelectMultiCheckBoxAtt();
 	    att_manager.deleteMultiplAttendnc_Btn();

@@ -110,6 +110,12 @@
 			<version>2.19.0</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.5.3</version>
+		</dependency>
 
 	</dependencies>
 
@@ -122,6 +128,10 @@
 					<version>3.8.1</version>
 					<configuration>
 						<release>11</release>
+						<forkCount>4</forkCount> <!-- Number of parallel processes -->
+						<includes>**/TestRunner.java</includes>
+						<parallel>methods</parallel> <!-- Execute tests in parallel by method -->
+						<useUnlimitedThreads>true</useUnlimitedThreads>
 					</configuration>
 				</plugin>
 			</plugins>
