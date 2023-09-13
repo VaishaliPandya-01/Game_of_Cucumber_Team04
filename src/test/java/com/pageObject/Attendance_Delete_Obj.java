@@ -40,9 +40,10 @@ public class Attendance_Delete_Obj extends BaseClass{
 	public void clickNo() {
 		cn.click(driver, att_confrim_n);
 	}
-	public void DisplayMessage() {
+	public String DisplayMessage() {
 		String sucessmsg = cn.getText(message);
 		Log.logInfo(sucessmsg);
+		return sucessmsg;
 	}
 	
 	

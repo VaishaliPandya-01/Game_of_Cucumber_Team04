@@ -1,30 +1,27 @@
 package com.pageObject;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Date;
 import java.util.List;
-import java.util.Locale;
+
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import com.pageObject.Attendance_Manage_Obj;
-import com.utility.Log;
-import java.util.Date;
+
 import com.baseClass.BaseClass;
 import com.controller.Controller;
-import java.text.SimpleDateFormat;
+import com.utility.Log;
 
 public class Attendance_Details_Obj extends BaseClass {
 	
-	//@FindBy(xpath="//input[@class='pgmName']") private WebElement att_pgmName;
-	@FindBy(xpath="//*[@class='dropdown-menu pgmName']/a[1]")@CacheLookup WebElement att_pgmName;
+	@FindBy(xpath="//*[@class='dropdown-menu pgmName']/a[1]")private WebElement att_pgmName;
 	@FindBy(xpath="//*[@class='dropdown-menu className']") private WebElement att_className;
 	@FindBy(xpath="//div[@class='dropdown-menu studName']") private WebElement att_studName;
 	@FindBy(xpath="//div[@class='dropdown-menu attendance']")private WebElement att_attendance;
-	@FindBy(xpath="//span[@aria-controls='datetimepicker_dateview']")
-			private WebElement dateBox;
+	@FindBy(xpath="//span[@aria-controls='datetimepicker_dateview']")private WebElement dateBox;
 	@FindBy(xpath="//*[@id='cancel']") private  WebElement att_cancel;
 	@FindBy(xpath="//*[@id='save']") private  WebElement att_save;
 	@FindBy(xpath="//*[@id='closeButton']") private  WebElement att_closeBtn;
@@ -42,7 +39,7 @@ public class Attendance_Details_Obj extends BaseClass {
 	public Attendance_Details_Obj() {
 		PageFactory.initElements(driver,this);
 	}
-	private Controller cn = new Controller();
+	 Controller cn = new Controller();
 	
 	public String getTitle_AttDetails() {
 		String title = cn.getTitle(driver);
@@ -277,9 +274,8 @@ public class Attendance_Details_Obj extends BaseClass {
 	public boolean VisiblePageControl() {
 		return cn.isEnabled(driver, pageControl);
 	}
+	
+	public boolean DisablePageControl() {	
+		return cn.isEnabled(driver, pageControl);	
+	}
 }
-
-
-
-
-
