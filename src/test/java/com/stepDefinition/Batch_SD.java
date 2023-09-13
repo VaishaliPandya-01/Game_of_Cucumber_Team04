@@ -192,7 +192,6 @@ public class Batch_SD{
 	@Then("The newly added batch should be present in the data table in Manage Batch page")
 	public void the_newly_added_batch_should_be_present_in_the_data_table_in_Manage_Batch_page() {
 
-
 		String actualTableData = batchManager.getTableValue();
 		Assert.assertTrue(actualTableData.contains(XlUtilsData.batchName));
 		Assert.assertTrue(actualTableData.contains(XlUtilsData.descriptionfrBtch));
@@ -202,7 +201,6 @@ public class Batch_SD{
 		Log.logInfo("Validate Manage Batch Title"+title);
 		Log.logInfo("Validate Manage Batch Data");
 	}
-
 
 	//Fill Batch Detail with Invalid value
 	@When("Click on save after filling all the fields with Invalid values on batch details {string} and {string}")

@@ -23,7 +23,6 @@ public class XLUtils {
 	public XSSFRow row;
 	public static XSSFCell cell;
 	public CellStyle style;   
-	//	static String path=readconfig.getXlpath() ;
 	public File jsonFile;
 
 	//data driven through feature file

@@ -25,7 +25,6 @@ public class XlUtilsData {
 		
 		return excelDataMap;
 	}
-	
 
 	public static Map<String, String> programXLdata(String dataKey,String sheetName) throws Exception {
 
@@ -37,5 +36,4 @@ public class XlUtilsData {
 				
 		return excelDataMap;
 	}
-
 }
