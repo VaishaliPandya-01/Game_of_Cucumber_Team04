@@ -1,11 +1,51 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Batch_Module/05_Batch_Delete.feature");
+<<<<<<< HEAD
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Assignment_Module/08_AssigmentAddNew.feature");
 formatter.feature({
-  "name": "Delete Batch",
+  "name": "Add new assignment",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@DeleteBatch"
+      "name": "@tag"
+    }
+  ]
+});
+formatter.scenarioOutline({
+  "name": "Validate admin able to add new assignment with valid data in mandatory fields",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@ValidData_in_mandatory_fields"
+    }
+  ]
+});
+formatter.step({
+  "name": "Admin enters all mandatory field values with valid data and clicks save button in assignment details \"\u003cKeyOptions\u003e\" and \"\u003cSheetName\u003e\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "Admin should see new assignment details is added in the data table",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "KeyOptions",
+        "",
+        "Sheetname"
+      ]
+    },
+    {
+      "cells": [
+        "valid mandatory fields",
+        "",
+        "AssignmentDetails"
+      ]
     }
   ]
 });
@@ -28,211 +68,99 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Admin clicks Batch from navigation bar",
+  "name": "Admin clicks \"Assignment\" button on the navigation bar in assignment page",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_Batch_from_navigation_bar()"
+  "location": "com.stepDefinition.Assignment_SD.admin_clicks_button_on_the_navigation_bar_in_assignment_page(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Admin clicks on the delete icon on batch page if it is enabled",
+  "name": "Admin click +Add new assignment button in Assignment details popup window",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_on_the_delete_icon_on_batch_page_if_it_is_enabled()"
+  "location": "com.stepDefinition.Assignment_SD.admin_click_Add_new_assignment_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Validate row level delete icon",
+  "name": "Validate admin able to add new assignment with valid data in mandatory fields",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@DeleteBatch"
+      "name": "@tag"
     },
     {
-      "name": "@ValidateRowLevelDeleteIcon"
+      "name": "@ValidData_in_mandatory_fields"
     }
   ]
 });
 formatter.step({
-  "name": "Alert appears with yes and No option to delete batch",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.alert_appears_with_yes_and_No_option_to_delete_batch()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.background({
-  "name": "Logged on the LMS portal",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin is on dashboard page after Login",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin clicks Batch from navigation bar",
+  "name": "Admin enters all mandatory field values with valid data and clicks save button in assignment details \"valid mandatory fields\" and \"\u003cSheetName\u003e\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_Batch_from_navigation_bar()"
+  "location": "com.stepDefinition.Assignment_SD.admin_enters_all_mandatory_field_values_with_valid_data_and_clicks_save_button_in_assignment_details_and(java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin clicks on the delete icon on batch page if it is enabled",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_on_the_delete_icon_on_batch_page_if_it_is_enabled()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Admin clicks the yes icon",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@DeleteBatch"
-    },
-    {
-      "name": "@ValidateRowLevelDeleteIconClickYesToDelete"
-    }
-  ]
-});
-formatter.step({
-  "name": "Admin click yes option to delete batch",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_click_yes_option_to_delete_batch()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Batch deleted alert pops and batch is no more available in data table",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.batch_deleted_alert_pops_and_batch_is_no_more_available_in_data_table()"
-});
-formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[contains(text(),\u0027Are you sure\u0027)]\"}\n  (Session info: chrome\u003d116.0.5845.187)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.11.0\u0027, revision: \u0027040bc5406b\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [b8da4876ac0c07e36d5c083ce6699fe5, findElement {using\u003dxpath, value\u003d//*[contains(text(),\u0027Are you sure\u0027)]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\\Users\\joshi\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63574}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63574/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: b8da4876ac0c07e36d5c083ce6699fe5\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy37.getText(Unknown Source)\r\n\tat com.pageObject.Batch_Delete_Obj.deleteMessage(Batch_Delete_Obj.java:61)\r\n\tat com.stepDefinition.Batch_SD.batch_deleted_alert_pops_and_batch_is_no_more_available_in_data_table(Batch_SD.java:284)\r\n\tat ✽.Batch deleted alert pops and batch is no more available in data table(file:///C:/Users/joshi/eclipse-workspace/Game_of_Cucumber_Team04/src/test/resources/features/Batch_Module/05_Batch_Delete.feature:16)\r\n",
+  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.apache.poi.xssf.usermodel.XSSFSheet.getLastRowNum()\" because \"com.utility.XLUtils.sheet\" is null\r\n\tat com.utility.XLUtils.getDataRow(XLUtils.java:31)\r\n\tat com.utility.XLUtils.getData(XLUtils.java:57)\r\n\tat com.utility.XlUtilsData.AssignmentXLdata(XlUtilsData.java:73)\r\n\tat com.stepDefinition.Assignment_SD.admin_enters_all_mandatory_field_values_with_valid_data_and_clicks_save_button_in_assignment_details_and(Assignment_SD.java:328)\r\n\tat ✽.Admin enters all mandatory field values with valid data and clicks save button in assignment details \"valid mandatory fields\" and \"\u003cSheetName\u003e\"(file:///C:/Users/joshi/eclipse-workspace/Game_of_Cucumber_Team04/src/test/resources/features/Assignment_Module/08_AssigmentAddNew.feature:13)\r\n",
   "status": "failed"
 });
+formatter.step({
+  "name": "Admin should see new assignment details is added in the data table",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.stepDefinition.Assignment_SD.admin_should_see_new_assignment_details_is_added_in_the_data_table()"
+});
+formatter.result({
+  "status": "skipped"
+});
 formatter.after({
-  "error_message": "org.openqa.selenium.NoSuchSessionException: invalid session id\nBuild info: version: \u00274.11.0\u0027, revision: \u0027040bc5406b\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [b8da4876ac0c07e36d5c083ce6699fe5, screenshot {}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\\Users\\joshi\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63574}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63574/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: b8da4876ac0c07e36d5c083ce6699fe5\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)\r\n\tat com.stepDefinition.Hooks.tearDown(Hooks.java:30)\r\n",
+  "error_message": "org.openqa.selenium.NoSuchSessionException: invalid session id\nBuild info: version: \u00274.11.0\u0027, revision: \u0027040bc5406b\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002719\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [9bc0d4c31b0e8ea975645248e51f55f8, screenshot {}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.189, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\\Users\\joshi\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63901}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63901/devtoo..., se:cdpVersion: 116.0.5845.189, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 9bc0d4c31b0e8ea975645248e51f55f8\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)\r\n\tat com.stepDefinition.Hooks.tearDown(Hooks.java:30)\r\n",
   "status": "failed"
 });
-formatter.background({
-  "name": "Logged on the LMS portal",
+formatter.scenarioOutline({
+  "name": "Validate admin able to add new assignment with invalid data in mandatory fields",
   "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin is on dashboard page after Login",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin clicks Batch from navigation bar",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_Batch_from_navigation_bar()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin clicks on the delete icon on batch page if it is enabled",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_on_the_delete_icon_on_batch_page_if_it_is_enabled()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Admin clicks the No icon",
-  "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@DeleteBatch"
-    },
-    {
-      "name": "@ValidateRowLevelDeleteIconClickNo"
+      "name": "@InValidData_mandatory_fields"
     }
   ]
 });
 formatter.step({
-  "name": "Admin click No option on delete batch",
+  "name": "Admin enters all mandatory field values with invalid data and clicks save button in assignment details \"\u003cKeyOptions\u003e\" and \"\u003cSheetName\u003e\"",
   "keyword": "When "
 });
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_click_No_option_on_delete_batch()"
-});
-formatter.result({
-  "status": "passed"
-});
 formatter.step({
-  "name": "Batch is still listed in data table",
+  "name": "Error message should appear in alert  in assignment details",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.Batch_is_still_listed_in_data_table()"
-});
-formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[contains(text(),\u0027Success\u0027)]\"}\n  (Session info: chrome\u003d116.0.5845.187)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.11.0\u0027, revision: \u0027040bc5406b\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [8adc6e85925812b48180a18a15713c7e, findElement {using\u003dxpath, value\u003d//*[contains(text(),\u0027Success\u0027)]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\\Users\\joshi\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63648/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 8adc6e85925812b48180a18a15713c7e\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy37.getText(Unknown Source)\r\n\tat com.pageObject.Batch_Delete_Obj.successMessage(Batch_Delete_Obj.java:56)\r\n\tat com.stepDefinition.Batch_SD.Batch_is_still_listed_in_data_table(Batch_SD.java:298)\r\n\tat ✽.Batch is still listed in data table(file:///C:/Users/joshi/eclipse-workspace/Game_of_Cucumber_Team04/src/test/resources/features/Batch_Module/05_Batch_Delete.feature:21)\r\n",
-  "status": "failed"
-});
-formatter.after({
-  "error_message": "org.openqa.selenium.NoSuchSessionException: invalid session id\nBuild info: version: \u00274.11.0\u0027, revision: \u0027040bc5406b\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [8adc6e85925812b48180a18a15713c7e, screenshot {}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\\Users\\joshi\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63648/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 8adc6e85925812b48180a18a15713c7e\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)\r\n\tat com.stepDefinition.Hooks.tearDown(Hooks.java:30)\r\n",
-  "status": "failed"
-});
-formatter.uri("file:src/test/resources/features/Program_Module/04_Program_Pagination.feature");
-formatter.feature({
-  "name": "Program Pagination",
+formatter.examples({
+  "name": "",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
+  "keyword": "Examples",
+  "rows": [
     {
-      "name": "@ProgramPagination"
+      "cells": [
+        "KeyOptions",
+        "",
+        "Sheetname"
+      ]
+    },
+    {
+      "cells": [
+        "invalid mandatory fields",
+        "",
+        "AssignmentDetails"
+      ]
     }
   ]
 });
@@ -255,241 +183,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Admin clicks Program from navigation bar",
+  "name": "Admin clicks \"Assignment\" button on the navigation bar in assignment page",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_Program_from_navigation_bar()"
+  "location": "com.stepDefinition.Assignment_SD.admin_clicks_button_on_the_navigation_bar_in_assignment_page(java.lang.String)"
 });
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify Next page link",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@ProgramPagination"
-    },
-    {
-      "name": "@VerifyNextPageLink"
-    }
-  ]
-});
-formatter.step({
-  "name": "Admin clicks Next page link on the program table",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.Program_SD.admin_clicks_Next_page_link_on_the_program_table()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin should see the Pagination has Next link",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.Program_SD.admin_should_see_the_Pagination_has_link()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.background({
-  "name": "Logged on the LMS portal",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin is on dashboard page after Login",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin clicks Program from navigation bar",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_Program_from_navigation_bar()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify Last page link",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@ProgramPagination"
-    },
-    {
-      "name": "@VerifyLastPageLink"
-    }
-  ]
-});
-formatter.step({
-  "name": "Admin clicks Last page link on the program table",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.Program_SD.admin_clicks_Last_page_link_on_the_program_table()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin should see the last page record on the table with Next page link are disabled",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.Program_SD.admin_should_see_the_last_page_record_on_the_table_with_Next_page_link_are_disabled()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.background({
-  "name": "Logged on the LMS portal",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin is on dashboard page after Login",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin clicks Program from navigation bar",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_Program_from_navigation_bar()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify First page link",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@ProgramPagination"
-    },
-    {
-      "name": "@VerifyFirstPageLink"
-    }
-  ]
-});
-formatter.step({
-  "name": "Admin clicks first page link on the program table",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.Program_SD.admin_clicks_first_page_link_on_the_program_table()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin should see the previous page record on the table with pagination has previous page link",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.Program_SD.Admin_should_see_the_previous_page_record_on_the_table_with_pagination_has_previous_page_link()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.background({
-  "name": "Logged on the LMS portal",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin is on dashboard page after Login",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin clicks Program from navigation bar",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.Batch_SD.admin_clicks_Program_from_navigation_bar()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify Start page link",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@ProgramPagination"
-    },
-    {
-      "name": "@VerifyStartPageLink"
-    }
-  ]
-});
-formatter.step({
-  "name": "Admin clicks start page link on the program table",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.Program_SD.admin_clicks_start_page_link_on_the_program_table()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Admin should see the very first page record on the table with Previous page link are disabled",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.Program_SD.Admin_should_see_the_very_first_page_record_on_the_table_with_Previous_page_link_are_disabled()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-});
+=======
+>>>>>>> shikha
