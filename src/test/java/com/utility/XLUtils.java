@@ -3,13 +3,11 @@ package com.utility;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -17,7 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class XLUtils {
 
-	Readconfig readconfig=new Readconfig();
+	static Readconfig readconfig=new Readconfig();
 	public static FileInputStream fi;
 	public FileOutputStream fo;
 	public static XSSFWorkbook workbook;
@@ -25,14 +23,9 @@ public class XLUtils {
 	public XSSFRow row;
 	public static XSSFCell cell;
 	public CellStyle style;   
-	static String path ;
 	public File jsonFile;
-	
-	 public XLUtils(String path)
-	{
-		this.path=readconfig.getXlpath();
-	}
-	 	
+
+
 	//data driven through feature file
 	private static int getDataRow(String dataKey, int dataColumn) {
 		int rowCount = sheet.getLastRowNum();
@@ -43,43 +36,43 @@ public class XLUtils {
 		}
 		return 0;		
 	}
-	
+
 	private static String getCellData(int rowNumb, int colNumb) {
 		cell = sheet.getRow(rowNumb).getCell(colNumb);
-		
+
 		if(cell.getCellType() == CellType.NUMERIC) {
 			cell.setCellType(CellType.STRING);
 		}
 		String cellData = cell.getStringCellValue();
 		return cellData;
 	}
-	
+
 	public static Map<String, String> getData(String dataKey, String sheetName) throws Exception {
-		
+
 		Map<String, String> dataMap = new HashMap<String, String>();
-		fi=new FileInputStream(path);
+		fi=new FileInputStream(readconfig.getXlpath());
 		workbook=new XSSFWorkbook(fi);
 		sheet=workbook.getSheet(sheetName);
-	
-			int dataRow = getDataRow(dataKey.trim(), 0);
-			
-			if (dataRow == 0) {
-				throw new Exception("NO DATA FOUND for dataKey: "+dataKey);
-			}
-			
-			int columnCount = sheet.getRow(dataRow).getLastCellNum();
-			
-			for(int i=0;i<columnCount;i++) {
-				cell = sheet.getRow(dataRow).getCell(i);
-				String cellData = null; 
-				if (cell != null) {
-					if(cell.getCellType() == CellType.NUMERIC) {
-						cell.setCellType(CellType.STRING);
-					}
-					cellData = cell.getStringCellValue();
+
+		int dataRow = getDataRow(dataKey.trim(), 0);
+
+		if (dataRow == 0) {
+			throw new Exception("NO DATA FOUND for dataKey: "+dataKey);
+		}
+
+		int columnCount = sheet.getRow(dataRow).getLastCellNum();
+
+		for(int i=0;i<columnCount;i++) {
+			cell = sheet.getRow(dataRow).getCell(i);
+			String cellData = null; 
+			if (cell != null) {
+				if(cell.getCellType() == CellType.NUMERIC) {
+					cell.setCellType(CellType.STRING);
 				}
-				dataMap.put(sheet.getRow(0).getCell(i).getStringCellValue(), cellData);
+				cellData = cell.getStringCellValue();
 			}
+			dataMap.put(sheet.getRow(0).getCell(i).getStringCellValue(), cellData);
+		}
 		return dataMap;
 	}
 

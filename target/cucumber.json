@@ -1,5 +1,6 @@
 [
   {
+
     "line": 3,
     "elements": [
       {
@@ -925,11 +926,16 @@
               "error_message": "io.cucumber.core.exception.CucumberException: Failed to instantiate class com.stepDefinition.Assignment_SD\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:135)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.getInstance(ObjectFactoryServiceLoader.java:121)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)\r\nCaused by: java.lang.reflect.InvocationTargetException\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:129)\r\n\t... 34 more\r\nCaused by: java.lang.IllegalArgumentException: Driver must be set\r\n\tat org.openqa.selenium.internal.Require.nonNull(Require.java:60)\r\n\tat org.openqa.selenium.interactions.Actions.\u003cinit\u003e(Actions.java:59)\r\n\tat com.controller.Controller.\u003cinit\u003e(Controller.java:14)\r\n\tat com.pageObject.Assignment_detailsPage_obj.\u003cinit\u003e(Assignment_detailsPage_obj.java:26)\r\n\tat com.stepDefinition.Assignment_SD.\u003cinit\u003e(Assignment_SD.java:28)\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\r\n\t... 37 more\r\n",
               "duration": 5983200,
               "status": "failed"
+
+              "duration": 17000200,
+              "status": "passed"
             },
             "line": 5,
             "name": "Admin is on dashboard page after Login",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_is_on_dashboard_page_after_Login()"
+
+              "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
             },
             "keyword": "Given "
           },
@@ -940,6 +946,14 @@
             "line": 6,
             "name": "Admin clicks Assignment from navigation bar",
             "match": {},
+              "duration": 996700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_Batch_from_navigation_bar()"
+            },
             "keyword": "When "
           },
           {
@@ -951,6 +965,14 @@
             "name": "Admin clicks on the delete icon on Assignment page if it is enabled",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_clicks_on_the_delete_icon_on_Assignment_page_if_it_is_enabled()"
+
+              "duration": 5030613800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Admin clicks on the delete icon on batch page if it is enabled",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_on_the_delete_icon_on_batch_page_if_it_is_enabled()"
             },
             "keyword": "Then "
           }
@@ -962,6 +984,34 @@
         "name": "Delete Feature",
         "description": "",
         "id": "delete-assignment;delete-feature",
+
+        "start_timestamp": "2023-09-13T01:13:51.414Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2911124500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Validate row level delete icon",
+        "description": "",
+        "id": "delete-batch;validate-row-level-delete-icon",
+        "after": [
+          {
+            "result": {
+              "duration": 100662100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -974,6 +1024,14 @@
             "name": "Alert appears with yes and No option to delete Assignment",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.alert_appears_with_yes_and_No_option_to_delete_Assignment()"
+
+              "duration": 10075059400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Alert appears with yes and No option to delete batch",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.alert_appears_with_yes_and_No_option_to_delete_batch()"
             },
             "keyword": "Then "
           }
@@ -984,6 +1042,11 @@
           },
           {
             "name": "@ValidateAlertBox"
+
+            "name": "@DeleteBatch"
+          },
+          {
+            "name": "@ValidateRowLevelDeleteIcon"
           }
         ]
       },
@@ -999,11 +1062,16 @@
               "error_message": "io.cucumber.core.exception.CucumberException: Failed to instantiate class com.stepDefinition.Assignment_SD\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:135)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.getInstance(ObjectFactoryServiceLoader.java:121)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)\r\nCaused by: java.lang.reflect.InvocationTargetException\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:129)\r\n\t... 34 more\r\nCaused by: java.lang.IllegalArgumentException: Driver must be set\r\n\tat org.openqa.selenium.internal.Require.nonNull(Require.java:60)\r\n\tat org.openqa.selenium.interactions.Actions.\u003cinit\u003e(Actions.java:59)\r\n\tat com.controller.Controller.\u003cinit\u003e(Controller.java:14)\r\n\tat com.pageObject.Assignment_detailsPage_obj.\u003cinit\u003e(Assignment_detailsPage_obj.java:26)\r\n\tat com.stepDefinition.Assignment_SD.\u003cinit\u003e(Assignment_SD.java:28)\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\r\n\t... 37 more\r\n",
               "duration": 1994600,
               "status": "failed"
+
+              "duration": 5003100,
+              "status": "passed"
             },
             "line": 5,
             "name": "Admin is on dashboard page after Login",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_is_on_dashboard_page_after_Login()"
+
+              "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
             },
             "keyword": "Given "
           },
@@ -1014,6 +1082,15 @@
             "line": 6,
             "name": "Admin clicks Assignment from navigation bar",
             "match": {},
+
+              "duration": 5992600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_Batch_from_navigation_bar()"
+            },
             "keyword": "When "
           },
           {
@@ -1025,6 +1102,14 @@
             "name": "Admin clicks on the delete icon on Assignment page if it is enabled",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_clicks_on_the_delete_icon_on_Assignment_page_if_it_is_enabled()"
+
+              "duration": 5023831900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Admin clicks on the delete icon on batch page if it is enabled",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_on_the_delete_icon_on_batch_page_if_it_is_enabled()"
             },
             "keyword": "Then "
           }
@@ -1116,6 +1201,35 @@
         "name": "Admin clicks the yes icon",
         "description": "",
         "id": "delete-assignment;admin-clicks-the-yes-icon",
+
+        "start_timestamp": "2023-09-13T01:14:09.794Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1947998000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Admin clicks the yes icon",
+        "description": "",
+        "id": "delete-batch;admin-clicks-the-yes-icon",
+        "after": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchSessionException: invalid session id\nBuild info: version: \u00274.11.0\u0027, revision: \u0027040bc5406b\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [b8da4876ac0c07e36d5c083ce6699fe5, screenshot {}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\\Users\\joshi\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63574}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63574/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: b8da4876ac0c07e36d5c083ce6699fe5\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)\r\n\tat com.stepDefinition.Hooks.tearDown(Hooks.java:30)\r\n",
+              "duration": 153210900,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -1128,6 +1242,14 @@
             "name": "Admin click yes option to delete Assignment",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_click_yes_option_to_delete_Assignment()"
+
+              "duration": 5046728200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Admin click yes option to delete batch",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_click_yes_option_to_delete_batch()"
             },
             "keyword": "When "
           },
@@ -1138,12 +1260,24 @@
             "line": 20,
             "name": "Assignment deleted alert pops and Assignment is no more available in data table",
             "match": {},
+
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[contains(text(),\u0027Are you sure\u0027)]\"}\n  (Session info: chrome\u003d116.0.5845.187)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.11.0\u0027, revision: \u0027040bc5406b\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [b8da4876ac0c07e36d5c083ce6699fe5, findElement {using\u003dxpath, value\u003d//*[contains(text(),\u0027Are you sure\u0027)]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\\Users\\joshi\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63574}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63574/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: b8da4876ac0c07e36d5c083ce6699fe5\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy37.getText(Unknown Source)\r\n\tat com.pageObject.Batch_Delete_Obj.deleteMessage(Batch_Delete_Obj.java:61)\r\n\tat com.stepDefinition.Batch_SD.batch_deleted_alert_pops_and_batch_is_no_more_available_in_data_table(Batch_SD.java:284)\r\n\tat ✽.Batch deleted alert pops and batch is no more available in data table(file:///C:/Users/joshi/eclipse-workspace/Game_of_Cucumber_Team04/src/test/resources/features/Batch_Module/05_Batch_Delete.feature:16)\r\n",
+              "duration": 5079278000,
+              "status": "failed"
+            },
+            "line": 16,
+            "name": "Batch deleted alert pops and batch is no more available in data table",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.batch_deleted_alert_pops_and_batch_is_no_more_available_in_data_table()"
+            },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
             "name": "@DeleteAssignment"
+
+            "name": "@DeleteBatch"
           },
           {
             "name": "@ValidateRowLevelDeleteIconClickYesToDelete"
@@ -1162,11 +1296,16 @@
               "error_message": "io.cucumber.core.exception.CucumberException: Failed to instantiate class com.stepDefinition.Assignment_SD\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:135)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.getInstance(ObjectFactoryServiceLoader.java:121)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)\r\nCaused by: java.lang.reflect.InvocationTargetException\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)\r\n\tat io.cucumber.core.runtime.ObjectFactoryServiceLoader$DefaultJavaObjectFactory.cacheNewInstance(ObjectFactoryServiceLoader.java:129)\r\n\t... 34 more\r\nCaused by: java.lang.IllegalArgumentException: Driver must be set\r\n\tat org.openqa.selenium.internal.Require.nonNull(Require.java:60)\r\n\tat org.openqa.selenium.interactions.Actions.\u003cinit\u003e(Actions.java:59)\r\n\tat com.controller.Controller.\u003cinit\u003e(Controller.java:14)\r\n\tat com.pageObject.Assignment_detailsPage_obj.\u003cinit\u003e(Assignment_detailsPage_obj.java:26)\r\n\tat com.stepDefinition.Assignment_SD.\u003cinit\u003e(Assignment_SD.java:28)\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\r\n\t... 37 more\r\n",
               "duration": 997600,
               "status": "failed"
+
+              "duration": 5993800,
+              "status": "passed"
             },
             "line": 5,
             "name": "Admin is on dashboard page after Login",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_is_on_dashboard_page_after_Login()"
+
+              "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
             },
             "keyword": "Given "
           },
@@ -1177,6 +1316,15 @@
             "line": 6,
             "name": "Admin clicks Assignment from navigation bar",
             "match": {},
+
+              "duration": 917800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Admin clicks Batch from navigation bar",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_Batch_from_navigation_bar()"
+            },
             "keyword": "When "
           },
           {
@@ -1188,6 +1336,14 @@
             "name": "Admin clicks on the delete icon on Assignment page if it is enabled",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_clicks_on_the_delete_icon_on_Assignment_page_if_it_is_enabled()"
+
+              "duration": 5032189700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Admin clicks on the delete icon on batch page if it is enabled",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_on_the_delete_icon_on_batch_page_if_it_is_enabled()"
             },
             "keyword": "Then "
           }
@@ -1199,6 +1355,35 @@
         "name": "Admin clicks the No icon",
         "description": "",
         "id": "delete-assignment;admin-clicks-the-no-icon",
+
+        "start_timestamp": "2023-09-13T01:14:27.101Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1823375700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Admin clicks the No icon",
+        "description": "",
+        "id": "delete-batch;admin-clicks-the-no-icon",
+        "after": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchSessionException: invalid session id\nBuild info: version: \u00274.11.0\u0027, revision: \u0027040bc5406b\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [8adc6e85925812b48180a18a15713c7e, screenshot {}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\\Users\\joshi\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63648/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 8adc6e85925812b48180a18a15713c7e\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)\r\n\tat com.stepDefinition.Hooks.tearDown(Hooks.java:30)\r\n",
+              "duration": 124450400,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -1211,6 +1396,14 @@
             "name": "Admin click No option on delete Assignment",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_click_No_option_on_delete_Assignment()"
+
+              "duration": 5128673700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Admin click No option on delete batch",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_click_No_option_on_delete_batch()"
             },
             "keyword": "When "
           },
@@ -1222,6 +1415,15 @@
             "name": "Assignment is still listed in data table",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.Assignment_is_still_listed_in_data_table()"
+
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[contains(text(),\u0027Success\u0027)]\"}\n  (Session info: chrome\u003d116.0.5845.187)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.11.0\u0027, revision: \u0027040bc5406b\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [8adc6e85925812b48180a18a15713c7e, findElement {using\u003dxpath, value\u003d//*[contains(text(),\u0027Success\u0027)]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\\Users\\joshi\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63648/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 8adc6e85925812b48180a18a15713c7e\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy37.getText(Unknown Source)\r\n\tat com.pageObject.Batch_Delete_Obj.successMessage(Batch_Delete_Obj.java:56)\r\n\tat com.stepDefinition.Batch_SD.Batch_is_still_listed_in_data_table(Batch_SD.java:298)\r\n\tat ✽.Batch is still listed in data table(file:///C:/Users/joshi/eclipse-workspace/Game_of_Cucumber_Team04/src/test/resources/features/Batch_Module/05_Batch_Delete.feature:21)\r\n",
+              "duration": 5035360300,
+              "status": "failed"
+            },
+            "line": 21,
+            "name": "Batch is still listed in data table",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.Batch_is_still_listed_in_data_table()"
             },
             "keyword": "Then "
           }
@@ -1229,6 +1431,8 @@
         "tags": [
           {
             "name": "@DeleteAssignment"
+
+            "name": "@DeleteBatch"
           },
           {
             "name": "@ValidateRowLevelDeleteIconClickNo"
@@ -1330,6 +1534,17 @@
     "tags": [
       {
         "name": "@DeleteAssignment",
+
+      }
+    ],
+    "name": "Delete Batch",
+    "description": "",
+    "id": "delete-batch",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Batch_Module/05_Batch_Delete.feature",
+    "tags": [
+      {
+        "name": "@DeleteBatch",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -1343,6 +1558,11 @@
     "elements": [
       {
         "line": 5,
+
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
         "name": "Logged on the LMS portal",
         "description": "",
         "type": "background",
@@ -1358,6 +1578,14 @@
             "name": "Admin is on dashboard page after Login",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_is_on_dashboard_page_after_Login()"
+
+              "duration": 2363300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
             },
             "keyword": "Given "
           },
@@ -1368,6 +1596,14 @@
             "line": 7,
             "name": "Admin clicks Assignment from navigation bar",
             "match": {},
+
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Admin clicks Program from navigation bar",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_Program_from_navigation_bar()"
+            },
             "keyword": "When "
           }
         ]
@@ -1378,6 +1614,34 @@
         "name": "Validate the delete icon below the header",
         "description": "",
         "id": "delete-multiple-assignment;validate-the-delete-icon-below-the-header",
+
+        "start_timestamp": "2023-09-13T01:14:44.301Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1820620000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Verify Next page link",
+        "description": "",
+        "id": "program-pagination;verify-next-page-link",
+        "after": [
+          {
+            "result": {
+              "duration": 860941700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -1402,6 +1666,26 @@
             "name": "The delete icon under the Manage Assignment header should be disabled",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.The_delete_icon_under_the_Manage_Assignment_header_should_be_disabled()"
+
+              "duration": 5030364200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Admin clicks Next page link on the program table",
+            "match": {
+              "location": "com.stepDefinition.Program_SD.admin_clicks_Next_page_link_on_the_program_table()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5060700300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Admin should see the Pagination has Next link",
+            "match": {
+              "location": "com.stepDefinition.Program_SD.admin_should_see_the_Pagination_has_link()"
             },
             "keyword": "Then "
           }
@@ -1412,11 +1696,19 @@
           },
           {
             "name": "@ValidateDeleteIconBelowHeader"
+
+            "name": "@ProgramPagination"
+          },
+          {
+            "name": "@VerifyNextPageLink"
           }
         ]
       },
       {
         "line": 5,
+
+        "line": 4,
+ 
         "name": "Logged on the LMS portal",
         "description": "",
         "type": "background",
@@ -1432,6 +1724,14 @@
             "name": "Admin is on dashboard page after Login",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_is_on_dashboard_page_after_Login()"
+
+              "duration": 1999500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
             },
             "keyword": "Given "
           },
@@ -4723,6 +5023,15 @@
             "line": 6,
             "name": "Admin clicks \"assignment\" button on the navigation bar",
             "match": {},
+
+              "duration": 1000100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Admin clicks Program from navigation bar",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_Program_from_navigation_bar()"
+            },
             "keyword": "When "
           }
         ]
@@ -6390,6 +6699,34 @@
         "name": "Verify sort function in data table for ascending order in manage assignment page",
         "description": "",
         "id": "verify-sort-function-in-manage-assignment-page;verify-sort-function-in-data-table-for-ascending-order-in-manage-assignment-page",
+
+        "start_timestamp": "2023-09-13T01:14:57.207Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2046671800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Verify Last page link",
+        "description": "",
+        "id": "program-pagination;verify-last-page-link",
+        "after": [
+          {
+            "result": {
+              "duration": 120176100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -6402,6 +6739,25 @@
             "name": "Admin should see data table sorted in ascending  order in manage assignment page",
             "match": {
               "location": "com.stepDefinition.Assignment_SD.admin_should_see_data_table_sorted_in_ascending_order_in_manage_assignment_page()"
+              "duration": 5012513300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Admin clicks Last page link on the program table",
+            "match": {
+              "location": "com.stepDefinition.Program_SD.admin_clicks_Last_page_link_on_the_program_table()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10058972800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Admin should see the last page record on the table with Next page link are disabled",
+            "match": {
+              "location": "com.stepDefinition.Program_SD.admin_should_see_the_last_page_record_on_the_table_with_Next_page_link_are_disabled()"
             },
             "keyword": "Then "
           }
@@ -6412,6 +6768,205 @@
           },
           {
             "name": "@sorted_in_ascending_order"
+
+            "name": "@ProgramPagination"
+          },
+          {
+            "name": "@VerifyLastPageLink"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Admin clicks Program from navigation bar",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_Program_from_navigation_bar()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-13T01:15:14.465Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1915951500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Verify First page link",
+        "description": "",
+        "id": "program-pagination;verify-first-page-link",
+        "after": [
+          {
+            "result": {
+              "duration": 160427000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5072106800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Admin clicks first page link on the program table",
+            "match": {
+              "location": "com.stepDefinition.Program_SD.admin_clicks_first_page_link_on_the_program_table()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5053653400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Admin should see the previous page record on the table with pagination has previous page link",
+            "match": {
+              "location": "com.stepDefinition.Program_SD.Admin_should_see_the_previous_page_record_on_the_table_with_pagination_has_previous_page_link()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ProgramPagination"
+          },
+          {
+            "name": "@VerifyFirstPageLink"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Logged on the LMS portal",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1948900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Admin is on dashboard page after Login",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_is_on_dashboard_page_after_Login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1308800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Admin clicks Program from navigation bar",
+            "match": {
+              "location": "com.stepDefinition.Batch_SD.admin_clicks_Program_from_navigation_bar()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-09-13T01:15:26.698Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1894804800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Verify Start page link",
+        "description": "",
+        "id": "program-pagination;verify-start-page-link",
+        "after": [
+          {
+            "result": {
+              "duration": 141494400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.stepDefinition.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10153781400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Admin clicks start page link on the program table",
+            "match": {
+              "location": "com.stepDefinition.Program_SD.admin_clicks_start_page_link_on_the_program_table()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5049526200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Admin should see the very first page record on the table with Previous page link are disabled",
+            "match": {
+              "location": "com.stepDefinition.Program_SD.Admin_should_see_the_very_first_page_record_on_the_table_with_Previous_page_link_are_disabled()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ProgramPagination"
+          },
+          {
+            "name": "@VerifyStartPageLink"
           }
         ]
       }
@@ -6424,6 +6979,15 @@
     "tags": [
       {
         "name": "@tag",
+
+    "name": "Program Pagination",
+    "description": "",
+    "id": "program-pagination",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Program_Module/04_Program_Pagination.feature",
+    "tags": [
+      {
+        "name": "@ProgramPagination",
         "type": "Tag",
         "location": {
           "line": 1,

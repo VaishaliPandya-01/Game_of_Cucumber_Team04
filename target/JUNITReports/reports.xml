@@ -4486,5 +4486,3 @@ Caused by: java.lang.IllegalArgumentException: Driver must be set
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	... 37 more
 ]]></failure>
-    </testcase>
-</testsuite>
