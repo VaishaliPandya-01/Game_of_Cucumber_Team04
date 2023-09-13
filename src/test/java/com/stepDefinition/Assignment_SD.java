@@ -40,9 +40,6 @@ public class Assignment_SD{
 	@Given("Logged on the LMS portal as Admin")
 	public void logged_on_the_LMS_portal_as_Admin() {
 	}
-	@Given("Admin is on dashboard page after Login")
-	public void admin_is_on_dashboard_page_after_Login() {
-	}
 
 	@When("Admin clicks {string} button on the navigation bar in manage assignment page")
 	public void admin_clicks_button_on_the_navigation_bar(String string) {
@@ -731,8 +728,8 @@ public class Assignment_SD{
 	}
 
 	//Validate message in delete box
-	@Then("Admin should see a message {string}")
-	public void admin_should_see_a_message(String expectedText) {
+	@Then("Admin should see a message on manage assignment {string}")
+	public void admin_should_see_a_message_on_manage_assignment(String expectedText) {
 		String actualText= deleteassign.deleteBoxText();
 		Assert.assertEquals(expectedText,actualText);
 		Log.logInfo("Delete alert box text"+actualText);

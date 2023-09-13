@@ -16,11 +16,6 @@ public class Student_SD extends BaseClass {
 	private long startTime;
 	private long endTime;
 
-	//Student page verification_1
-	@Given("Admin is on dashboard page after Login")
-	public void admin_is_on_dashboard_page_after_Login() {
-
-	}
 
 	@When("Admin clicks Student on the navigation bar")
 	public void admin_clicks_Student_on_the_navigation_bar() {

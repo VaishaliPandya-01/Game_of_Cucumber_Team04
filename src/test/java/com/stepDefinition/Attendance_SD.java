@@ -26,14 +26,6 @@ public class Attendance_SD extends BaseClass{
 	private long startTime;
 	private long endTime;
 
-	//Validate the dashboard page 
-	@Given("Admin is on dashboard page after Login")
-	public void admin_is_on_dashboard_page_after_Login() {
-
-		System.out.println("First Given");	
-		Log.logInfo("Admin on DashboardPage");
-	}
-
 	//Validate the Attendance on Navigation
 	@When("Admin clicks Attendance on the navigation bar")
 	public void admin_clicks_on_the_navigation_bar(String string) {

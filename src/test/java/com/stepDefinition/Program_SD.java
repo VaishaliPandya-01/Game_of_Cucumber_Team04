@@ -438,8 +438,8 @@ public class Program_SD{
 	}
 
 	//Validate message in delete box
-	@Then("Admin should see a message {string}")
-	public void admin_should_see_a_message(String expectedText) {
+	@Then("Admin should see a message on manage program {string}")
+	public void admin_should_see_a_message_on_manage_program(String expectedText) {
 		String actualText= deleteProgram.deleteBoxText();
 		Assert.assertEquals(expectedText,actualText);
 		Log.logInfo("Delete alert box text"+actualText);
