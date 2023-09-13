@@ -22,6 +22,7 @@ public interface ControllerInterface {
 	public void rightclick(WebDriver driver,WebElement element);
 	public void Alert(WebDriver driver);
 	public String getTitle(WebDriver driver);
-	public void click(WebElement locator, String locatorName);
+	public String getCurrentURL(WebDriver driver);
+	public String getText(WebElement element);
 
 }
