@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 
-public class BatchEdit extends BaseClass{
+public class Batch_Edit_Obj extends BaseClass{
 
 
 	@FindBy (id="batchName") 
@@ -38,11 +38,11 @@ public class BatchEdit extends BaseClass{
 	private WebElement closeBatchDetails;
 
 
-	Controller act = new Controller();
+	private Controller act = new Controller();
 
 
 	//Constructor
-	public BatchEdit() {
+	public Batch_Edit_Obj() {
 
 		PageFactory.initElements(driver, this);
 	}
@@ -98,5 +98,10 @@ public class BatchEdit extends BaseClass{
 	public void closeBatchDetails() {
 
 		act.click(driver, closeBatchDetails);;
+	}
+	
+	public String getBatchDetailsTitle() {
+		String pageTitle=act.getTitle(driver);
+		return pageTitle;
 	}
 }
