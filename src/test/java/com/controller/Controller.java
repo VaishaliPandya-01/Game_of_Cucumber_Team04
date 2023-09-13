@@ -291,8 +291,8 @@ public class Controller extends BaseClass implements ControllerInterface{
 	@Override
 	public String getCurrentURL(WebDriver driver)  {
 		return driver.getCurrentUrl();
-	}
 
+	}
 
 	@Override
 	public String getText(WebElement element) {

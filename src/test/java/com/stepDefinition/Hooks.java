@@ -27,7 +27,6 @@ public class Hooks{
 	@After
 	public void tearDown(Scenario scenario) {
 		baseClass.teardown();
-
 		if (scenario.isFailed()) {
 			// take screenshot:
 				String screenshotName = scenario.getName().replaceAll(" ", "_");
@@ -36,5 +35,4 @@ public class Hooks{
 				Allure.addAttachment("Failed screenshots", new ByteArrayInputStream(sourcePath));
 		}
 	}  
-
 }
