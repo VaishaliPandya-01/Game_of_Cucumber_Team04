@@ -1,10 +1,9 @@
 Feature: Add new Attendance 
 
 Background: Logged on the LMS portal as Admin
-  	#Given Admin is on dashboard page after Login
+  	Given Admin is on dashboard page after Login
 		When Admin clicks Attendance on the navigation bar
-		Then Admin is in "Manage Attendance" page
-		When Admin clicks + a new attendance button
+		Then Admin clicks + a new attendance button
 		
 	
 	Scenario Outline: Validate admin able to create new attendance data

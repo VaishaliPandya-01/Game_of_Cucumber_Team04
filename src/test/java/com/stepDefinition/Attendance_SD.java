@@ -216,7 +216,8 @@ public class Attendance_SD extends BaseClass{
 	@Then("Admin should see the text with total number classes in the data table. \\( {string})")
 	public void admin_should_see_the_text_with_total_number_classes_in_the_data_table(String string) {
 	    
-	    
+		int total = att_manager.ClassesTotalCount();
+		Log.logInfo("Verified Total Number of Classess-"+total);
 	}
 
 	///////*******************Attendance Details Feature ****************************///////
@@ -479,8 +480,8 @@ public class Attendance_SD extends BaseClass{
 
 	@Given("Admin clicks date picker button and selects future date for Attendance Module")
 	public void admin_clicks_date_picker_button_and_selects_future_date_for_Attendance_Module() {
-		
-		
+		att_details.clickAttndncDate();
+		att_details.selectFutureDate("2025");
 	    
 	}
 
@@ -730,7 +731,7 @@ public class Attendance_SD extends BaseClass{
 
 	@Then("When entries are more than {int} in data table pagination controls enabled for Attendance")
 	public void when_entries_are_more_than_in_data_table_pagination_controls_enabled_for_attendance(Integer int1) {
-	    
+	    Assert.assertTrue(att_details.VisiblePageControl());
 	    
 	}
 

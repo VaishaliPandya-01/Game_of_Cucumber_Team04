@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
@@ -36,7 +37,7 @@ public class Attendance_Manage extends BaseClass {
 	@FindBy (xpath="//*[@class='sortClass']") private WebElement sortClass_btn;
 	@FindBy (xpath="//*[@class='sortstud']") private WebElement sortStud_btn;
 	@FindBy (xpath="//*[@class='sortpresent']") private WebElement sortAttendance_btn;
-	
+	@FindBy (xpath="//table[@id='users_table']/tbody/tr") private WebElement ClassColum;
 	
 	static Readconfig rc = new Readconfig();
 	Controller cn = new Controller();
@@ -216,5 +217,12 @@ public class Attendance_Manage extends BaseClass {
 		Assert.assertEquals(att_PreasentValue.getText(),"Present");
 		
 	}
+	public int ClassesTotalCount() {
+		
+		List<WebElement> TotalColsList = ClassColum.findElements(By.tagName("td"));
+		int TotalClasses = TotalColsList.size();
+		return TotalClasses;
+	}
+	
 	
 }

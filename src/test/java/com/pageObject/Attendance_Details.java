@@ -36,7 +36,8 @@ public class Attendance_Details extends BaseClass {
 	@FindBy(xpath="//*[@id='example_next']") private  WebElement nextBtn_dataTable;
 	@FindBy(xpath="//input[@class='page_left']") private WebElement page_left;
 	@FindBy(xpath="//input[@class='page_right']") private WebElement page_right;
-
+	@FindBy(xpath = "//td[@data-handler='selectDay']") private List<WebElement> datepickeryears;
+	@FindBy(xpath="//input[id='pageControls']") private WebElement pageControl;
 	
 	public Attendance_Details() {
 		PageFactory.initElements(driver,this);
@@ -263,6 +264,18 @@ public class Attendance_Details extends BaseClass {
 			flag = cn.isEnabled(driver, page_left);
 		}
 		return flag;
+	}
+	public void selectFutureDate(String futureDate) {
+	       
+        for (WebElement day : datepickeryears) {
+            if (day.getText().equals(futureDate)) {
+                day.click();
+                break;
+            }
+        }
+    }
+	public boolean VisiblePageControl() {
+		return cn.isEnabled(driver, pageControl);
 	}
 }
 
