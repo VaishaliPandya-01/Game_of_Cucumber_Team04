@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Assignment_Module/08_AssigmentAddNew.feature");
 formatter.feature({
   "name": "Add new assignment",
@@ -188,3 +189,5 @@ formatter.step({
 formatter.match({
   "location": "com.stepDefinition.Assignment_SD.admin_clicks_button_on_the_navigation_bar_in_assignment_page(java.lang.String)"
 });
+=======
+>>>>>>> shikha

@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: anoop
 Build-Jdk: 20.0.1
+=======
+Built-By: Laptop
+Build-Jdk: 17.0.7
+>>>>>>> shikha
 Created-By: Maven Integration for Eclipse
 
