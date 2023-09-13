@@ -1,20 +1,20 @@
 package com.pageObject;
 
 
-import java.util.Arrays;
-import java.util.List;
-import java.net.URL;
 import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Point;
+
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 import com.utility.Readconfig;
-import java.net.MalformedURLException;
+
 public class Attendance_Manage_Obj extends BaseClass {
 	
 	@FindBy (id="id_searchtxt") private WebElement attendnc_searchbox;

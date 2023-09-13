@@ -1,26 +1,25 @@
 package com.utility;
 
-import com.pageObject.Assignment_detailsPage_obj;
 import java.util.Map;
 
 public class XlUtilsData {
 
+	//Batch
 	public static String batchName;
 	public static String descriptionfrBtch;
 	public static String NoOfClassfrBtch;
 	public static String programNameFrBtch;
+	//Program
 	public static String programName;
 	public static String descriptionfrPrgrm;
 	public static String prgrmStatus;
-
+	//Attendance
 	public static String programName_att;
 	public static String ClassName_att;
 	public static String StudName_att;
 	public static String attendance_att;
-	public static String AttendDate_att;
-	
-	//assignment
-	
+	public static String AttendDate_att;	
+	//assignment	
 	public static String assignNm;
 	public static String assignDescri;
 	public static String gradeby;
