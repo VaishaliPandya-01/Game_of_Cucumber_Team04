@@ -10,21 +10,26 @@ import com.controller.Controller;
 import com.utility.Log;
 
 public class Attendance_Delete_Obj extends BaseClass{
-	
-	
-	@FindBy(xpath="//*[@id='confirm_no']") private  WebElement att_confrim_n;
-	@FindBy(xpath="//*[@id='confirm_yes']") private  WebElement att_confrim_y;
-	@FindBy(name = "closepop_up") private WebElement close;
-	@FindBy(xpath="//*[contains(text(),'Message')") private WebElement deleteMessage;
-	@FindBy(xpath="//*[@id='outputmessage']")  WebElement message;
-	
-	private Controller cn = new Controller();
 
-	
+
+	@FindBy(xpath="//*[@id='confirm_no']")
+	private  WebElement att_confrim_n;
+	@FindBy(xpath="//*[@id='confirm_yes']") 
+	private  WebElement att_confrim_y;
+	@FindBy(name = "closepop_up") 
+	private WebElement close;
+	@FindBy(xpath="//*[contains(text(),'Message')")
+	private WebElement deleteMessage;
+	@FindBy(xpath="//*[@id='outputmessage']")
+	private WebElement message;
+
+	Controller cn = new Controller();
+
+
 	public Attendance_Delete_Obj() {
 		PageFactory.initElements(driver,this);
 	}
-	
+
 	public boolean alertBoxIsDisplayed() {
 		return cn.switchToFrameByName(driver, "alert");
 	}
@@ -44,8 +49,8 @@ public class Attendance_Delete_Obj extends BaseClass{
 		String sucessmsg = cn.getText(message);
 		Log.logInfo(sucessmsg);
 	}
-	
-	
-	
-	
+
+
+
+
 }

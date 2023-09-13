@@ -14,23 +14,20 @@ import io.qameta.allure.Allure;
 
 public class Hooks{
 
-	private BaseClass baseClass;
-
 	@Before
 	public void setUp() {
-
-		baseClass = new BaseClass();
-		baseClass.Initialization();
-
+		BaseClass.Initialization();
 	}
 
+	
 	@After
 	public void tearDown(Scenario scenario) {
-		baseClass.teardown();
+		BaseClass.teardown();
+
 		if (scenario.isFailed()) {
 			// take screenshot:
 				String screenshotName = scenario.getName().replaceAll(" ", "_");
-				byte[] sourcePath = ((TakesScreenshot)baseClass.driver).getScreenshotAs(OutputType.BYTES);
+				byte[] sourcePath = ((TakesScreenshot)BaseClass.driver).getScreenshotAs(OutputType.BYTES);
 				//scenario.attach(sourcePath, "image/png", screenshotName);
 				Allure.addAttachment("Failed screenshots", new ByteArrayInputStream(sourcePath));
 		}
