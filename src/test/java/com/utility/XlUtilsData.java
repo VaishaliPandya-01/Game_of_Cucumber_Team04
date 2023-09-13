@@ -1,7 +1,7 @@
 package com.utility;
 import java.util.Map;
 
-import com.pageObject.AssignmentdetailsPage;
+import com.pageObject.Assignment_detailsPage_obj;
 public class XlUtilsData {
 	
 	public static String batchName;

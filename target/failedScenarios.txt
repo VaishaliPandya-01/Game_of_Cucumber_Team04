@@ -1,0 +1,7 @@
+file:src/test/resources/features/Assignment_Module/08_Assignment_Edit.feature:9:25:34:43:52:61:70:79:88:97:106:109:114
+file:src/test/resources/features/Assignment_Module/08_Assignment_Sort.feature:10:14
+file:src/test/resources/features/Assignment_Module/08_Assignment_Pagination.feature:10:15:20:25:30:35:39:44:49
+file:src/test/resources/features/Assignment_Module/08_Assignment_Manage_page.feature:9:13:17:21:25:29:33:42:43:44:45:46:47:50:54:58:62:66:70:74:78:82:86
+file:src/test/resources/features/Assignment_Module/08_Assignment_Delete_multiple.feature:10:15:21:27:33
+file:src/test/resources/features/Assignment_Module/08_AssigmentAddNew.feature:17:29:39:49:59:68:79:89:99:109:112:118:124:130:136:142:148:154
+file:src/test/resources/features/Assignment_Module/08_Assignment_Delete.feature:10:14:18:23:28

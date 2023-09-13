@@ -20,7 +20,8 @@ plugin = {"pretty",
 		"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm",
 		"html:target/Cucumber.html",
 		"json:target/cucumber.json",
-		"junit:target/JUNITReports/reports.xml"})
+		"junit:target/JUNITReports/reports.xml",
+		"rerun:target/failedScenarios.txt"})
 
 public class TestRunner {
 

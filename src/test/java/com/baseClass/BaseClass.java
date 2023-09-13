@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.utility.Readconfig;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 
 	static Readconfig readconfig=new Readconfig();
@@ -17,30 +19,29 @@ public class BaseClass {
 	public static String browserName = readconfig.getbrowser();
 
 	public static void Initialization() {
-		if(driver==null) {
-			if(browserName.equalsIgnoreCase("chrome")) {
-				driver=new ChromeDriver();
-			}
 
-			else if(browserName.equalsIgnoreCase("firefox")) {
-				driver=new FirefoxDriver();
-			}
-
-			else if (browserName.equalsIgnoreCase("edge")) {
-				driver=new EdgeDriver();
-			}
+		if(browserName.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
 		}
 
+		else if(browserName.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver=new FirefoxDriver();
+		}
+
+		else if (browserName.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
+		}
 		driver.get(baseURL);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 	}
 
 
 	public static void teardown() {
-		if (driver != null) {
-			driver.close();
-		}
+		driver.close();
 	}
 }

@@ -53,11 +53,11 @@ public class Controller extends BaseClass implements ControllerInterface{
 		try {
 			if (element.isDisplayed()) {				
 				flag = true;
-				System.out.println("The element is Displayed");
+				System.out.println("The element is Displayed"+element);
 
 			} else {
 				flag = false;
-				System.out.println("The element is not Displayed");
+				System.out.println("The element is not Displayed"+element);
 			}
 		} catch (Exception e) {
 			System.out.println(e);
@@ -294,7 +294,23 @@ public class Controller extends BaseClass implements ControllerInterface{
 	}
 
 
-	
-		
+	@Override
+	public String getText(WebElement element) {
+		String textValue = "";
+		try {
+		if(element.isDisplayed()) {
+			textValue=element.getText();
+			System.out.println("Text value:- "+textValue);
+		}
+		else {
+			System.out.println("Element is not visible");
+		}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return textValue;
 	}
 
+
+
+}
