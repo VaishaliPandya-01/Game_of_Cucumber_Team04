@@ -42,7 +42,7 @@ public class Assignment_SD extends BaseClass {
 	@Given("Logged on the LMS portal as Admin")
 	public void logged_on_the_LMS_portal_as_Admin() {
 		driver = new ChromeDriver();
-        driver.get("https://example.com/portal");
+        driver.get("");
        
 	    
 	}
@@ -55,6 +55,9 @@ public class Assignment_SD extends BaseClass {
 	public void admin_clicks_button_on_the_navigation_bar(String string) {
 	    assign.Assignment_btn();
 	}
+	
+
+//	********************************************Assignment Manage*************************************
 
 	@Then("Admin should see URL with {string} in manage assignment page")
 	public void admin_should_see_URL_with(String PageURL) {
@@ -199,7 +202,7 @@ public class Assignment_SD extends BaseClass {
 	}
 
 
-	@Then("Admin should see the text with total number assignments in the data table . \\({string})")
+	@Then("Admin should see the text with total number assignments in the data table")
 	public void admin_should_see_the_text_with_total_number_assignments_in_the_data_table(String string) {
 		Assert.assertTrue(assign.totalNumberOfAssignment());
 	}
@@ -273,13 +276,9 @@ public class Assignment_SD extends BaseClass {
 //	****************************************02 Steps for Assignment Details*********************************************************** 
 	
 	
-	@Given("Admin is on manage assignment Page")
-	public void admin_is_on_manage_assignment_Page(String pageTitle) {
-		String title= assign.getManageAssignmentTitle();
-		Assert.assertEquals(pageTitle, title);
-	}
+	
 
-	@When("Admin click +Add new assignment button in Assignment details popup window")
+	@Then("Admin click +Add new assignment button in Assignment details popup window")
 	public void admin_click_Add_new_assignment_button() {
 		assign.Assignment_btn();
 	}
@@ -296,8 +295,8 @@ public class Assignment_SD extends BaseClass {
 		
 	}
 	
-	@Then("{int} textbox should be  present in Assignment details popup window in Assignment details popup window")
-	public void textbox_should_be_present_in_Assignment_details_popup_window(Integer int1) {
+	@Then("Eight {int} textbox should be present in Assignment details popup window")
+	public void eight_textbox_should_be_present_in_Assignment_details_popup_window(Integer int1) {
 		Assert.assertEquals(8,assigndetails.getTextboxes().size());
 	}
 	@Then("Admin should see  dropdown option for Batch Number in Assignment details popup window")
@@ -309,7 +308,7 @@ public class Assignment_SD extends BaseClass {
 		assigndetails.isDropDownProgramDisplayed();
 	}
 	
-	@Then("Admin should see  calendar icon for assignment due date in Assignment details popup window")
+	@Then("Admin should see  calendar icon for assignment due date")
 	public void admin_should_see_calendar_icon_for_assignment_due_date() {
 		assigndetails.isCalenderIconDisplayed();
 	}
@@ -331,10 +330,7 @@ public class Assignment_SD extends BaseClass {
 	
 	// *****************************03 ADD NEW ASSIGNMENT ***************************************************
 	
-	@Given("Admin is in  assignment details popup window")
-	public void admin_is_in_assignment_details_popup_window() {
-	    
-	}
+	
 
 	@When("Admin enters all mandatory field values with valid data and clicks save button in assignment details {string} and {string}")
 	public void admin_enters_all_mandatory_field_values_with_valid_data_and_clicks_save_button_in_assignment_details_and(String dataKey , String sheetName) throws Exception {
@@ -709,11 +705,7 @@ public class Assignment_SD extends BaseClass {
 	
 	// 04 EDIT ASSIGNMENT FEATURE
 	
-	@Given("Admin is in manage assignment page")
-	public void admin_is_in_manage_assignment_page() {
-		String URL=assign.getManageAssignmentTitle();
-		Assert.assertTrue(URL.contains("Manage Assignment"));
-	}
+	
 
 	@When("Admin clicks assignment button on the navigation bar")
 	public void admin_clicks_assignment_button_on_the_navigation_bar() {
@@ -764,8 +756,8 @@ public class Assignment_SD extends BaseClass {
 	}
 
 	//Validate Deleted program
-	@Then("Assignment deleted alert pops and program is no more available in data table")
-	public void Assignment_deleted_alert_pops_and_program_is_no_more_available_in_data_table() {
+	@Then("Assignment deleted alert pops and Assignment is no more available in data table")
+	public void Assignment_deleted_alert_pops_and_Assignment_is_no_more_available_in_data_table() {
 		deleteassign.deleteMessage();
 		Log.logInfo("Assignment is deleted");
 	}

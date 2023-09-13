@@ -1,10 +1,10 @@
 
 @DeleteMultipleAssignment
 Feature: Delete Multiple Assignment
-
   Background: Logged on the LMS portal
     Given Admin is on dashboard page after Login
-    When Admin clicks Assignment from navigation bar
+    When Admin clicks "Assignment" button on the navigation bar in assignment page
+
 
   @ValidateDeleteIconBelowHeader
   Scenario: Validate the delete icon below the header

@@ -2,12 +2,13 @@
 Feature: Assignment details Feature
 
   Background: Admin logged into LMS portal and clicks assignment button on the navigation bar
-    Given Admin is on "Manage Assignment" Page in Manage Assignment page
-    When Admin click +Add new assignment button in Manage Assignment page
+   Given Admin is on dashboard page after Login
+    When Admin clicks "Assignment" button on the navigation bar in assignment page
+    Then Admin click +Add new assignment button in Assignment details popup window
 
   @verifyHeaderTitle
   Scenario: Verify Assignment details popup window
-    Then Admin should see a popup  with  heading "Assignment details" in Assignment details popup window
+    Then Admin click +Add new assignment button in Assignment details popup window
 
   @verifyInputField
   Scenario Outline: Verify input fields in Assignment details popup window
@@ -29,7 +30,7 @@ Feature: Assignment details Feature
 
   @VerifyTextBoX
   Scenario: Verify text box present in Assignment details popup window
-    Then 8 textbox should be  present in Assignment details popup window
+    Then Eight 8 textbox should be present in Assignment details popup window
 
   @VerifyDropdownBatch
   Scenario: Verify drop down in Batch Number  in Assignment details popup window

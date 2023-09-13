@@ -1,9 +1,11 @@
 
 @tag
 Feature: Add new assignment
-  
-  #Background: Admin click +Add new assignment button after reaching to manage assignment page
-    #Given Admin is in  assignment details popup window
+ 
+    Background: Logged on the LMS portal
+    Given Admin is on dashboard page after Login
+    When Admin clicks "Assignment" button on the navigation bar in assignment page
+    Then Admin click +Add new assignment button in Assignment details popup window
 
      @ValidData_in_mandatory_fields
     Scenario Outline: Validate admin able to add new assignment with valid data in mandatory fields

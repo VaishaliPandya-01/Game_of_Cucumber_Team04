@@ -1,10 +1,11 @@
 @DeleteAssignment
 Feature: Delete Assignment
 
-  Background: Logged on the LMS portal
-    Given Admin is on dashboard page after Login
-    When Admin clicks Assignment from navigation bar
+   Background: Logged on the LMS portal
+     Given Admin is on dashboard page after Login
+    When Admin clicks "Assignment" button on the navigation bar in assignment page
     Then Admin clicks on the delete icon on Assignment page if it is enabled
+ 
 
   @ValidateAlertBox
   Scenario: Delete Feature

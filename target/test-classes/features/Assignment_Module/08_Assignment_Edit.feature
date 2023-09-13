@@ -1,13 +1,14 @@
 @tag
 Feature: Edit Assignment Validation
 
-  Background: Admin logged into LMS portal and clicks assignment button on the navigation bar
-    Given Admin is in manage assignment page
-    When Admin clicks assignment button on the navigation bar
+  Background: Logged on the LMS portal
+    Given Admin is on dashboard page after Login
+    When Admin clicks "Assignment" button on the navigation bar in assignment page
+    Then Admin clicks Edit button in data table
 
   @Verify_Edit_PopUpWindow
   Scenario: Verify Edit assignment popup window
-    When Admin clicks Edit button in data table
+   
     Then Edit popup window appears with heading Assignment Details
 
   @Verify_Edit_PopUpWindow
