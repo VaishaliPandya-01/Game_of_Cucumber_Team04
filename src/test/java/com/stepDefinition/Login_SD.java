@@ -1,12 +1,15 @@
 package com.stepDefinition;
 
 import java.awt.AWTException;
+import java.io.IOException;
+import java.net.MalformedURLException;
 
 import org.junit.Assert;
 
 import com.baseClass.BaseClass;
 import com.pageObject.Home_Obj;
 import com.pageObject.Login_Obj;
+import com.utility.Log;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -52,7 +55,7 @@ public class Login_SD extends BaseClass{
 
 	@Then("Admin should see * symbol next to user text")
 	public void admin_should_see_symbol_next_to_user_text() {
-	    
+		loginPage.checkForAstrickInUsername();
 	}
 
 	@Then("Admin should {string} in the second text field")
@@ -62,7 +65,7 @@ public class Login_SD extends BaseClass{
 
 	@Then("Admin should see * symbol next to password text")
 	public void admin_should_see_symbol_next_to_password_text() {
-	    
+		loginPage.checkForAstrickInPswdField();
 	}
 
 	@Then("Admin should see input field on the centre of the page")
@@ -150,7 +153,9 @@ public class Login_SD extends BaseClass{
 	
 	@When("Admin enter blank in username   and clicks login button")
 	public void admin_enter_blank_in_username_and_clicks_login_button() {
-	    
+		loginPage.userNameText("");
+		loginPage.PswdText("pwd");
+		loginPage.clickLoginBtn();
 	}
 
 	@When("Admin enter blank in password  and clicks login button")
@@ -184,153 +189,149 @@ public class Login_SD extends BaseClass{
 
 	@When("Admin clicks forgot username or password link")
 	public void admin_clicks_forgot_username_or_password_link() {
-	    
+		driver.navigate().back();
+		loginPage.clickOnForgotUsernamePasswordLink();
 	}
 
 	@Then("Admin should land on forgot username or password page")
 	public void admin_should_land_on_forgot_username_or_password_page() {
-	    
+		loginPage.validateForgetUsernamePswdPage();
 	}
 
 	@Then("HTTP response >= {int}.")
-	public void http_response(Integer int1) {
-	    
+	public void http_response(Integer int1) throws MalformedURLException, IOException {
+		//loginPage.hhtpResponseCode(res);
+		loginPage.verifyBrokenLink();
+		Log.logInfo("Validate Broken Link");
 	}
 
 	@Then("Admin should see {string} text in gray color")
 	public void admin_should_see_text_in_gray_color(String string) {
-	    
+		loginPage.validateTextColor();
 	}
 
 
 	@Then("Admin should see {string} in text field")
 	public void admin_should_see_in_text_field(String string) {
-	    
+		String emailFieldMsg =loginPage.emailFieldText("Email");
+		Assert.assertEquals("Email",emailFieldMsg);
 	}
 
 
 	@Then("Admin should see {string}  button")
 	public void admin_should_see_button(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    loginPage.validateSendLinkBtn();
 	}
 
 
 	@Then("Admin should see asterik symbol need Email")
 	public void admin_should_see_asterik_symbol_need_Email() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.validateSpecialChar();
 	}
 
 
 	@Then("Admin should see send link button in center of the page")
 	public void admin_should_see_send_link_button_in_center_of_the_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.validateSendlinkLocation();
+		driver.navigate().back();
 	}
+	
 	@When("Admin clicks reset password link")
 	public void admin_clicks_reset_password_link() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.clickResetPassword();
 	}
 
 	@Then("Admin should land on reset password page")
 	public void admin_should_land_on_reset_password_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.validateResetPasswordPage();
 	}
-
 
 	@Then("Admin should see submit button in center of the page")
 	public void admin_should_see_submit_button_in_center_of_the_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.validateSubmitBtnLocation();
 	}
-
 
 	@Then("Admin should see two text box")
 	public void admin_should_see_two_text_box() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    loginPage.validatePswdTextBoxes();
 	}
 	
 	@Then("Admin should see {string} in the first label text")
-	public void admin_should_see_in_the_first_label_text(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void admin_should_see_in_the_first_label_text(String expectedmsg) {
+		String actualmssg =loginPage.validateTextInTypeNewPswdField(expectedmsg);
+		Assert.assertEquals(expectedmsg,actualmssg);
 	}
 
-
 	@Then("Admin should see {string} in the second label text")
-	public void admin_should_see_in_the_second_label_text(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void admin_should_see_in_the_second_label_text(String expectePswddmsg) {
+		String actualPswdmssg =loginPage.validateTextInReTypeNewPswdField(expectePswddmsg);
+		Assert.assertEquals(expectePswddmsg,actualPswdmssg);
 	}
 
 	@Then("Admin should see text box in disabled state")
 	public void admin_should_see_text_box_in_disabled_state() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.validateTextBoxIsDisabled();
 	}
 
 	@Given("Admin reset password page")
 	public void admin_reset_password_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.validateResetPasswordPage();
 	}
 
 	@When("Admin clicks on type in new password field")
 	public void admin_clicks_on_type_in_new_password_field() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.clicksTypeNewPassword();
 	}
 
 	@Then("Admin should see text box is enabled state")
 	public void admin_should_see_text_box_is_enabled_state() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    loginPage.validatePswdTextBoxEnabled();
 	}
 	
 	@When("Admin clicks on retype password field")
 	public void admin_clicks_on_retype_password_field() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.clicksReTypeNewPassword();
 	}
 
 	@When("Admin enters same password on both field and clicks submit button")
 	public void admin_enters_same_password_on_both_field_and_clicks_submit_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.NewPasswordTxt("password");
+		loginPage.RetypePasswordTxt("password");
+		loginPage.clickSubmitButton();
 	}
 
 	@Then("Admin should recieve  : {string}. Please click here to login")
-	public void admin_should_recieve_Please_click_here_to_login(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void admin_should_recieve_Please_click_here_to_login(String expecMsg) {
+		String loginMsg = loginPage.validatePleaseClickToLoginField(expecMsg);
+		Assert.assertEquals(expecMsg, loginMsg);
 	}
 
 	@When("Admin enters same password on both field with invalid details and clicks submit button")
 	public void admin_enters_same_password_on_both_field_with_invalid_details_and_clicks_submit_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.NewPasswordTxt("password;;;");
+		loginPage.RetypePasswordTxt("password;;;");
+		loginPage.clickSubmitButton();
 	}
 
 	@Then("Error message {string}")
-	public void error_message(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void error_message(String errorMSg) {
+		String errorMsg = "Please try again";
+		String actualmsg =loginPage.Message(errorMsg);
+		Assert.assertEquals(errorMsg,actualmsg);
 	}
 
 	@When("Admin enters  empty details on both fieldand clicks submit button")
 	public void admin_enters_empty_details_on_both_fieldand_clicks_submit_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.NewPasswordTxt("");
+		loginPage.RetypePasswordTxt("");
+		loginPage.clickSubmitButton();
 	}
 
 	@When("Admin enters  mismatch values and clicks submit button")
 	public void admin_enters_mismatch_values_and_clicks_submit_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		loginPage.NewPasswordTxt("password");
+		loginPage.RetypePasswordTxt("pass");
+		loginPage.clickSubmitButton();
 	}
 
 
