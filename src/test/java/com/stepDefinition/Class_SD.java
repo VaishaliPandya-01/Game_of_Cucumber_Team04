@@ -24,11 +24,6 @@ public class Class_SD {
 	Class_Manage_Obj MCP = new Class_Manage_Obj();
 	Class_Detail_Obj CD = new Class_Detail_Obj();
 	
-@Given("Admin is on dashboard page after Login")
-public void admin_is_on_dashboard_page_after_login() {
-    
-    
-}
 
 @When("Admin clicks {string} button on the navigation bar")
 public void admin_clicks_button_on_the_navigation_bar(String string) {

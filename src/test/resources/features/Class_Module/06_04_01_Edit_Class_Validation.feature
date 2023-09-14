@@ -5,7 +5,7 @@ Feature: Edit class Validation
   	
   	@Verifypopwindow
   	Scenario: Verify Edit class popup window
-  	When Admin clicks Edit button in data table 
+  	When Admin clicks Edit button in data table of class 
   	Then Edit popup window appears with heading Class Details
   	
   	@Verifyvaluesinpopwindow

@@ -1,0 +1,4 @@
+[INFO ]2023-09-13 20:17:52.015 [main]WebDriverManager-Using chromedriver 116.0.5845.96 (resolved driver for Chrome 116)
+[INFO ]2023-09-13 20:17:52.046 [main]WebDriverManager-Exporting webdriver.chrome.driver as C:\Users\joshi\.cache\selenium\chromedriver\win64\116.0.5845.96\chromedriver.exe
+[INFO ]2023-09-13 20:17:57.014 [main]WebDriverManager-Using chromedriver 116.0.5845.96 (resolved driver for Chrome 116)
+[INFO ]2023-09-13 20:17:57.047 [main]WebDriverManager-Exporting webdriver.chrome.driver as C:\Users\joshi\.cache\selenium\chromedriver\win64\116.0.5845.96\chromedriver.exe
