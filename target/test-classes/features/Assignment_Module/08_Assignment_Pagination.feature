@@ -4,7 +4,7 @@ Feature: Pagination in manage assignment
  
  Background:Logged on the LMS portal as Admin 
 Given Admin is on dashboard page after Login
-When Admin clicks "Assignment" button on the navigation bar in assignment page
+When Admin clicks Assignment button on the navigation bar in assignment page
 
   @Verify_sheet_one_is_displayed
   Scenario: Verify sheet one is displayed on default in data table in Manage Assignment Page

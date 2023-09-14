@@ -12,7 +12,7 @@ Feature: Delete Program
 
   @ValidateTextInAlertBox
   Scenario: Validate details for Confirm Deletion form
-    Then Admin should see a message "Are you sure you want to delete"
+    Then Admin should see a message on manage program "Are you sure you want to delete"
 
   @ValidateRowLevelDeleteIconClickYesToDelete
   Scenario: Admin clicks the yes icon

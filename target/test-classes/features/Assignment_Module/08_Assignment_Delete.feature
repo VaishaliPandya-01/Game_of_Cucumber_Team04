@@ -3,7 +3,7 @@ Feature: Delete Assignment
 
    Background: Logged on the LMS portal
      Given Admin is on dashboard page after Login
-    When Admin clicks "Assignment" button on the navigation bar in assignment page
+    When Admin clicks Assignment button on the navigation bar in assignment page
     Then Admin clicks on the delete icon on Assignment page if it is enabled
  
 
@@ -13,7 +13,7 @@ Feature: Delete Assignment
 
   @ValidateTextInAlertBox
   Scenario: Validate details for Confirm Deletion form
-    Then Admin should see a message "Are you sure you want to delete"
+    Then Admin should see a message on manage assignment "Are you sure you want to delete"
 
   @ValidateRowLevelDeleteIconClickYesToDelete
   Scenario: Admin clicks the yes icon

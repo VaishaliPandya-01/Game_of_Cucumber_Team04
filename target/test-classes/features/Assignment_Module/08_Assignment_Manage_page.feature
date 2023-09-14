@@ -4,7 +4,7 @@ Feature: Assignment feature
   
     Background: Logged on the LMS portal
     Given Admin is on dashboard page after Login
-    When Admin clicks "Assignment" button on the navigation bar in assignment page
+    When Admin clicks Assignment button on the navigation bar in assignment page
 
   @Verifylanding
   Scenario: Verify landing in manage assignment page

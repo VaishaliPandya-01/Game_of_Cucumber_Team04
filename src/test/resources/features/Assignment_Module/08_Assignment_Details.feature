@@ -3,7 +3,7 @@ Feature: Assignment details Feature
 
   Background: Admin logged into LMS portal and clicks assignment button on the navigation bar
    Given Admin is on dashboard page after Login
-    When Admin clicks "Assignment" button on the navigation bar in assignment page
+    When Admin clicks Assignment button on the navigation bar in assignment page
     Then Admin click +Add new assignment button in Assignment details popup window
 
   @verifyHeaderTitle
