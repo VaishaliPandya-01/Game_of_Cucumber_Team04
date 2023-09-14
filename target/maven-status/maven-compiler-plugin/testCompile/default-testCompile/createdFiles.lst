@@ -1,3 +1,4 @@
+com\pageObject\User_Add_Obj.class
 com\stepDefinition\Dashboard_SD.class
 com\pageObject\Class_Pagination_obj.class
 com\pageObject\Login_Obj.class
@@ -15,6 +16,7 @@ com\controllerInterface\ControllerInterface.class
 com\pageObject\Assignment_Delete_obj.class
 com\utility\XlUtilsData.class
 com\stepDefinition\Hooks.class
+com\pageObject\User_Manage_Obj.class
 com\stepDefinition\Class_SD.class
 com\pageObject\Dashboard_Obj.class
 com\pageObject\Batch_Manage_Obj.class
@@ -28,7 +30,10 @@ com\stepDefinition\Batch_SD.class
 com\stepDefinition\Program_SD.class
 com\pageObject\Program_Add_Obj.class
 com\utility\Readconfig.class
+com\stepDefinition\User_SD.class
+com\pageObject\User_Delete_Obj.class
 com\pageObject\Class_Edit_obj.class
+com\pageObject\User_Edit_Obj.class
 com\pageObject\Program_Delete_Obj.class
 com\pageObject\Class_AddNew_obj.class
 com\pageObject\Assignment_detailsPage_obj.class
