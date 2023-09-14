@@ -17,13 +17,12 @@ import io.cucumber.java.en.When;
 
 public class Login_SD extends BaseClass{
 	
-	Home_Obj homePage;
-	Login_Obj loginPage;
+	private Home_Obj homePage = new Home_Obj();;
+	private Login_Obj loginPage = new Login_Obj();
 	
 	
 	@Given("Admin is in home page")
 	public void admin_is_in_home_page() {
-		homePage = new Home_Obj();
 		homePage.verifyHomePage();
 	}
 

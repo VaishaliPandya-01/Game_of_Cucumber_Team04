@@ -32,15 +32,10 @@ public class Assignment_SD{
 
 
 
-
-
-	@Given("Logged on the LMS portal as Admin")
-	public void logged_on_the_LMS_portal_as_Admin() {
-	}
-
 	@When("Admin clicks {string} button on the navigation bar in manage assignment page")
 	public void admin_clicks_button_on_the_navigation_bar(String string) {
 		assign.Assignment_btn();
+		Log.logInfo("Admin Clicks 'Assignment' on NavigationBar");
 	}
 
 
@@ -51,6 +46,7 @@ public class Assignment_SD{
 
 		String URL=assign.getManageAssignmentTitle();
 		Assert.assertTrue(URL.contains(PageURL));
+		Log.logInfo("Admin see see URL with"+URL);
 	}
 
 	@When("the user clicks the 'assignment' button in manage assignment page")
@@ -58,12 +54,14 @@ public class Assignment_SD{
 		startTime = System.currentTimeMillis();
 		assign.Assignment_btn();
 		endTime = System.currentTimeMillis();
+		Log.logInfo("the user clicks the 'assignment' button in manage assignment page");
 	}
 
 	@Then("Get the response time for navigation from dashboard page to manage assignment page")
 	public void get_the_response_time_for_navigation_from_dashboard_page_to_manage_assignment_page() {
 		long responseTime = endTime - startTime;
 		System.out.println("Response time: " + responseTime + " milliseconds");
+		Log.logInfo("Response time: " + responseTime + " milliseconds");
 	}
 
 
@@ -71,6 +69,7 @@ public class Assignment_SD{
 	public void admin_should_see_header_with(String pageTitle) {
 		String title= assign.getManageAssignmentTitle();
 		Assert.assertEquals(pageTitle, title);
+		Log.logInfo("Admin should see header with"+title);
 
 	}
 
@@ -78,6 +77,7 @@ public class Assignment_SD{
 	public void admin_clicks_button_on_the_navigation_bar_and_get_all_text_from_the_portal_page(String portalText) {
 		assign.Assignment_btn();;
 		assign.GetTextAllFieldsOnForm();
+		Log.logInfo("Admin clicks button on the navigation bar and get all text from the portal page in manage assignment page");
 	}
 
 	@Then("Admin should see correct spelling for the all the fields in manage assignment page")

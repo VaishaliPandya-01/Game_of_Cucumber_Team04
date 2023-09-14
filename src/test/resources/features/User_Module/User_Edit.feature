@@ -2,7 +2,7 @@ Feature: Edit new user
 
 Background: Logged on the LMS portal
 Given Admin is on dashboard page after Login
-When Admin clicks "User" from navigation bar
+When Admin clicks User from navigation bar
 Then Admin clicks the edit icon if it is enabled
 
 Scenario: Validate row level edit icon
