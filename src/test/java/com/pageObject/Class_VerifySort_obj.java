@@ -14,35 +14,34 @@ import com.utility.Log;
 import java.util.List;
 
 public class Class_VerifySort_obj extends BaseClass{
-	
-	 Controller control = new Controller();
+
+	Controller control = new Controller();
 
 
-		//Constructor
-		public  Class_VerifySort_obj() {
+	//Constructor
+	public  Class_VerifySort_obj() {
 
-			PageFactory.initElements(driver, this);
-		}
-		
-		 boolean status;
-	 
-	   @FindBy(xpath = "//button[contains(text(),'Sort')]]")
-		WebElement batchidTab;
-	 
-	//   driver.findElements(By.xpath("//table[@id='myTable']/tbody/tr/td[1]"));
-	   @FindBy(xpath = "//table[@id='myTable']/tbody/tr/td[1]")
-	   WebElement tablsrt;
-	   
-	   public void clickbatchid()
-	   {
-		   batchidTab.click();
-	   }
-	   
-	   public void Sortingmethod()
-	   {
-	   
-		  
-	  // driver.findElement(By.xpath("//button[contains(text(),'Sort')]")).click();
+		PageFactory.initElements(driver, this);
+	}
+
+	boolean status;
+
+	@FindBy(xpath = "//button[contains(text(),'Sort')]]")
+	private WebElement batchidTab;
+
+	@FindBy(xpath = "//table[@id='myTable']/tbody/tr/td[1]")
+	private WebElement tablsrt;
+
+	public void clickbatchid()
+	{
+		batchidTab.click();
+	}
+
+	public void Sortingmethod()
+	{
+
+
+		// driver.findElement(By.xpath("//button[contains(text(),'Sort')]")).click();
 		List<WebElement> tdList = (List<WebElement>) tablsrt;
 		String strArry [] = new String[tdList.size()];
 		for(int i=0;i < tdList.size();i++)
@@ -54,27 +53,27 @@ public class Class_VerifySort_obj extends BaseClass{
 		 */
 		boolean sortFunctionality = true;
 		outer: 
-		for(int i=0;i < strArry.length;i++)
-		{
-			for(int j=i+1;j < i;j++)
+			for(int i=0;i < strArry.length;i++)
 			{
-				int result = strArry[j].compareTo(strArry[i]);
-				if(!(result > 0))
+				for(int j=i+1;j < i;j++)
 				{
-					 Log.logInfo("Data in the Table is not SORTED");
-//	System.out.println("Data in the Table is not SORTED::" +strArry[j]+":::"+ strArry[i]);
+					int result = strArry[j].compareTo(strArry[i]);
+					if(!(result > 0))
+					{
+						Log.logInfo("Data in the Table is not SORTED");
+						//	System.out.println("Data in the Table is not SORTED::" +strArry[j]+":::"+ strArry[i]);
 						sortFunctionality=false;
 						break outer;
-				}
-				else
-				{
-					Log.logInfo("Data in the Table is SORTED");
-					// System.out.println("Data in the Table is SORTED::" +strArry[j]+":::"+ strArry[i]);
+					}
+					else
+					{
+						Log.logInfo("Data in the Table is SORTED");
+						// System.out.println("Data in the Table is SORTED::" +strArry[j]+":::"+ strArry[i]);
+					}
 				}
 			}
-		}
-		
-		
+
+
 		if(sortFunctionality)
 		{
 			Log.logInfo("SORT Functionality is working");
@@ -85,10 +84,10 @@ public class Class_VerifySort_obj extends BaseClass{
 			Log.logInfo("SORT Functionality is not working");
 			//System.out.println("SORT Functionality is not working");
 		}
-		
+
 	}
-	
-	   
-	   
-	
+
+
+
+
 }

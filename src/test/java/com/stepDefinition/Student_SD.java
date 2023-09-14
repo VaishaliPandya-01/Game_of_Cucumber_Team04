@@ -26,6 +26,12 @@ public class Student_SD extends BaseClass {
 
 	}
 
+	@Then("Admin should see the Student details Page Title")
+	public void Admin_should_see_the_Student_details_Page_Title() {
+
+		student.VerifyTitle();
+		Log.logInfo("Validate admin is on Student Details , Title is :-"+student.VerifyTitle());
+	}
 
 	@Then("Maximum navigation time in milliseconds, defaults to {int} seconds in Student Module")
 	public void maximum_navigation_time_in_milliseconds_defaults_to_seconds_in_Student_Module(Integer int1) {

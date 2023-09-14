@@ -16,9 +16,9 @@ import java.util.List;
 
 
 public class Class_Pagination_obj extends BaseClass {
-	
+
 	int columnIndex = 0;
-	
+
 	Controller control = new Controller();
 
 
@@ -30,86 +30,86 @@ public class Class_Pagination_obj extends BaseClass {
 	boolean status;
 
 	@FindBy(xpath = "//a[@id ='dashboardsmsg']")
-	WebElement dashboardlandmsg;
-	
+	private WebElement dashboardlandmsg;
+
 	List<WebElement> tableHeaders = (List<WebElement>) dashboardlandmsg;
-	
+
 	@FindBy(xpath = "//a[@id ='paginationbutton']")
-	WebElement Btnclick;
+	private WebElement Btnclick;
 	@FindBy(xpath = "//pre[@id='datadisplay']")
-	WebElement OutputChk;
-	
-	 @FindBy(xpath ="//td[value() ='1']") 
-			 WebElement data1;
-			
-	
+	private WebElement OutputChk;
+
+	@FindBy(xpath ="//td[value() ='1']") 
+	private WebElement data1;
+
+
 	@FindBy(xpath = "//a[title ='>']")
-	WebElement rigtclick;
-	
+	private WebElement rigtclick;
+
 	@FindBy(xpath = "//a[title='<']")
-	WebElement lftclick;
-	
+	private WebElement lftclick;
+
 	@FindBy(xpath = "//a[title='>>']")
-	WebElement rigtdblclick;
+	private WebElement rigtdblclick;
 	@FindBy(xpath = "//a[title='<<']")
-	WebElement lftdblclick;
+	private WebElement lftdblclick;
 	@FindBy(xpath = "//a[@id='isEnabled']")
-	WebElement arrwenabled;
+	private WebElement arrwenabled;
 	@FindBy(xpath = "//a[@id='isDisabled']")
-	WebElement arrwdisabled;
-	
+	private WebElement arrwdisabled;
+
 	public void paginationchk()
 	{
-		 Object colName = null;
-		 List<WebElement> result = null;
-        for (int i = 0; i < tableHeaders.size(); i++) {
-           
+		Object colName = null;
+		List<WebElement> result = null;
+		for (int i = 0; i < tableHeaders.size(); i++) {
+
 			if (tableHeaders.get(i).getText().equals(colName)) {
-                break;
-            }
-        }
-        
-        boolean goNext = false;
-        do { 
-        	for (int i = 0; i < tableHeaders.size(); i++) {
-                data1.getText();
-                             
-	        }
-        	 boolean paginationNext = false;
+				break;
+			}
+		}
+
+		boolean goNext = false;
+		do { 
+			for (int i = 0; i < tableHeaders.size(); i++) {
+				data1.getText();
+
+			}
+			boolean paginationNext = false;
 			goNext = paginationNext;
-             if (paginationNext) {
-                 data1.click();
-             }
-           } while (goNext);
-             return ;
-        }
-	
-	
+			if (paginationNext) {
+				data1.click();
+			}
+		} while (goNext);
+		return ;
+	}
+
+
 	public void DashboardLandingPage() {
 		try {
 			status = dashboardlandmsg.isDisplayed();
 			assertTrue(status);
 
-			 Log.logInfo("Dashboard page is displayed");
+			Log.logInfo("Dashboard page is displayed");
 
 		} catch (AssertionError e) {
 			Log.error("Dashboard page is not displayed");
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	public void ClassbtnclickMethod()
 	{
 		Btnclick.click();
 	}
-	
+
 	public void dataMessagedisplayed() {
 
 		try {
 			status = OutputChk.isDisplayed();
 			assertTrue(status);
 
-			 Log.logInfo("Alert is displayed");
+			Log.logInfo("Alert is displayed");
 
 		} catch (AssertionError e) {
 			Log.error("Alert is not displayed");
@@ -117,14 +117,14 @@ public class Class_Pagination_obj extends BaseClass {
 		}
 
 	}
-	
+
 	public void rightarrowchk()
 	{
 		try {
 			status = rigtclick.isDisplayed();
 			assertTrue(status);
 
-			 Log.logInfo("Alert is displayed");
+			Log.logInfo("Alert is displayed");
 
 		} catch (AssertionError e) {
 			Log.error("Alert is not displayed");
@@ -132,14 +132,14 @@ public class Class_Pagination_obj extends BaseClass {
 		}
 		//rigtclick.click();
 	}
-	
+
 	public void leftarrowchk()
 	{
 		try {
 			status = lftclick.isDisplayed();
 			assertTrue(status);
 
-			 Log.logInfo("Alert is displayed");
+			Log.logInfo("Alert is displayed");
 
 		} catch (AssertionError e) {
 			Log.error("Alert is not displayed");
@@ -147,15 +147,15 @@ public class Class_Pagination_obj extends BaseClass {
 		}
 		//lftclick.click();
 	}
-	
+
 	public void rightdblClick()
 	{
-		
+
 		try {
 			status = lftdblclick.isDisplayed();
 			assertTrue(status);
 
-			 Log.logInfo("Alert is displayed");
+			Log.logInfo("Alert is displayed");
 
 		} catch (AssertionError e) {
 			Log.error("Alert is not displayed");
@@ -163,14 +163,14 @@ public class Class_Pagination_obj extends BaseClass {
 		}
 		//rigtdblclick.click();
 	}
-	
+
 	public void lftdblarr() {
-		
+
 		try {
 			status = rigtdblclick.isDisplayed();
 			assertTrue(status);
 
-			 Log.logInfo("Alert is displayed");
+			Log.logInfo("Alert is displayed");
 
 		} catch (AssertionError e) {
 			Log.error("Alert is not displayed");
@@ -178,15 +178,15 @@ public class Class_Pagination_obj extends BaseClass {
 		}
 		//lftdblclick.click();
 	}
-	
-	
+
+
 	public void arrenabledmethd() {
-		
+
 		try {
 			status = arrwenabled.isDisplayed();
 			assertTrue(status);
 
-			 Log.logInfo("Alert is displayed");
+			Log.logInfo("Alert is displayed");
 
 		} catch (AssertionError e) {
 			Log.error("Alert is not displayed");
@@ -194,13 +194,13 @@ public class Class_Pagination_obj extends BaseClass {
 		}
 		//lftdblclick.click();
 	}
-public void arrdisbledmethd() {
-		
+	public void arrdisbledmethd() {
+
 		try {
 			status = arrwdisabled.isDisplayed();
 			assertTrue(status);
 
-			 Log.logInfo("Alert is displayed");
+			Log.logInfo("Alert is displayed");
 
 		} catch (AssertionError e) {
 			Log.error("Alert is not displayed");

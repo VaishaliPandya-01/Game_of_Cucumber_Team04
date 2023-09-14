@@ -12,13 +12,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Dashboard_SD extends BaseClass{
-	
+
 	Dashboard_Obj dashboardPage;
 	Login_Obj login;
-	
+
 	private long startTime;
 	private long endTime;
-	
+
 	//validate manage program header
 	@Then("Admin should see manage program as header")
 	public void admin_should_see_manage_program_as_header(String expectedText) {
@@ -53,7 +53,7 @@ public class Dashboard_SD extends BaseClass{
 	@Then("LMS title should be on the top left corner of page")
 	public void lms_title_should_be_on_the_top_left_corner_of_page() {
 		Assert.assertEquals("Left",dashboardPage.alignmentManageHeader());
-	    Log.logInfo("Validate Alignment of Header");
+		Log.logInfo("Validate Alignment of Header");
 	}
 
 	//check correct spellings
@@ -62,7 +62,7 @@ public class Dashboard_SD extends BaseClass{
 		dashboardPage.spellCheckFunction();
 		Log.logInfo("Validate spellings");
 	}
-	
+
 	//checkk Spellings
 	@Then("Admin should see correct spelling and space in LMS title")
 	public void admin_should_see_correct_spelling_and_space_in_LMS_title() {
@@ -74,7 +74,7 @@ public class Dashboard_SD extends BaseClass{
 	@Then("Admin should see the navigation bar text on the top right side")
 	public void admin_should_see_the_navigation_bar_text_on_the_top_right_side() {
 		Assert.assertEquals("Right",dashboardPage.navigationBarAllignment());
-	    Log.logInfo("Validate Alignment of Header");
+		Log.logInfo("Validate Alignment of Header");
 	}
 
 	@Then("Admin should see student in the 1st place")
@@ -116,7 +116,7 @@ public class Dashboard_SD extends BaseClass{
 	public void admin_should_see_logout_in_the_8th() {
 		dashboardPage.validateLogoutModule();
 	}
-	
+
 	//validate dashboard page
 	@Given("Admin is in dashboard page")
 	public void admin_is_in_dashboard_page() {

@@ -2,7 +2,7 @@
 Feature: Verify sort function in manage assignment page
   
 Background: Admin is manage assignment page after logged in
-Given Admin is in manage assignment page
+Given Admin clicks Assignment button on the navigation bar in assignment page
 When Admin click on assignment name column header to sort 
 
 

@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.controller.Controller;
 import com.baseClass.BaseClass;
+import com.controller.Controller;
 import com.utility.Log;
 
 
@@ -22,27 +22,24 @@ public class Class_DeleteValidation_obj extends BaseClass{
 
 		PageFactory.initElements(driver, this);
 	}
-	
+
 
 	boolean status;
 
 	@FindBy(xpath = "//a[@id ='manageclassmsg']")
-	WebElement manageclassmsg;
+	private WebElement manageclassmsg;
 	@FindBy(xpath = "//a[@id ='DeleteButton']")
-	WebElement deleteBtnclick;
+	private WebElement deleteBtnclick;
 	@FindBy(xpath = "//pre[@id='message']")
-	WebElement OutputChk;
-
+	private WebElement OutputChk;
 	@FindBy(xpath = "//pre[@id='yesmessage']")
-	WebElement YesbtnChk;
+	private WebElement YesbtnChk;
 	@FindBy(xpath = "//pre[@id='nomessage']")
-	WebElement NobtnChk;
-
+	private WebElement NobtnChk;
 	@FindBy(xpath = "//a[@id ='hobbies-checkbox']")
-	WebElement ChkboxClk;
-
+	private WebElement ChkboxClk;
 	@FindBy(xpath = "//input[@type='checkbox' and starts-with(@id,'ex1-check')]")
-	WebElement multichkbox;
+	private WebElement multichkbox;
 
 	public void ManageclassLandingPage() {
 		try {
@@ -170,8 +167,8 @@ public class Class_DeleteValidation_obj extends BaseClass{
 			System.out.println(e.getMessage());
 		}
 	}
-	
-	
-	
-	
+
+
+
+
 }

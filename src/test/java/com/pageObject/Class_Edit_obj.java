@@ -21,23 +21,23 @@ public class Class_Edit_obj extends BaseClass {
 
 		PageFactory.initElements(driver, this);
 	}
-	
-	
+
+
 	boolean status;
-	
+
 	@FindBy(xpath = "//a[@id ='Edit class']")
-	WebElement editBtnclk;
+	private WebElement editBtnclk;
 	@FindBy(xpath = "//a[Text() ='class details']")
-	WebElement editpopupchk;
+	private WebElement editpopupchk;
 	@FindBy(xpath = "//a[@id ='batchid']")
-	WebElement Batchidval;
+	private WebElement Batchidval;
 	@FindBy(xpath = "//a[@id ='noofclasses']")
-	WebElement noclassval;
+	private WebElement noclassval;
 	@FindBy(xpath = "//a[@id ='classdate']")
-	WebElement clasdtval;
+	private WebElement clasdtval;
 	@FindBy(xpath = "//a[@id ='staffid']")
-	WebElement staffval;
-	
+	private WebElement staffval;
+
 	public void editbtnclkmehtod()
 	{
 		editBtnclk.click();
@@ -56,18 +56,18 @@ public class Class_Edit_obj extends BaseClass {
 			Log.error("edit page is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
-		
+
+
 	}
-	
+
 	public void chkallrws()
 	{
-		
-			Batchidval.getAttribute("value");
-			noclassval.getText();
-			clasdtval.getText();
-			staffval.getText();
-		
+
+		Batchidval.getAttribute("value");
+		noclassval.getText();
+		clasdtval.getText();
+		staffval.getText();
+
 		try {
 			status = editpopupchk.isDisplayed();
 			assertTrue(status);
