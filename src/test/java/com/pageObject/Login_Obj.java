@@ -57,11 +57,11 @@ public class Login_Obj extends BaseClass{
 	}
 
 	public void userNameText(String uNmae) {
-		userName_txt.sendKeys(uNmae);
+		act.type(userName_txt, uNmae);
 	}
 
 	public void PswdText(String pwd) {
-		password_txt.sendKeys(pwd);
+		act.type(password_txt, pwd);
 	}
 
 	public void clickLoginBtn() {

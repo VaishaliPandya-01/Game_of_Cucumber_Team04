@@ -13,8 +13,8 @@ import io.cucumber.java.en.When;
 
 public class Dashboard_SD extends BaseClass{
 
-	Dashboard_Obj dashboardPage;
-	Login_Obj login;
+	private Dashboard_Obj dashboardPage = new Dashboard_Obj();
+	private Login_Obj login = new Login_Obj();
 
 	private long startTime;
 	private long endTime;
