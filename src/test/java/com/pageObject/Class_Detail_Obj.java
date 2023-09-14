@@ -1,4 +1,4 @@
-package com.pageObject.Class_obj;
+package com.pageObject;
 
 import static org.junit.Assert.assertTrue;
 
@@ -11,13 +11,13 @@ import com.controller.Controller;
 import com.baseClass.BaseClass;
 import com.utility.Log;
 
-public class ClassDetail_PageObject extends BaseClass {
+public class Class_Detail_Obj extends BaseClass {
 	
 		Controller control = new Controller();
 
 
 		//Constructor
-		public ClassDetail_PageObject() {
+		public Class_Detail_Obj() {
 
 			PageFactory.initElements(driver, this);
 		}

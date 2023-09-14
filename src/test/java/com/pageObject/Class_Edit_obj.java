@@ -1,4 +1,4 @@
-package com.pageObject.Class_obj;
+package com.pageObject;
 
 import static org.junit.Assert.assertTrue;
 
@@ -11,13 +11,13 @@ import com.controller.Controller;
 import com.baseClass.BaseClass;
 import com.utility.Log;
 
-public class EditClass_obj extends BaseClass {
+public class Class_Edit_obj extends BaseClass {
 
 	Controller control = new Controller();
 
 
 	//Constructor
-	public EditClass_obj() {
+	public Class_Edit_obj() {
 
 		PageFactory.initElements(driver, this);
 	}

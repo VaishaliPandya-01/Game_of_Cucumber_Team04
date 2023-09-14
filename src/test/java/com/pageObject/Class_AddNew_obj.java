@@ -1,4 +1,4 @@
-package com.pageObject.Class_obj;
+package com.pageObject;
 
 import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.WebElement;
@@ -12,13 +12,13 @@ import com.utility.Log;
 
 
 
-public class AddNewClass_obj extends BaseClass {
+public class Class_AddNew_obj extends BaseClass {
 
 	Controller control = new Controller();
 
 
 	//Constructor
-	public AddNewClass_obj() {
+	public Class_AddNew_obj() {
 
 		PageFactory.initElements(driver, this);
 	}

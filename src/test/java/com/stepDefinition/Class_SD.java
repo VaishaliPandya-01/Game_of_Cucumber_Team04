@@ -1,9 +1,12 @@
 package com.stepDefinition;
 
-import org.openqa.selenium.WebDriver;
-
-import com.baseClass.BaseClass;
-import com.pageObject.Class_obj.*;
+import com.pageObject.Class_AddNew_obj;
+import com.pageObject.Class_Detail_Obj;
+import com.pageObject.Class_DeleteValidation_obj;
+import com.pageObject.Class_Edit_obj;
+import com.pageObject.Class_Manage_Obj;
+import com.pageObject.Class_Pagination_obj;
+import com.pageObject.Class_VerifySort_obj;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,13 +16,13 @@ public class Class_SD {
 
 	//WebDriver driver = DriverFactory.getDriver();
 	
-	DeleteClassValidation_obj obj = new DeleteClassValidation_obj();
-	VerifySort_obj objvd = new VerifySort_obj();
-	Pagination_obj objpg = new Pagination_obj();
-	AddNewClass_obj objanw = new AddNewClass_obj();
-	EditClass_obj objedc = new EditClass_obj();
-	ManageClassPage_PageObject MCP = new ManageClassPage_PageObject();
-	ClassDetail_PageObject CD = new ClassDetail_PageObject();
+	Class_DeleteValidation_obj obj = new Class_DeleteValidation_obj();
+	Class_VerifySort_obj objvd = new Class_VerifySort_obj();
+	Class_Pagination_obj objpg = new Class_Pagination_obj();
+	Class_AddNew_obj objanw = new Class_AddNew_obj();
+	Class_Edit_obj objedc = new Class_Edit_obj();
+	Class_Manage_Obj MCP = new Class_Manage_Obj();
+	Class_Detail_Obj CD = new Class_Detail_Obj();
 	
 @Given("Admin is on dashboard page after Login")
 public void admin_is_on_dashboard_page_after_login() {
