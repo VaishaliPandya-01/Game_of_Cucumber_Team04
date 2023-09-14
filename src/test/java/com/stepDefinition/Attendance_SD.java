@@ -366,15 +366,17 @@ public class Attendance_SD extends BaseClass{
 	//Verify Program Name with Program name in Program Module data
 	@Then("Program Name in the drop down  for Attendance Module should match with  program name in  manage program page table")
 	public void program_Name_in_the_drop_down_for_Attendance_Module_should_match_with_program_name_in_manage_program_page_table() {
-
-
+		
+		Assert.assertEquals(att_details.pgmnameTxt(),att_details.pgmnameTxtPgm());
+		Log.logInfo("Verified Program Name with Program name in Program Module data");
 	}
 
 	//Verify Class Name with class name in class Module data
 	@Then("Class Name in the drop down should match with  class name in  manage class page table for Attendance Module")
 	public void class_Name_in_the_drop_down_should_match_with_class_name_in_manage_class_page_table() {
-
-
+		
+		Assert.assertEquals(att_details.ClassnameTxt(),att_details.ClassnameTxtPgm());
+		Log.logInfo("Verified Class Name with Class name in Class Module data");
 	}
 
 	//Verify the KeyWords in Attendance Field
@@ -601,12 +603,14 @@ public class Attendance_SD extends BaseClass{
 	public void admin_clicks_yes_button_for_Attendance_module() {
 
 		att_delete.clickYes();
+		Log.logInfo("Admin clicks Yes button");
 	}
 
 	@Then("Success message and selected attendance details are deleted from the data table")
 	public void success_message_and_selected_attendance_details_are_deleted_from_the_data_table() {
 
 		att_delete.DisplayMessage();
+		Log.logInfo("Success message is displayed");
 	}
 
 
@@ -614,12 +618,14 @@ public class Attendance_SD extends BaseClass{
 	public void admin_clicks_no_button_for_Attendance_module() {
 
 		att_delete.clickNo();
+		Log.logInfo("Admin clicks No");
 	}
 
 	@Then("Redirected attendance page and selected attendance details are not deleted from the data table")
 	public void redirected_attendance_page_and_selected_attendance_details_are_not_deleted_from_the_data_table() {
 
 		Assert.assertEquals(att_manager.getTitle(), "Attendance Manage");
+		Log.logInfo("Verified Attendance page");
 
 	}
 
@@ -630,6 +636,7 @@ public class Attendance_SD extends BaseClass{
 	public void admin_clicks_single_row_level_check_box_in_the_data_table_for_Attendance_Module() {
 
 		att_manager.SelectSingleCheckBoxAtt();
+		Log.logInfo("Admin clicks single checkbox");
 
 	}
 
@@ -637,12 +644,14 @@ public class Attendance_SD extends BaseClass{
 	public void admin_should_see_delete_icon_below_the_header_is_enabled_on_Attendance_Module() {
 
 		Assert.assertTrue(att_manager.M_DeleteiconEnabled());
+		Log.logInfo("Delete icon below header is verified");
 	}
 
 	@Then("Admin should see tick mark in check box for Attendance Module")
 	public void admin_should_see_tick_mark_in_check_box_for_Attendance_Module() {
 
 		Assert.assertTrue(att_manager.VerifyTickMark());
+		Log.logInfo("Tick mark in check box is verified");
 
 	}
 
@@ -650,6 +659,7 @@ public class Attendance_SD extends BaseClass{
 	public void admin_click_multiple_row_level_check_box() {
 
 		att_manager.SelectMultiCheckBoxAtt();
+		Log.logInfo("Admin clicks multiple row level check box");
 	}
 
 	@Given("Admin clicks delete button under header after selecting the single check box for attendance module")
@@ -738,11 +748,14 @@ public class Attendance_SD extends BaseClass{
 	@Then("When entries are more than {int} in data table pagination controls enabled for Attendance")
 	public void when_entries_are_more_than_in_data_table_pagination_controls_enabled_for_attendance(Integer int1) {
 		Assert.assertTrue(att_details.VisiblePageControl());
-
+		Log.logInfo("Verified pagination contol is enabled when enteries are more");
 	}
 
 	@Then("When entries are less than {int} in data table pagination controls disabled for Attendance")
 	public void when_entries_are_less_than_in_data_table_pagination_controls_disabled_for_attendance(Integer int1) {
+
+		Assert.assertTrue(att_details.DisablePageControl());
+		Log.logInfo("Verified pagination contol is diabled when enteries are less");
 
 
 	}
