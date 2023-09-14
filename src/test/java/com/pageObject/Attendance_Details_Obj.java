@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.baseClass.BaseClass;
 import com.controller.Controller;
 import com.utility.Log;
+import java.util.ArrayList;
 
 public class Attendance_Details_Obj extends BaseClass {
 	
@@ -35,6 +36,12 @@ public class Attendance_Details_Obj extends BaseClass {
 	@FindBy(xpath="//input[@class='page_right']") private WebElement page_right;
 	@FindBy(xpath = "//td[@data-handler='selectDay']") private List<WebElement> datepickeryears;
 	@FindBy(xpath="//input[id='pageControls']") private WebElement pageControl;
+	@FindBy(xpath="//*[@id=”leftcontainer”]/table/thead/tr/th [1]")private List<WebElement> PgmLstPgmModule;
+	@FindBy(xpath="//*[@id=”pgmmdule”]/table/thead/tr/th [2]")private List<WebElement> PgmNameLst;
+	@FindBy(xpath="//*[@id=”leftcontainer”]/table/thead/tr/th [1]")private List<WebElement> ClassLstPgmModule;
+	@FindBy(xpath="//*[@id=”classmdul”]/table/thead/tr/th [2]")private List<WebElement> ClassNameLst;
+	
+
 	
 	public Attendance_Details_Obj() {
 		PageFactory.initElements(driver,this);
@@ -273,5 +280,40 @@ public class Attendance_Details_Obj extends BaseClass {
     }
 	public boolean VisiblePageControl() {
 		return cn.isEnabled(driver, pageControl);
+	}
+	public boolean DisablePageControl() {	
+		return cn.isEnabled(driver, pageControl);	
+	}
+	public List<String> pgmnameTxt() {
+		List<String> PgmNames = new ArrayList<>();		
+		for(WebElement list : PgmNameLst) {
+			String name =list.getText();
+			PgmNames.add(name);
+		}
+		return PgmNames;
+	}
+	public List<String> pgmnameTxtPgm() {
+		List<String> PgmNames = new ArrayList<>();		
+		for(WebElement list : PgmLstPgmModule) {
+			String name =list.getText();
+			PgmNames.add(name);
+		}
+		return PgmNames;
+	}
+	public List<String> ClassnameTxt() {
+		List<String> PgmNames = new ArrayList<>();		
+		for(WebElement list : ClassNameLst) {
+			String name =list.getText();
+			PgmNames.add(name);
+		}
+		return PgmNames;
+	}
+	public List<String> ClassnameTxtPgm() {
+		List<String> PgmNames = new ArrayList<>();		
+		for(WebElement list : ClassLstPgmModule) {
+			String name =list.getText();
+			PgmNames.add(name);
+		}
+		return PgmNames;
 	}
 }
