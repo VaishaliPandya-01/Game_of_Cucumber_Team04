@@ -7,9 +7,9 @@ Given Admin is in add class details popup window
 @Verifynextpageenabled
 Scenario: Verify next page is enabled
 When Admin creates six new class
-Then If total class entries above five next page is enabled ( On multiples of five new page will be enabled)
+Then If total class entries above five next page is enabled
 
 @Verifynextpagedisabled
 Scenario: Verify next page is disabled	
 When Admin creates less than or equal to five new class
-Then If total class entries five or below next page is disabled
+Then If total class entries  five or below next page is disabled

@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 
 public class Home_SD extends BaseClass{
 
-	Home_Obj home;
+	private Home_Obj home= new Home_Obj();
 
 	@Given("Admin launch the browser")
 	public void admin_launch_the_browser() {
