@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.junit.Assert;
 
+import com.pageObject.Dashboard_Obj;
 import com.pageObject.Program_Add_Obj;
 import com.pageObject.Program_Delete_Obj;
 import com.pageObject.Program_Edit_Obj;
@@ -22,7 +23,13 @@ public class Program_SD{
 	private Program_Add_Obj addProgram = new Program_Add_Obj();
 	private Program_Edit_Obj editProgram = new Program_Edit_Obj();
 	private Program_Delete_Obj deleteProgram = new Program_Delete_Obj();
+	private Dashboard_Obj dashboardPage = new Dashboard_Obj();
 
+	@When("Admin clicks Program from navigation bar")
+	public void admin_clicks_Program_from_navigation_bar() {
+		dashboardPage.clickProgram();
+	}
+	
 	/**
 	 * Validate Manage Program
 	 *

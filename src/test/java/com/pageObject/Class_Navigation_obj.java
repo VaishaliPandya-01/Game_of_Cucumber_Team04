@@ -23,27 +23,27 @@ public class Class_Navigation_obj extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	boolean status;
-	
-	
+
+
 	@FindBy(xpath = "//a[@id ='Student']")
-	WebElement StudntClick;
+	private WebElement StudntClick;
 	@FindBy(xpath = "//a[@id ='Program']")
-	WebElement prgmclick;
+	private WebElement prgmclick;
 	@FindBy(xpath = "//a[@id ='Batch']")
-	WebElement btchClick;
+	private WebElement btchClick;
 	@FindBy(xpath = "//a[@id ='User']")
-	WebElement usrClick;
+	private WebElement usrClick;
 	@FindBy(xpath = "//a[@id ='Assignment']")
-	WebElement assgnClick;
+	private WebElement assgnClick;
 	@FindBy(xpath = "//a[@id ='Attendance']")
-	WebElement attdnClick;
+	private WebElement attdnClick;
 	@FindBy(xpath = "//a[@id ='Logout']")
-	WebElement LogoutClick;
+	private WebElement LogoutClick;
 	@FindBy(xpath = "//a[@id ='Class']")
-	WebElement classClick;
+	private WebElement classClick;
 	@FindBy(xpath = "//pre[@id='message']")
-	WebElement OutputChk;
-	
+	private WebElement OutputChk;
+
 	public void studntclickmethod()
 	{
 		StudntClick.click();
@@ -76,7 +76,7 @@ public class Class_Navigation_obj extends BaseClass{
 	{
 		LogoutClick.click();
 	}
-	
+
 	public void msgchckstdnchk()
 	{
 		try {
@@ -90,7 +90,7 @@ public class Class_Navigation_obj extends BaseClass{
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	public void msgclasschk()
 	{
 		try {
@@ -117,8 +117,8 @@ public class Class_Navigation_obj extends BaseClass{
 			System.out.println(e.getMessage());
 		}
 	}
-	
-	
+
+
 	public void msgchckbtchmchk()
 	{
 		try {
@@ -132,7 +132,7 @@ public class Class_Navigation_obj extends BaseClass{
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	public void msgchcusrmchk()
 	{
 		try {
@@ -146,7 +146,7 @@ public class Class_Navigation_obj extends BaseClass{
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	public void msgchckassignmchk()
 	{
 		try {
@@ -173,18 +173,18 @@ public class Class_Navigation_obj extends BaseClass{
 			System.out.println(e.getMessage());
 		}
 	}
-		public void msgchlogoutchk()
-		{
-			try {
-				status = LogoutClick.isDisplayed();
-				assertTrue(status);
+	public void msgchlogoutchk()
+	{
+		try {
+			status = LogoutClick.isDisplayed();
+			assertTrue(status);
 
-				Log.logInfo("Logout is displayed");
+			Log.logInfo("Logout is displayed");
 
-			} catch (AssertionError e) {
-				Log.error("Logout is not displayed");
-				System.out.println(e.getMessage());
-			}
+		} catch (AssertionError e) {
+			Log.error("Logout is not displayed");
+			System.out.println(e.getMessage());
 		}
 	}
-	
+}
+

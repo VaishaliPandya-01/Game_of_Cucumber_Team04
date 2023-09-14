@@ -4,7 +4,7 @@ Feature: Add new assignment
  
     Background: Logged on the LMS portal
     Given Admin is on dashboard page after Login
-    When Admin clicks "Assignment" button on the navigation bar in assignment page
+    When Admin clicks Assignment button on the navigation bar in assignment page
     Then Admin click +Add new assignment button in Assignment details popup window
 
      @ValidData_in_mandatory_fields

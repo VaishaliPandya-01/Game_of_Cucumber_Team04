@@ -8,6 +8,8 @@ import com.pageObject.Batch_Add_Obj;
 import com.pageObject.Batch_Delete_Obj;
 import com.pageObject.Batch_Edit_Obj;
 import com.pageObject.Batch_Manage_Obj;
+import com.pageObject.Dashboard_Obj;
+import com.pageObject.Login_Obj;
 import com.utility.Log;
 import com.utility.XlUtilsData;
 
@@ -22,21 +24,22 @@ public class Batch_SD{
 	private Batch_Add_Obj addBatch = new Batch_Add_Obj();
 	private Batch_Delete_Obj deleteBatch = new Batch_Delete_Obj();
 	private Batch_Edit_Obj editBatch = new Batch_Edit_Obj();
+	private Login_Obj loginPage = new Login_Obj();
+	private Dashboard_Obj dashboardPage = new Dashboard_Obj();
 
 	
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_Login() {
-
+		loginPage.userNameText("uName");
+		loginPage.PswdText("pwd");
+		loginPage.keyboardClick();
+		dashboardPage.getDashboardTitle();
 	}
 
 	@When("Admin clicks Batch from navigation bar")
 	public void admin_clicks_Batch_from_navigation_bar() {
+		dashboardPage.clickBatch();
 	}
-
-	@When("Admin clicks Program from navigation bar")
-	public void admin_clicks_Program_from_navigation_bar() {
-	}
-
 
 	/**
 	 * Validate Manage Batch

@@ -22,29 +22,29 @@ public class Class_AddNew_obj extends BaseClass {
 
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	boolean status;
-	
+
 	@FindBy(xpath = "//a[@id ='batchid']")
-	WebElement Batchidval;
+	private WebElement Batchidval;
 	@FindBy(xpath = "//a[@id ='noofclasses']")
-	WebElement noclassval;
+	private WebElement noclassval;
 	@FindBy(xpath = "//a[@id ='classdate']")
-	WebElement clasdtval;
+	private WebElement clasdtval;
 	@FindBy(xpath = "//a[@id ='staffid']")
-	WebElement staffval;
+	private WebElement staffval;
 	@FindBy(xpath = "//a[@id ='Save']")
-	WebElement saveBtnclick;
+	private WebElement saveBtnclick;
 	@FindBy(xpath = "//pre[@id='classdetail']")
-	WebElement OutputclassdetailChk;
+	private WebElement OutputclassdetailChk;
 	@FindBy(xpath = "//a[@id ='date picker']")
-	WebElement datepickerclick;
+	private WebElement datepickerclick;
 	@FindBy(xpath = "//a[@id ='Cancel']")
-	WebElement cancelclick;
+	private WebElement cancelclick;
 	@FindBy(xpath = "//a[@id ='msgcheck']")
-	WebElement manageclassnoent;
-	
-	
+	private WebElement manageclassnoent;
+
+
 	public void batchidDrpdwn()
 	{
 		Batchidval.click();
@@ -53,10 +53,10 @@ public class Class_AddNew_obj extends BaseClass {
 	{
 		datepickerclick.click();
 	}
-	
-	
 
-	
+
+
+
 	public void cancelclkmeth()
 	{
 		cancelclick.click();
@@ -73,7 +73,7 @@ public class Class_AddNew_obj extends BaseClass {
 			Log.error("No button is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
+
 	}
 	public void checkbatchdrpmsg()
 	{
@@ -87,10 +87,10 @@ public class Class_AddNew_obj extends BaseClass {
 			Log.error("batch id is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
-		
+
+
 	}
-	
+
 	public void checknoclasspmsg()
 	{
 		try {
@@ -103,8 +103,8 @@ public class Class_AddNew_obj extends BaseClass {
 			Log.error("no of classes  is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
-		
+
+
 	}
 	public void checkclasdtmsg()
 	{
@@ -118,8 +118,8 @@ public class Class_AddNew_obj extends BaseClass {
 			Log.error("class date is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
-		
+
+
 	}
 	public void checkstaffidmsg()
 	{
@@ -133,8 +133,8 @@ public class Class_AddNew_obj extends BaseClass {
 			Log.error("staff id is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
-		
+
+
 	}
 
 	public void checfieldsmsg()
@@ -149,10 +149,10 @@ public class Class_AddNew_obj extends BaseClass {
 			Log.error("No button is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
-		
+
+
 	}
-	
+
 	public void allfields()
 	{
 		Batchidval.getAttribute("value");
@@ -160,13 +160,13 @@ public class Class_AddNew_obj extends BaseClass {
 		clasdtval.getText();
 		staffval.getText();
 	}
-	
+
 	public void savebtnclickmth()
 	{
 		saveBtnclick.click();
 	}
-	
-	
+
+
 	public void alertmsg()
 	{
 		try {
@@ -180,7 +180,7 @@ public class Class_AddNew_obj extends BaseClass {
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	public void mangecalssnoentrychk()
 	{
 		try {
@@ -194,7 +194,7 @@ public class Class_AddNew_obj extends BaseClass {
 			System.out.println(e.getMessage());
 		}
 	}
-	
-	
+
+
 }
 

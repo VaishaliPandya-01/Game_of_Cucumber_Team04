@@ -16,13 +16,13 @@ public class Class_SD {
 
 	//WebDriver driver = DriverFactory.getDriver();
 	
-	Class_DeleteValidation_obj obj = new Class_DeleteValidation_obj();
-	Class_VerifySort_obj objvd = new Class_VerifySort_obj();
-	Class_Pagination_obj objpg = new Class_Pagination_obj();
-	Class_AddNew_obj objanw = new Class_AddNew_obj();
-	Class_Edit_obj objedc = new Class_Edit_obj();
-	Class_Manage_Obj MCP = new Class_Manage_Obj();
-	Class_Detail_Obj CD = new Class_Detail_Obj();
+	private Class_DeleteValidation_obj obj = new Class_DeleteValidation_obj();
+	private Class_VerifySort_obj objvd = new Class_VerifySort_obj();
+	private Class_Pagination_obj objpg = new Class_Pagination_obj();
+	private Class_AddNew_obj objanw = new Class_AddNew_obj();
+	private Class_Edit_obj objedc = new Class_Edit_obj();
+	private Class_Manage_Obj MCP = new Class_Manage_Obj();
+	private Class_Detail_Obj CD = new Class_Detail_Obj();
 	
 
 @When("Admin clicks {string} button on the navigation bar")

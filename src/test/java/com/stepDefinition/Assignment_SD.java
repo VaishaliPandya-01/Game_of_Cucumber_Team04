@@ -4,15 +4,12 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.baseClass.BaseClass;
-import com.controller.Controller;
 import com.pageObject.Assignment_Add_obj;
 import com.pageObject.Assignment_Delete_obj;
 import com.pageObject.Assignment_Manage_obj;
 import com.pageObject.Assignment_detailsPage_obj;
+import com.pageObject.Dashboard_Obj;
 import com.utility.Log;
 import com.utility.XlUtilsData;
 
@@ -24,11 +21,11 @@ import io.cucumber.java.en.When;
 
 public class Assignment_SD{
 
-	Assignment_detailsPage_obj assigndetails = new Assignment_detailsPage_obj();
-	Assignment_Manage_obj assign = new Assignment_Manage_obj();
-	Controller cn = new Controller();
-	Assignment_Add_obj addassign = new Assignment_Add_obj();
-	Assignment_Delete_obj deleteassign = new Assignment_Delete_obj();
+	private Assignment_detailsPage_obj assigndetails = new Assignment_detailsPage_obj();
+	private Assignment_Manage_obj assign = new Assignment_Manage_obj();
+	private Assignment_Add_obj addassign = new Assignment_Add_obj();
+	private Assignment_Delete_obj deleteassign = new Assignment_Delete_obj();
+	private Dashboard_Obj dashboardPage = new Dashboard_Obj();
 	private long startTime;
 	private long endTime;
 	int numberOfAssignmentRows = assign.getNumberOfAssignmentRows();
@@ -863,9 +860,9 @@ public class Assignment_SD{
 
 	//*************************************************Pagination Assignment *************************************************
 
-	@When("Admin clicks {string} button on the navigation bar in assignment page")
-	public void admin_clicks_button_on_the_navigation_bar_in_assignment_page(String string) {
-
+	@When("Admin clicks Assignment button on the navigation bar in assignment page")
+	public void admin_clicks_Assignment_button_on_the_navigation_bar_in_assignment_page(String string) {
+		dashboardPage.clickAssignment();
 	}
 
 	@Then("Data table should display {int} page  when entries available in Manage Assignment Page")
