@@ -700,8 +700,8 @@ public class Assignment_SD{
 		assign.Assignment_btn();
 	}
 
-	@When("Admin clicks Edit button in data table")
-	public void admin_clicks_Edit_button_in_data_table() {
+	@When("Admin clicks Edit button in data table of class")
+	public void admin_clicks_Edit_button_in_data_table_of_class() {
 		assign.Edit_btn();
 	}
 
