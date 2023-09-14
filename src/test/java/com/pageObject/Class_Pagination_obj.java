@@ -1,4 +1,4 @@
-package com.pageObject.Class_obj;
+package com.pageObject;
 
 import static org.junit.Assert.assertTrue;
 
@@ -15,7 +15,7 @@ import java.util.List;
 
 
 
-public class Pagination_obj extends BaseClass {
+public class Class_Pagination_obj extends BaseClass {
 	
 	int columnIndex = 0;
 	
@@ -23,7 +23,7 @@ public class Pagination_obj extends BaseClass {
 
 
 	//Constructor
-	public Pagination_obj() {
+	public Class_Pagination_obj() {
 
 		PageFactory.initElements(driver, this);
 	}

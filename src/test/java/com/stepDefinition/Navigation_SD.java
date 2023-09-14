@@ -1,9 +1,6 @@
 package com.stepDefinition;
 
-import org.openqa.selenium.WebDriver;
-
-import com.baseClass.BaseClass;
-import com.pageObject.Class_obj.*;
+import com.pageObject.Class_Navigation_obj;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,7 +8,7 @@ import io.cucumber.java.en.When;
 
 public class Navigation_SD {
 
-	Navigation_obj objng = new Navigation_obj();
+	Class_Navigation_obj objng = new Class_Navigation_obj();
 	
 
 @When("Admin clicks Student button in the navigation bar")

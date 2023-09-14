@@ -1,4 +1,4 @@
-package com.pageObject.Class_obj;
+package com.pageObject;
 
 import static org.junit.Assert.assertTrue;
 
@@ -13,13 +13,13 @@ import com.baseClass.BaseClass;
 import com.utility.Log;
 import java.util.List;
 
-public class VerifySort_obj extends BaseClass{
+public class Class_VerifySort_obj extends BaseClass{
 	
 	 Controller control = new Controller();
 
 
 		//Constructor
-		public  VerifySort_obj() {
+		public  Class_VerifySort_obj() {
 
 			PageFactory.initElements(driver, this);
 		}
