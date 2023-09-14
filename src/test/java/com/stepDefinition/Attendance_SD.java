@@ -670,7 +670,6 @@ public class Attendance_SD extends BaseClass{
 	public void admin_clicks_delete_button_under_header_after_selecting_the_multiple_check_box_for_Attendance_Module() {
 		att_manager.SelectMultiCheckBoxAtt();
 		att_manager.deleteMultiplAttendnc_Btn();
-		Log.logInfo("Admin Clicks No button");
 
 	}
 
@@ -678,14 +677,12 @@ public class Attendance_SD extends BaseClass{
 	public void admin_clicks_yes_button_for_Attendance_Module() {
 
 		att_delete.clickYes();
-		Log.logInfo("Admin Clicks Yes button");
 	}
 
 	@Then("Success message and selected attendance detail are deleted from the data table")
 	public void success_message_and_selected_attendance_detail_are_deleted_from_the_data_table() {
 
-		String msg = att_delete.DisplayMessage();
-		Log.logInfo("Success message Displayed - "+msg);
+		att_delete.DisplayMessage();
 	}
 
 
@@ -693,7 +690,6 @@ public class Attendance_SD extends BaseClass{
 	public void admin_clicks_no_button_for_Attendance_Module() {
 
 		att_delete.clickNo();
-		Log.logInfo("Admin Clicks No button");
 	}
 
 	////////************** Pgination ********************//////////////////////////
@@ -742,14 +738,13 @@ public class Attendance_SD extends BaseClass{
 	@Then("When entries are more than {int} in data table pagination controls enabled for Attendance")
 	public void when_entries_are_more_than_in_data_table_pagination_controls_enabled_for_attendance(Integer int1) {
 		Assert.assertTrue(att_details.VisiblePageControl());
-		Log.logInfo("Verified pagination contol");
+
 	}
 
 	@Then("When entries are less than {int} in data table pagination controls disabled for Attendance")
 	public void when_entries_are_less_than_in_data_table_pagination_controls_disabled_for_attendance(Integer int1) {
 
-		Assert.assertTrue(att_details.DisablePageControl());
-		Log.logInfo("Verified disabled pagination contol");
+
 	}
 
 

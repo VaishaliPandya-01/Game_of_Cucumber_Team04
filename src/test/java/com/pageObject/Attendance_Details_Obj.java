@@ -274,8 +274,4 @@ public class Attendance_Details_Obj extends BaseClass {
 	public boolean VisiblePageControl() {
 		return cn.isEnabled(driver, pageControl);
 	}
-	
-	public boolean DisablePageControl() {	
-		return cn.isEnabled(driver, pageControl);	
-	}
 }
