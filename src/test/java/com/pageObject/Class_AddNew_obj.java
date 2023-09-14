@@ -74,8 +74,8 @@ public class Class_AddNew_obj extends BaseClass {
 	
 	//Fill in form
 	
-	public Class_Detail_Obj fillClassDetailsForm(String Batch_id,String No_of_Classes,String class_date,String Class_Topic,String Staff_Id,String Class_Descrip,
-			String Class_Comm,String Class_notes,String Class_recording, Class_Detail_Obj classDetailObj) {
+	public <classDetailObj> Class_Detail_Obj fillClassDetailsForm(String Batch_id,String No_of_Classes,String class_date,String Class_Topic,String Staff_Id,String Class_Descrip,
+			String Class_Comm,String Class_notes, String Class_recording, classDetailObj Class_Manage_Obj) {
 		
 		control.selectByVisibleText(Batch_id, Batchidval);
 		control.type(noclassval, No_of_Classes);
@@ -87,13 +87,11 @@ public class Class_AddNew_obj extends BaseClass {
 		control.type(classNotes, Class_notes);
 		control.type(classRecordings, Class_recording);
 		
-		classDetailObj = new Class_Detail_Obj();
+		Class_Detail_Obj classDetailObj = new Class_Detail_Obj();
 		return classDetailObj;
+	
 	}
 	
-
-
-
 
 	public void batchidDrpdwn()
 	{
@@ -244,6 +242,17 @@ public class Class_AddNew_obj extends BaseClass {
 			System.out.println(e.getMessage());
 		}
 	}
+
+	public Class_Manage_Obj fillClassDetailsForm(String batchID_class, String noOfClasses_Class, String classDate_Class,
+			String classDescription_Class, Class_Manage_Obj mCP) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+
 
 
 }
