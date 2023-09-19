@@ -9,6 +9,18 @@ public class XlUtilsData {
 	public static String descriptionfrBtch;
 	public static String NoOfClassfrBtch;
 	public static String programNameFrBtch;
+	
+	//Class
+	public static String batchID_class;
+	public static String noOfClasses_Class;
+	public static String classDate_Class;
+	public static String classTopic_class;
+	public static String staffID_Class;
+	public static String classDescription_Class;
+	public static String comments_class;
+	public static String notes_Class;
+	public static String recording_Class;
+	
 	//Program
 	public static String programName;
 	public static String descriptionfrPrgrm;
@@ -50,6 +62,26 @@ public class XlUtilsData {
 		programNameFrBtch = excelDataMap.get("programNameFrBtch");
 
 		return excelDataMap;
+	}
+	
+	//Class
+	
+	public static Map<String, String> classXLData (String datakey, String sheetName) throws Exception {
+		
+		excelDataMap = XLUtils.getData(datakey, sheetName);
+		
+		batchID_class = excelDataMap.get("BatchID");
+		noOfClasses_Class = excelDataMap.get("NoofClasses");
+		classDate_Class = excelDataMap.get("ClassDate");
+		classTopic_class = excelDataMap.get("ClassTopic");
+		staffID_Class = excelDataMap.get("StaffId");
+		classDescription_Class = excelDataMap.get("ClassDescription");
+		comments_class = excelDataMap.get("Comments");
+		notes_Class = excelDataMap.get("Notes");
+		recording_Class = excelDataMap.get("Recording");
+		
+		return excelDataMap;
+		
 	}
 	//Program
 	public static Map<String, String> programXLdata(String dataKey,String sheetName) throws Exception {

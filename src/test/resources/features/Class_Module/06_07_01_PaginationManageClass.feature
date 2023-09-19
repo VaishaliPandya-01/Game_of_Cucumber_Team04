@@ -26,7 +26,7 @@ Then Left arrow should be enabled in page two
 
 @Verifyrightarrowdisabledsheettwo
 Scenario: Verify  right arrow is disable when sheet two is displayed in data table when entries are less than ten
-Then Data table should display  page one  when entries available
+Then Data table should display  pageone when entries available
 
 @Verifypaginationcontrolsenbaled
 Scenario: Verify pagination controls enabled

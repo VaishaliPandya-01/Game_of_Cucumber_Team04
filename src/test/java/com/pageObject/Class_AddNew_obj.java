@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.controller.Controller;
 import com.baseClass.BaseClass;
 import com.utility.Log;
+import java.util.List;
 
 
 
@@ -43,7 +44,54 @@ public class Class_AddNew_obj extends BaseClass {
 	private WebElement cancelclick;
 	@FindBy(xpath = "//a[@id ='msgcheck']")
 	private WebElement manageclassnoent;
+	@FindBy(xpath = "//a[@id ='classdescrip']")
+	private WebElement classDescription;
+	@FindBy(xpath = "//a[@id ='comments']")
+	private WebElement classComments;
+	@FindBy(xpath = "//a[@id ='notes']")
+	private WebElement classNotes;
+	@FindBy(xpath = "//a[@id ='recordings']")
+	private WebElement classRecordings;
+	@FindBy(xpath = "//a[@id ='classTopic']")
+	private WebElement classTopic;
+	
+	
+	//Validate Fields
+	
+	public boolean fieldsOnClassForm() {
+		control.isDisplayed(driver, Batchidval);
+		control.isDisplayed(driver, noclassval);
+		control.isDisplayed(driver, clasdtval);
+		control.isDisplayed(driver, classTopic);
+		control.isDisplayed(driver, staffval);
+		control.isDisplayed(driver, classDescription);
+		control.isDisplayed(driver, classComments);
+		control.isDisplayed(driver, classNotes);
+		control.isDisplayed(driver, classRecordings);
 
+		return true;
+	}
+	
+	//Fill in form
+	
+	public <classDetailObj> Class_Detail_Obj fillClassDetailsForm(String Batch_id,String No_of_Classes,String class_date,String Class_Topic,String Staff_Id,String Class_Descrip,
+			String Class_Comm,String Class_notes, String Class_recording, classDetailObj Class_Manage_Obj) {
+		
+		control.selectByVisibleText(Batch_id, Batchidval);
+		control.type(noclassval, No_of_Classes);
+		control.click(driver, clasdtval);
+		control.type(classTopic, Class_Topic);
+		control.selectByVisibleText(Staff_Id,  staffval);
+		control.type(classDescription, Class_Descrip);
+		control.type(classComments, Class_Comm);
+		control.type(classNotes, Class_notes);
+		control.type(classRecordings, Class_recording);
+		
+		Class_Detail_Obj classDetailObj = new Class_Detail_Obj();
+		return classDetailObj;
+	
+	}
+	
 
 	public void batchidDrpdwn()
 	{
@@ -194,6 +242,17 @@ public class Class_AddNew_obj extends BaseClass {
 			System.out.println(e.getMessage());
 		}
 	}
+
+	public Class_Manage_Obj fillClassDetailsForm(String batchID_class, String noOfClasses_Class, String classDate_Class,
+			String classDescription_Class, Class_Manage_Obj mCP) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+
 
 
 }

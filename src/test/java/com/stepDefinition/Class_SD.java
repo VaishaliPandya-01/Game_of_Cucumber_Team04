@@ -7,6 +7,8 @@ import com.pageObject.Class_Edit_obj;
 import com.pageObject.Class_Manage_Obj;
 import com.pageObject.Class_Pagination_obj;
 import com.pageObject.Class_VerifySort_obj;
+import com.utility.Log;
+import com.utility.XlUtilsData;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -190,6 +192,7 @@ public void admin_enters_class_no_which_is_not_existing_the_table_into_search_bo
 
 @When("Admin enters class topic into search box")
 public void admin_enters_class_topic_into_search_box() {
+	MCP.PopUpClassTopic1();
     
     
 }
@@ -202,7 +205,7 @@ public void displays_entries_with_that_class_topic() {
 
 @When("Admin enters class topic which is not existing the table into search box")
 public void admin_enters_class_topic_which_is_not_existing_the_table_into_search_box() {
-    
+	MCP.PopUpClassTopic1();
     
 }
 
@@ -214,19 +217,19 @@ public void admin_enters_staff_id_into_search_box() {
 
 @Then("Displays entries with that  staff id")
 public void displays_entries_with_that_staff_id() {
-    
+    MCP.PopUpStaffIdField();
     
 }
 
 @When("Admin enters staff id which is not existing the table into search box")
 public void admin_enters_staff_id_which_is_not_existing_the_table_into_search_box() {
-    
+    MCP.PopUpStaffIdField();
     
 }
 
 @When("Admin enters class date into search box")
 public void admin_enters_class_date_into_search_box() {
-    
+	
     
 }
 
@@ -323,8 +326,19 @@ public void batch_id_in_the_drop_down_should_match_with_batch_id_manage_batch_pa
 }
 
 @When("Admin enters all mandatory field values with valid data and clicks save button {string} and {string}")
-public void admin_enters_all_mandatory_field_values_with_valid_data_and_clicks_save_button_and(String string, String string2) {
-    
+public void admin_enters_all_mandatory_field_values_with_valid_data_and_clicks_save_button_and(String dataKey, String sheetName) throws Exception {
+	
+	XlUtilsData.classXLData(dataKey, sheetName);
+	 MCP = objanw.fillClassDetailsForm(XlUtilsData.batchID_class, XlUtilsData.noOfClasses_Class,
+			 XlUtilsData.classDate_Class, XlUtilsData.staffID_Class,  MCP);
+	 
+	 Log.logInfo("Class details added:-" +
+	 "BatchId:-" + XlUtilsData.batchID_class +
+	 "NoOfClasses:-" + XlUtilsData.noOfClasses_Class +
+	 "ClassDate:-" + XlUtilsData.classDate_Class +
+	 "StaffId:-" + XlUtilsData.staffID_Class);
+	 
+	 
     objanw.allfields();
 }
 
@@ -335,8 +349,20 @@ public void admin_should_see_new_class_details_is_added_in_the_data_table() {
 }
 
 @When("Admin enters all mandatory field values with invalid data and clicks save button {string} and {string}")
-public void admin_enters_all_mandatory_field_values_with_invalid_data_and_clicks_save_button_and(String string, String string2) {
-    objanw.savebtnclickmth();
+public void admin_enters_all_mandatory_field_values_with_invalid_data_and_clicks_save_button_and(String dataKey, String sheetName) throws Exception {
+	
+	XlUtilsData.classXLData(dataKey, sheetName);
+	 MCP = objanw.fillClassDetailsForm(XlUtilsData.batchID_class, XlUtilsData.noOfClasses_Class,
+			 XlUtilsData.classDate_Class, XlUtilsData.staffID_Class,  MCP);
+	 
+	 Log.logInfo("Class details added:-" +
+	 "BatchId:-" + XlUtilsData.batchID_class +
+	 "NoOfClasses:-" + XlUtilsData.noOfClasses_Class +
+	 "ClassDate:-" + XlUtilsData.classDate_Class +
+	 "StaffId:-" + XlUtilsData.staffID_Class);
+	 
+	
+	objanw.savebtnclickmth();
     
 }
 
@@ -347,19 +373,62 @@ public void error_message_should_appear_in_alert() {
 }
 
 @When("Admin enters values in all fields with valid data and clicks save button {string} and {string}")
-public void admin_enters_values_in_all_fields_with_valid_data_and_clicks_save_button_and(String string, String string2) {
+public void admin_enters_values_in_all_fields_with_valid_data_and_clicks_save_button_and(String dataKey, String sheetName) throws Exception {
+	
+	XlUtilsData.classXLData(dataKey, sheetName);
+	 MCP = objanw.fillClassDetailsForm(XlUtilsData.batchID_class, XlUtilsData.noOfClasses_Class,
+			 XlUtilsData.classDate_Class, XlUtilsData.staffID_Class,  MCP);
+	 
+	 Log.logInfo("Class details added:-" +
+	 "BatchId:-" + XlUtilsData.batchID_class +
+	 "NoOfClasses:-" + XlUtilsData.noOfClasses_Class +
+	 "ClassDate:-" + XlUtilsData.classDate_Class +
+	 "ClassTopic:-" + XlUtilsData.classTopic_class +
+	 "StaffId:-" + XlUtilsData.staffID_Class +
+	 "CalssDescription:-" + XlUtilsData.classDescription_Class +
+	 "Comments:-" + XlUtilsData.comments_class +
+	 "Notes:-" + XlUtilsData.notes_Class +
+	 "Recording:-" + XlUtilsData.recording_Class
+	 );
 	   objanw.savebtnclickmth();
     
 }
 
 @When("Admin enters with invalid data in optional fields and clicks save button {string} and {string}")
-public void admin_enters_with_invalid_data_in_optional_fields_and_clicks_save_button_and(String string, String string2) {
+public void admin_enters_with_invalid_data_in_optional_fields_and_clicks_save_button_and(String dataKey, String sheetName) throws Exception {
+	
+	XlUtilsData.classXLData(dataKey, sheetName);
+	 MCP = objanw.fillClassDetailsForm(XlUtilsData.batchID_class, XlUtilsData.noOfClasses_Class,
+			 XlUtilsData.classDate_Class, XlUtilsData.staffID_Class,  MCP);
+	 
+	 Log.logInfo("Class details added:-" +
+	 "ClassTopic:-" + XlUtilsData.classTopic_class +
+	 "CalssDescription:-" + XlUtilsData.classDescription_Class +
+	 "Comments:-" + XlUtilsData.comments_class +
+	 "Notes:-" + XlUtilsData.notes_Class +
+	 "Recording:-" + XlUtilsData.recording_Class
+	 );
 	   objanw.savebtnclickmth();
     
 }
 
 @When("Admin enters  data missing value in Batch ID and clicks save button {string} and {string}")
-public void admin_enters_data_missing_value_in_batch_id_and_clicks_save_button_and(String string, String string2) {
+public void admin_enters_data_missing_value_in_batch_id_and_clicks_save_button_and(String dataKey, String sheetName) throws Exception {
+	
+	XlUtilsData.classXLData(dataKey, sheetName);
+	 MCP = objanw.fillClassDetailsForm(XlUtilsData.batchID_class, XlUtilsData.noOfClasses_Class,
+			 XlUtilsData.classDate_Class, XlUtilsData.staffID_Class,  MCP);
+	 
+	 Log.logInfo("Class details added:-" +
+	 "NoOfClasses:-" + XlUtilsData.noOfClasses_Class +
+	 "ClassDate:-" + XlUtilsData.classDate_Class +
+	 "ClassTopic:-" + XlUtilsData.classTopic_class +
+	 "StaffId:-" + XlUtilsData.staffID_Class +
+	 "CalssDescription:-" + XlUtilsData.classDescription_Class +
+	 "Comments:-" + XlUtilsData.comments_class +
+	 "Notes:-" + XlUtilsData.notes_Class +
+	 "Recording:-" + XlUtilsData.recording_Class
+	 );
     
 	   objanw.savebtnclickmth();
 }
@@ -371,8 +440,23 @@ public void batch_id_is_missing() {
 }
 
 @When("Admin enters data missing value in No of class and clicks save button {string} and {string}")
-public void admin_enters_data_missing_value_in_no_of_class_and_clicks_save_button_and(String string, String string2) {
-	objanw.checkbatchdrpmsg();
+public void admin_enters_data_missing_value_in_no_of_class_and_clicks_save_button_and(String dataKey, String sheetName) throws Exception {
+	
+	XlUtilsData.classXLData(dataKey, sheetName);
+	 MCP = objanw.fillClassDetailsForm(XlUtilsData.batchID_class, XlUtilsData.noOfClasses_Class,
+			 XlUtilsData.classDate_Class, XlUtilsData.staffID_Class,  MCP);
+	 
+	 Log.logInfo("Class details added:-" +
+	 "BatchId:-" + XlUtilsData.batchID_class +
+	 "ClassDate:-" + XlUtilsData.classDate_Class +
+	 "ClassTopic:-" + XlUtilsData.classTopic_class +
+	 "StaffId:-" + XlUtilsData.staffID_Class +
+	 "CalssDescription:-" + XlUtilsData.classDescription_Class +
+	 "Comments:-" + XlUtilsData.comments_class +
+	 "Notes:-" + XlUtilsData.notes_Class +
+	 "Recording:-" + XlUtilsData.recording_Class
+	 );
+	objanw.savebtnclickmth();
     
 }
 
@@ -383,7 +467,22 @@ public void no_of_classes_is_missing() {
 }
 
 @When("Admin enters data missing value in  class date and clicks save button {string} and {string}")
-public void admin_enters_data_missing_value_in_class_date_and_clicks_save_button_and(String string, String string2) {
+public void admin_enters_data_missing_value_in_class_date_and_clicks_save_button_and(String dataKey, String sheetName) throws Exception {
+	
+	XlUtilsData.classXLData(dataKey, sheetName);
+	 MCP = objanw.fillClassDetailsForm(XlUtilsData.batchID_class, XlUtilsData.noOfClasses_Class,
+			 XlUtilsData.classDate_Class, XlUtilsData.staffID_Class,  MCP);
+	 
+	 Log.logInfo("Class details added:-" +
+	 "BatchId:-" + XlUtilsData.batchID_class +
+	 "NoOfClasses:-" + XlUtilsData.noOfClasses_Class +
+	 "ClassTopic:-" + XlUtilsData.classTopic_class +
+	 "StaffId:-" + XlUtilsData.staffID_Class +
+	 "CalssDescription:-" + XlUtilsData.classDescription_Class +
+	 "Comments:-" + XlUtilsData.comments_class +
+	 "Notes:-" + XlUtilsData.notes_Class +
+	 "Recording:-" + XlUtilsData.recording_Class
+	 );
 	objanw.savebtnclickmth();
     
 }
@@ -395,7 +494,22 @@ public void class_date_is_missing() {
 }
 
 @When("Admin enters data missing value in staff id and clicks save button {string} and {string}")
-public void admin_enters_data_missing_value_in_staff_id_and_clicks_save_button_and(String string, String string2) {
+public void admin_enters_data_missing_value_in_staff_id_and_clicks_save_button_and(String dataKey, String sheetName) throws Exception {
+	
+	XlUtilsData.classXLData(dataKey, sheetName);
+	 MCP = objanw.fillClassDetailsForm(XlUtilsData.batchID_class, XlUtilsData.noOfClasses_Class,
+			 XlUtilsData.classDate_Class, XlUtilsData.staffID_Class,  MCP);
+	 
+	 Log.logInfo("Class details added:-" +
+	 "BatchId:-" + XlUtilsData.batchID_class +
+	 "NoOfClasses:-" + XlUtilsData.noOfClasses_Class +
+	 "ClassDate:-" + XlUtilsData.classDate_Class +
+	 "ClassTopic:-" + XlUtilsData.classTopic_class +
+	 "CalssDescription:-" + XlUtilsData.classDescription_Class +
+	 "Comments:-" + XlUtilsData.comments_class +
+	 "Notes:-" + XlUtilsData.notes_Class +
+	 "Recording:-" + XlUtilsData.recording_Class
+	 );
 	objanw.savebtnclickmth();
     
 }
@@ -407,8 +521,26 @@ public void staff_id_is_missing() {
 }
 
 @When("Admin enters passed date in the class date field and clicks save button {string} and {string}")
-public void admin_enters_passed_date_in_the_class_date_field_and_clicks_save_button_and(String string, String string2) {
+public void admin_enters_passed_date_in_the_class_date_field_and_clicks_save_button_and(String dataKey, String sheetName) throws Exception {
+	
+	
+	XlUtilsData.classXLData(dataKey, sheetName);
+	 MCP = objanw.fillClassDetailsForm(XlUtilsData.batchID_class, XlUtilsData.noOfClasses_Class,
+			 XlUtilsData.classDate_Class, XlUtilsData.staffID_Class,  MCP);
+	 
+	 Log.logInfo("Class details added:-" +
+	 "BatchId:-" + XlUtilsData.batchID_class +
+	 "NoOfClasses:-" + XlUtilsData.noOfClasses_Class +
+	 "ClassDate:-" + XlUtilsData.classDate_Class +
+	 "ClassTopic:-" + XlUtilsData.classTopic_class +
+	 "StaffId:-" + XlUtilsData.staffID_Class +
+	 "CalssDescription:-" + XlUtilsData.classDescription_Class +
+	 "Comments:-" + XlUtilsData.comments_class +
+	 "Notes:-" + XlUtilsData.notes_Class +
+	 "Recording:-" + XlUtilsData.recording_Class
+	 );
 	objanw.savebtnclickmth();
+
     
 }
 

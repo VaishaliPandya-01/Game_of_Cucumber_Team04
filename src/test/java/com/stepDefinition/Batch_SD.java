@@ -32,7 +32,7 @@ public class Batch_SD{
 	public void admin_is_on_dashboard_page_after_Login() {
 		loginPage.userNameText("uName");
 		loginPage.PswdText("pwd");
-		loginPage.keyboardClick();
+		loginPage.clickLoginBtn();
 		dashboardPage.getDashboardTitle();
 	}
 
